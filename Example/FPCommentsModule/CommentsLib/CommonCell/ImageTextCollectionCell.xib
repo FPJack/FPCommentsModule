@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageTextCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="195" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9We-Hr-IGd">
+                        <rect key="frame" x="0.0" y="55" width="195" height="46.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aliPay" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-iZ-nPL">
+                                <rect key="frame" x="86.5" y="0.0" width="22" height="22"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_reddot" translatesAutoresizingMaskIntoConstraints="NO" id="S0O-g4-EEZ">
+                                <rect key="frame" x="94.5" y="0.0" width="14" height="14"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宠物定位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-Jh-H2R">
+                                <rect key="frame" x="73" y="32" width="49.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rw6-Jh-H2R" firstAttribute="centerX" secondItem="9We-Hr-IGd" secondAttribute="centerX" id="1GL-Ct-asa"/>
+                            <constraint firstItem="vm8-iZ-nPL" firstAttribute="centerX" secondItem="9We-Hr-IGd" secondAttribute="centerX" id="BPy-kR-X9n"/>
+                            <constraint firstItem="vm8-iZ-nPL" firstAttribute="trailing" secondItem="S0O-g4-EEZ" secondAttribute="trailing" id="RJI-Kw-aud"/>
+                            <constraint firstAttribute="bottom" secondItem="Rw6-Jh-H2R" secondAttribute="bottom" id="ZU0-3d-Oui"/>
+                            <constraint firstItem="Rw6-Jh-H2R" firstAttribute="top" secondItem="vm8-iZ-nPL" secondAttribute="bottom" constant="10" id="k7B-8b-uYm"/>
+                            <constraint firstItem="vm8-iZ-nPL" firstAttribute="top" secondItem="9We-Hr-IGd" secondAttribute="top" id="lYI-uU-8hr"/>
+                            <constraint firstItem="vm8-iZ-nPL" firstAttribute="top" secondItem="S0O-g4-EEZ" secondAttribute="top" id="omR-Mz-Rp2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9We-Hr-IGd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6H8-ob-0O1"/>
+                <constraint firstItem="9We-Hr-IGd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fNb-uh-2Nv"/>
+                <constraint firstAttribute="trailing" secondItem="9We-Hr-IGd" secondAttribute="trailing" id="mRS-MT-tOi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="195" height="156"/>
+            <connections>
+                <outlet property="dotImgView" destination="S0O-g4-EEZ" id="fyi-i9-qsf"/>
+                <outlet property="imgView" destination="vm8-iZ-nPL" id="Jt4-gk-C4Y"/>
+                <outlet property="label" destination="Rw6-Jh-H2R" id="kBB-2Q-ejo"/>
+                <outlet property="spaceCon" destination="k7B-8b-uYm" id="OkC-Ic-rLB"/>
+            </connections>
+            <point key="canvasLocation" x="242.75362318840581" y="185.49107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="aliPay" width="22" height="22"/>
+        <image name="ic_reddot" width="14" height="14"/>
+    </resources>
+</document>

@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/FPJack/FPCommentsModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'FPCommentsModule/Classes/**/*'
+#  s.source_files = 'FPCommentsModule/Classes/**/*'
   
   # s.resource_bundles = {
   #   'FPCommentsModule' => ['FPCommentsModule/Assets/*.png']
@@ -38,5 +38,49 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'IGListKit'
+   s.dependency 'Masonry'
+
+
+
+
+   s.subspec 'Protocal' do |p|
+   p.ios.deployment_target = '9.0'
+   
+   ##########--协议---#########
+   p.source_files = 'FPCommentsModule/Classes/Protocal/*'
+#   p.resource_bundles = {
+#     'XLPagerTabStripObjcContinue' => ['XLPagerTabStripObjcContinue/Assets/*.png','XLPagerTabStripObjcContinue/Assets/*.xib']
+#   }
+   end
+   
+   ##########--模型---#########
+   s.subspec 'Model' do |m|
+   m.ios.deployment_target = '9.0'
+   m.source_files = 'FPCommentsModule/Classes/Model/*'
+   end
+   
+   ##########--View---#########
+   s.subspec 'View' do |v|
+   v.ios.deployment_target = '9.0'
+   v.source_files = 'FPCommentsModule/Classes/View/*'
+   end
+   
+   ##########--SectionController---#########
+   s.subspec 'SectionController' do |sc|
+   sc.ios.deployment_target = '9.0'
+   sc.source_files = 'FPCommentsModule/Classes/SectionController/*'
+   end
+   
+   ##########--Comment---#########
+   s.subspec 'Comment' do |c|
+   c.ios.deployment_target = '9.0'
+   c.source_files = 'FPCommentsModule/Classes/Comment/*'
+   c.dependency 'TTTAttributedLabel'
+   end
+
+
+
+
+
 end

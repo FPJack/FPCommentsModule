@@ -1,0 +1,63 @@
+PODS:
+  - FPCommentsModule (0.1.0):
+    - FPCommentsModule/Comment (= 0.1.0)
+    - FPCommentsModule/Model (= 0.1.0)
+    - FPCommentsModule/Protocal (= 0.1.0)
+    - FPCommentsModule/SectionController (= 0.1.0)
+    - FPCommentsModule/View (= 0.1.0)
+    - IGListKit
+    - Masonry
+  - FPCommentsModule/Comment (0.1.0):
+    - IGListKit
+    - Masonry
+    - TTTAttributedLabel
+  - FPCommentsModule/Model (0.1.0):
+    - IGListKit
+    - Masonry
+  - FPCommentsModule/Protocal (0.1.0):
+    - IGListKit
+    - Masonry
+  - FPCommentsModule/SectionController (0.1.0):
+    - IGListKit
+    - Masonry
+  - FPCommentsModule/View (0.1.0):
+    - IGListKit
+    - Masonry
+  - FPRefresh (0.1.3):
+    - MJRefresh
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
+  - Masonry (1.1.0)
+  - MJRefresh (3.3.1)
+  - TTTAttributedLabel (2.0.0)
+
+DEPENDENCIES:
+  - FPCommentsModule (from `../`)
+  - FPRefresh
+
+SPEC REPOS:
+  trunk:
+    - FPRefresh
+    - IGListDiffKit
+    - IGListKit
+    - Masonry
+    - MJRefresh
+    - TTTAttributedLabel
+
+EXTERNAL SOURCES:
+  FPCommentsModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FPCommentsModule: 236fcb7e9db497bd9054b3a9c5ed6ef2098fda3a
+  FPRefresh: 446483b154c6b363d4f56f6b69a59f8f87c6cd1f
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+
+PODFILE CHECKSUM: 59303b1bee617cad3f028e8477bd982d59239f74
+
+COCOAPODS: 1.9.0.beta.2

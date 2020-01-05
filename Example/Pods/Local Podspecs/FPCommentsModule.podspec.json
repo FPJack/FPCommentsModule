@@ -1,0 +1,71 @@
+{
+  "name": "FPCommentsModule",
+  "version": "0.1.0",
+  "summary": "A short description of FPCommentsModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/FPJack/FPCommentsModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "FPJack": "2551412939@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/FPJack/FPCommentsModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "dependencies": {
+    "IGListKit": [
+
+    ],
+    "Masonry": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Protocal",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/Protocal/*"
+    },
+    {
+      "name": "Model",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/Model/*"
+    },
+    {
+      "name": "View",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/View/*"
+    },
+    {
+      "name": "SectionController",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/SectionController/*"
+    },
+    {
+      "name": "Comment",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/Comment/*",
+      "dependencies": {
+        "TTTAttributedLabel": [
+
+        ]
+      }
+    }
+  ]
+}

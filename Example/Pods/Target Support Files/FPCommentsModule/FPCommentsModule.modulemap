@@ -1,0 +1,6 @@
+framework module FPCommentsModule {
+  umbrella header "FPCommentsModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

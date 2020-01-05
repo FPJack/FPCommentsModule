@@ -1,0 +1,6 @@
+framework module Pods_FPCommentsModule_Example {
+  umbrella header "Pods-FPCommentsModule_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
