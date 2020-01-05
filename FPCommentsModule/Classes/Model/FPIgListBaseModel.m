@@ -24,3 +24,7 @@
     return [self.diffId isEqualToString:obj.diffId];
 }
 @end
+@implementation FPHyperlinkModel
+
+
+@end

@@ -10,6 +10,13 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol FPSectionControllerConfigureProtocal <NSObject>
+@property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
+@end
+NS_ASSUME_NONNULL_END
+
+
+NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerProtocal <NSObject>
 @required
 @property (nonatomic,strong)IGListSectionController *sectionController;
@@ -28,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPSubSectionModels <NSObject>
+@protocol FPSubSectionModelsProtocal <NSObject>
 @required
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
 @end
@@ -36,10 +43,11 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPListModuleProtocoal <FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModels>
+@protocol FPListModuleProtocoal <FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>
 
 @end
 NS_ASSUME_NONNULL_END
+
 
 
 

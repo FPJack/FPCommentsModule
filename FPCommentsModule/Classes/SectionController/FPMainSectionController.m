@@ -23,7 +23,7 @@
 }
 - (IGListAdapter *)adapter{
     if (!_adapter) {
-        _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:50];
+        _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:0];
         _adapter.dataSource = self;
     }
     return _adapter;
@@ -39,6 +39,9 @@
     FPMainCollectionCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPMainCollectionCell.class forSectionController:self atIndex:index];
     self.adapter.collectionView = cell.collectionView;
     [self.adapter reloadDataWithCompletion:nil];
+    if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {
+        self.configureCellBlock(self.model, cell);
+    }
     return cell;
 }
 - (void)didUpdateToObject:(id<FPListModuleProtocoal>)object{

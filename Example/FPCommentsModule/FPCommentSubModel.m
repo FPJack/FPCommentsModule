@@ -109,6 +109,7 @@ static TTTAttributedLabel *label;
     }
     return _attrText;
 }
+
 //- (UIEdgeInsets)inset{
 //    return UIEdgeInsetsMake(0, 12, 0, 12);
 //}
