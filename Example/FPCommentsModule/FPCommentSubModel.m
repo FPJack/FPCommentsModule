@@ -7,7 +7,9 @@
 //
 
 #import "FPCommentSubModel.h"
-#import "FPLinkModel.h"
+
+#define kCommentFont [UIFont systemFontOfSize:13]
+
 #define kSWidth [UIScreen mainScreen].bounds.size.width
 #import <TTTAttributedLabel/TTTAttributedLabel.h>
 static TTTAttributedLabel *label;
@@ -43,7 +45,7 @@ static TTTAttributedLabel *label;
         if (self.commentUserName && self.commentUserName.length > 0) {//回复人
                 NSAttributedString *userAttr = [[NSMutableAttributedString alloc]initWithString:self.commentUserName];
                 NSRange userNameRange = NSMakeRange(0,self.commentUserName.length);
-                FPLinkModel *model = [FPLinkModel new];
+                FPHyperlinkModel *model = [FPHyperlinkModel new];
                 model.range = userNameRange;
                 model.mid = self.commentUserId;
                 model.text = self.commentUserName;
@@ -56,7 +58,7 @@ static TTTAttributedLabel *label;
         if (mAttr.length > 0 && self.commentByUserName && self.commentByUserName.length > 0) {//
                 NSAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:@" 回复 "];
                 NSRange range = NSMakeRange(mAttr.length,attr.length);
-                FPLinkModel *model = [FPLinkModel new];
+                FPHyperlinkModel *model = [FPHyperlinkModel new];
                 model.range = range;
                 model.enableTap = NO;
                 model.text = attr.string;
@@ -68,7 +70,7 @@ static TTTAttributedLabel *label;
         if (self.commentByUserName && self.commentByUserName.length > 0) {
                 NSAttributedString *commentAttr = [[NSMutableAttributedString alloc]initWithString:self.commentByUserName];
                 NSRange range = NSMakeRange(mAttr.string.length,self.commentByUserName.length);
-                FPLinkModel *model = [FPLinkModel new];
+                FPHyperlinkModel *model = [FPHyperlinkModel new];
                 model.range = range;
                 model.mid = self.commentByUserId;
                 model.text = self.commentByUserName;
@@ -81,7 +83,7 @@ static TTTAttributedLabel *label;
         if (mAttr.length > 0) {//
                 NSAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:@" : "];
                 NSRange range = NSMakeRange(mAttr.length,attr.length);
-                FPLinkModel *model = [FPLinkModel new];
+                FPHyperlinkModel *model = [FPHyperlinkModel new];
                 model.range = range;
                 model.enableTap = NO;
                 model.text = attr.string;
@@ -94,7 +96,7 @@ static TTTAttributedLabel *label;
         if (self.commentText && self.commentText.length > 0) {
             NSAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:self.commentText];
             NSRange range = NSMakeRange(mAttr.length,attr.length);
-            FPLinkModel *model = [FPLinkModel new];
+            FPHyperlinkModel *model = [FPHyperlinkModel new];
             model.range = range;
             model.mid = self.commentId;
             model.text = attr.string;
@@ -109,9 +111,4 @@ static TTTAttributedLabel *label;
     }
     return _attrText;
 }
-
-//- (UIEdgeInsets)inset{
-//    return UIEdgeInsetsMake(0, 12, 0, 12);
-//}
-
 @end
