@@ -19,7 +19,6 @@
 #import "FPCommentBigModel.h"
 #import "FPCommentSubModel.h"
 #import "FPCommentReplayContainerController.h"
-#import <FPCommentContainerSectionController.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -58,9 +57,17 @@
         }
         {
             FPCommentBigModel *commentModel = [FPCommentBigModel new];
-            commentModel.sectionController = [FPCommentContainerSectionController new];
+            commentModel.sectionController = [FPMainSectionController new];
             [subArr addObject:commentModel];
         }
+        {
+            FPTextModel *textModel = [FPTextModel new];
+            textModel.sectionController = [FPCommentContentSectionController new];
+            textModel.numberOfLines = 0;
+            textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
+            [subArr addObject:textModel];
+        }
+
 
         FPMainModel *mainModel = [FPMainModel new];
         mainModel.subSectionModels = subArr;
