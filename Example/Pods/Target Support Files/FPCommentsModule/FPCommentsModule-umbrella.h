@@ -12,6 +12,7 @@
 
 #import "FPCommentSubCell.h"
 #import "FPCommentSubProtocal.h"
+#import "FPCommentSubSectionController.h"
 #import "FPIgListBaseModel.h"
 #import "FPModuleProtocoal.h"
 #import "FPMainSectionController.h"

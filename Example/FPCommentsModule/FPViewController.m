@@ -21,6 +21,7 @@
 #import "FPCommentSubModel.h"
 #import "FPCommentReplayContainerController.h"
 #import <FPCommentSubCell.h>
+#import <FPCommentSubSectionController.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -65,11 +66,7 @@
             CGFloat width = kSWidth - 68 - 12 * 2 - 20;
             for (int i = 0; i < 50; i ++) {
                 FPCommentSubModel *model = [FPCommentSubModel new];
-                model.sectionController = [[IGListSingleSectionController alloc] initWithCellClass:FPCommentSubCell.class configureBlock:^(FPCommentSubModel*  _Nonnull item, __kindof FPCommentSubCell * _Nonnull cell) {
-                    cell.model = item;
-                } sizeBlock:^CGSize(FPCommentSubModel*  _Nonnull item, id<IGListCollectionContext>  _Nullable collectionContext) {
-                    return CGSizeMake(item.width, item.height);
-                }];
+                model.sectionController = [FPCommentSubSectionController new];
                 model.commentText = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 model.commentByUserName = @"评论人";
                 model.commentUserName = @"回复人";

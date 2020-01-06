@@ -648,6 +648,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = FPJack;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = MSL77HGY8X;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -960,11 +963,12 @@
 			baseConfigurationReference = 0A785B1AF93FC82DE9D7F6CE /* Pods-FPCommentsModule_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MSL77HGY8X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPCommentsModule/FPCommentsModule-Prefix.pch";
 				INFOPLIST_FILE = "FPCommentsModule/FPCommentsModule-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhichongjia.ZhiChongRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -976,11 +980,12 @@
 			baseConfigurationReference = 2787FEE5C00616CCB645CC74 /* Pods-FPCommentsModule_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MSL77HGY8X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPCommentsModule/FPCommentsModule-Prefix.pch";
 				INFOPLIST_FILE = "FPCommentsModule/FPCommentsModule-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhichongjia.ZhiChongRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
