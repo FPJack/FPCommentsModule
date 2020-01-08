@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812C823C57F9900311887 /* FPVideoPictureModel.m */; };
+		041812CB23C5A17400311887 /* example.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041812CA23C5A17400311887 /* example.mp4 */; };
+		041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */; };
+		041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */; };
+		041812D423C5A4E800311887 /* FPPreviewMoreCommentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812D323C5A4E800311887 /* FPPreviewMoreCommentsModel.m */; };
 		04BBF02E23C05D15001DCAB7 /* FPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF02D23C05D15001DCAB7 /* FPUserModel.m */; };
 		04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF03123C05E24001DCAB7 /* FPMainModel.m */; };
 		04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */; };
@@ -93,6 +97,12 @@
 /* Begin PBXFileReference section */
 		041812C723C57F9900311887 /* FPVideoPictureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPVideoPictureModel.h; sourceTree = "<group>"; };
 		041812C823C57F9900311887 /* FPVideoPictureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPVideoPictureModel.m; sourceTree = "<group>"; };
+		041812CA23C5A17400311887 /* example.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.mp4; sourceTree = "<group>"; };
+		041812CC23C5A4BF00311887 /* FPPreviewMoreCommentsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPreviewMoreCommentsCell.h; sourceTree = "<group>"; };
+		041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPreviewMoreCommentsCell.m; sourceTree = "<group>"; };
+		041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPreviewMoreCommentsCell.xib; sourceTree = "<group>"; };
+		041812D223C5A4E800311887 /* FPPreviewMoreCommentsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPreviewMoreCommentsModel.h; sourceTree = "<group>"; };
+		041812D323C5A4E800311887 /* FPPreviewMoreCommentsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPreviewMoreCommentsModel.m; sourceTree = "<group>"; };
 		04BBF02C23C05D15001DCAB7 /* FPUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPUserModel.h; sourceTree = "<group>"; };
 		04BBF02D23C05D15001DCAB7 /* FPUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPUserModel.m; sourceTree = "<group>"; };
 		04BBF03023C05E24001DCAB7 /* FPMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPMainModel.h; sourceTree = "<group>"; };
@@ -250,6 +260,15 @@
 			name = PictureVideo;
 			sourceTree = "<group>";
 		};
+		041812D123C5A4CE00311887 /* PreviewMoreComments */ = {
+			isa = PBXGroup;
+			children = (
+				041812D223C5A4E800311887 /* FPPreviewMoreCommentsModel.h */,
+				041812D323C5A4E800311887 /* FPPreviewMoreCommentsModel.m */,
+			);
+			name = PreviewMoreComments;
+			sourceTree = "<group>";
+		};
 		04BBF02723C05CA8001DCAB7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +283,7 @@
 		04BBF02823C05CB1001DCAB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041812D123C5A4CE00311887 /* PreviewMoreComments */,
 				041812C623C57F8600311887 /* PictureVideo */,
 				04BBF0D523C06E63001DCAB7 /* Comment */,
 				04BBF0D123C06AE0001DCAB7 /* Content */,
@@ -276,6 +296,9 @@
 		04BBF02923C05CB6001DCAB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				041812CC23C5A4BF00311887 /* FPPreviewMoreCommentsCell.h */,
+				041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */,
+				041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -545,6 +568,7 @@
 		6003F593195388D20070C39A /* Example for FPCommentsModule */ = {
 			isa = PBXGroup;
 			children = (
+				041812CA23C5A17400311887 /* example.mp4 */,
 				04BBF02723C05CA8001DCAB7 /* Example */,
 				6003F59C195388D20070C39A /* FPAppDelegate.h */,
 				6003F59D195388D20070C39A /* FPAppDelegate.m */,
@@ -704,6 +728,7 @@
 				04BBF09E23C062E5001DCAB7 /* CollectionEmptyCell.xib in Resources */,
 				04BBF0AB23C062E5001DCAB7 /* FPCommentUserInfoCell.xib in Resources */,
 				04BBF0B623C062E5001DCAB7 /* FPCommentContentCell.xib in Resources */,
+				041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */,
 				04BBF0B323C062E5001DCAB7 /* CommentsTableCell.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				04BBF0A123C062E5001DCAB7 /* ImageLabelCollectionCell.xib in Resources */,
@@ -714,6 +739,7 @@
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				04BBF09D23C062E5001DCAB7 /* LeftBtnCollectionCell.xib in Resources */,
 				04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */,
+				041812CB23C5A17400311887 /* example.mp4 in Resources */,
 				04BBF09923C062E5001DCAB7 /* CollectionImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,6 +848,7 @@
 				04BBF0A623C062E5001DCAB7 /* FPCommentToolView.m in Sources */,
 				04BBF0A823C062E5001DCAB7 /* FPLinkModel.m in Sources */,
 				04BBF0A923C062E5001DCAB7 /* FPCommentModel.m in Sources */,
+				041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */,
 				04BBF0BC23C062E5001DCAB7 /* FPCommentReplayContainerController.m in Sources */,
 				04BBF0B123C062E5001DCAB7 /* FPCommentCell.m in Sources */,
 				6003F59E195388D20070C39A /* FPAppDelegate.m in Sources */,
@@ -858,6 +885,7 @@
 				04BBF02E23C05D15001DCAB7 /* FPUserModel.m in Sources */,
 				04BBF09623C062E5001DCAB7 /* ImageLabelCollectionCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				041812D423C5A4E800311887 /* FPPreviewMoreCommentsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

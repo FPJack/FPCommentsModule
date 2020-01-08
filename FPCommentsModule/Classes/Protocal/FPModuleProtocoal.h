@@ -14,6 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
 @end
 NS_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPDequeueReusableCellProtocal <NSObject>
+@property (nonatomic,strong)Class className;
+
+@property (nonatomic,copy)NSString* nibName;
+@property (nonatomic,strong)NSBundle *bundle;
+@end
+NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN

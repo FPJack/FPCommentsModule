@@ -12,15 +12,7 @@
 @property (nonatomic,strong)IGListAdapter *adapter;
 @property (nonatomic,strong)id<FPListModuleProtocoal> model;
 @end
-
 @implementation FPMainSectionController
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-    }
-    return self;
-}
 - (IGListAdapter *)adapter{
     if (!_adapter) {
         _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:0];
@@ -48,11 +40,7 @@
     self.inset = object.inset;
     self.model = object;
 }
-- (void)didSelectItemAtIndex:(NSInteger)index{
-}
-- (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {
-    return nil;
-}
+- (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {return nil;}
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id <FPSectionModelProtocal,FPSectionControllerProtocal>)object {
     return object.sectionController;
 }
@@ -60,3 +48,31 @@
     return self.model.subSectionModels;
 }
 @end
+
+@interface FPListSectionController()
+@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal> model;
+@end
+@implementation FPListSectionController
+- (CGSize)sizeForItemAtIndex:(NSInteger)index{
+    CGFloat width = self.model.width;
+    if (width <= 0) {
+        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+    }
+    return CGSizeMake(width, self.model.height);
+}
+- (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
+    UICollectionViewCell *cell;
+    if (self.model.nibName && self.model.bundle) {
+        cell = [self.collectionContext dequeueReusableCellWithNibName:self.model.nibName bundle:self.model.bundle forSectionController:self atIndex:index];
+    }else{
+        cell = [self.collectionContext dequeueReusableCellOfClass:self.model.class forSectionController:self atIndex:index];
+    }
+    if (self.configureCellBlock) self.configureCellBlock(self.model, cell);
+    return cell;
+}
+-(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal>)object{
+    self.inset = object.inset;
+    self.model = object;
+}
+@end
+

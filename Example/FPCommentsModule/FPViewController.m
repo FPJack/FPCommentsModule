@@ -24,6 +24,8 @@
 #import <FPCommentSubSectionController.h>
 #import "FPVideoPictureModel.h"
 #import <FPVideoPictureSectionController.h>
+#import "FPPreviewMoreCommentsModel.h"
+#import "FPPreviewMoreCommentsCell.h"
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -57,7 +59,7 @@
         {
             FPTextModel *textModel = [FPTextModel new];
             textModel.sectionController = [FPCommentContentSectionController new];
-            textModel.numberOfLines = 0;
+            textModel.numberOfLines = 3;
             textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
             [subArr addObject:textModel];
         }
@@ -69,7 +71,7 @@
             model.minimumInteritemSpacing = 10;
             model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
             model.type = FPImageTypeShowImage;
-            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
+            model.inset = UIEdgeInsetsMake(5, 68, 20, 20);
             CGFloat width = kSWidth - 68 - 20;
             model.width = width;
             [subArr addObject:model];
@@ -97,14 +99,23 @@
                 }
                 model.sectionController.inset = model.inset;
                 [arr addObject:model];
-                commentModel.subSectionModels = arr;
             }
+            {
+                FPPreviewMoreCommentsModel *model = [FPPreviewMoreCommentsModel new];
+                model.sectionController = [FPListSectionController new];
+                model.bundle = [NSBundle mainBundle];
+                model.nibName = @"FPPreviewMoreCommentsCell";
+                model.inset = UIEdgeInsetsMake(0, 12, 0, 0);
+                [arr addObject:model];
+                
+            }
+            commentModel.subSectionModels = arr;
+
             
             FPMainSectionController *sc = [FPMainSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
             };
-            
             commentModel.sectionController = sc;
             [subArr addObject:commentModel];
         }
@@ -131,12 +142,34 @@
             model.minimumInteritemSpacing = 10;
             model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
             model.type = FPImageTypeShowImage;
-            model.oneItemSize = CGSizeMake(100, 150);
+            model.maxImageCount = 1;
+            model.oneItemSize = CGSizeMake(200, 300);
             model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
             CGFloat width = kSWidth - 68 - 20;
             model.width = width;
             [subArr addObject:model];
         }
+        {
+            FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.sectionController = [FPVideoPictureSectionController new];
+            model.column = 3;
+            model.minimumLineSpacing = 10;
+            model.minimumInteritemSpacing = 10;
+            model.type = FPImageTypeShowVideo;
+            model.maxVideoCount = 1;
+            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
+            CGFloat width = kSWidth - 68 - 20;
+            model.width = width;
+            FPVideoItem *item = [FPVideoItem new];
+            item.coverUrl =  @"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg";
+            NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
+            item.videoUrl = url;
+            item.itemSize = CGSizeMake(300, 300);
+            model.oneItemSize = item.itemSize;
+            model.sources = [@[item] mutableCopy];
+            [subArr addObject:model];
+        }
+
 
         
         FPMainModel *mainModel = [FPMainModel new];

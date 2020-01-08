@@ -35,8 +35,10 @@
         self.tableCell.minimumLineSpacing = self.model.minimumLineSpacing;
         self.tableCell.minimumInteritemSpacing = self.model.minimumInteritemSpacing;
         self.tableCell.column = self.model.column;
-        self.tableCell.sectionInset = self.model.sectionInset;
         self.tableCell.itemSize = self.model.oneItemSize;
+        self.tableCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
+        self.tableCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
+
     }
     __weak typeof(self) weakSelf = self;
     return cell;
