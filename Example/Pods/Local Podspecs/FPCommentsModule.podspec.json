@@ -66,6 +66,18 @@
 
         ]
       }
+    },
+    {
+      "name": "VideoPicture",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/VideoPicture/*",
+      "dependencies": {
+        "FPImageVideoCell": [
+
+        ]
+      }
     }
   ]
 }

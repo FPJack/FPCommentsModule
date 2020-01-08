@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812C823C57F9900311887 /* FPVideoPictureModel.m */; };
 		04BBF02E23C05D15001DCAB7 /* FPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF02D23C05D15001DCAB7 /* FPUserModel.m */; };
 		04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF03123C05E24001DCAB7 /* FPMainModel.m */; };
 		04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */; };
@@ -90,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041812C723C57F9900311887 /* FPVideoPictureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPVideoPictureModel.h; sourceTree = "<group>"; };
+		041812C823C57F9900311887 /* FPVideoPictureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPVideoPictureModel.m; sourceTree = "<group>"; };
 		04BBF02C23C05D15001DCAB7 /* FPUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPUserModel.h; sourceTree = "<group>"; };
 		04BBF02D23C05D15001DCAB7 /* FPUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPUserModel.m; sourceTree = "<group>"; };
 		04BBF03023C05E24001DCAB7 /* FPMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPMainModel.h; sourceTree = "<group>"; };
@@ -238,6 +241,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041812C623C57F8600311887 /* PictureVideo */ = {
+			isa = PBXGroup;
+			children = (
+				041812C723C57F9900311887 /* FPVideoPictureModel.h */,
+				041812C823C57F9900311887 /* FPVideoPictureModel.m */,
+			);
+			name = PictureVideo;
+			sourceTree = "<group>";
+		};
 		04BBF02723C05CA8001DCAB7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +264,7 @@
 		04BBF02823C05CB1001DCAB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041812C623C57F8600311887 /* PictureVideo */,
 				04BBF0D523C06E63001DCAB7 /* Comment */,
 				04BBF0D123C06AE0001DCAB7 /* Content */,
 				04BBF02F23C05DBC001DCAB7 /* Main */,
@@ -768,22 +781,30 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FPCommentsModule/FPCommentsModule.framework",
+				"${BUILT_PRODUCTS_DIR}/FPImageVideoCell/FPImageVideoCell.framework",
 				"${BUILT_PRODUCTS_DIR}/FPRefresh/FPRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListDiffKit/IGListDiffKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPCommentsModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPImageVideoCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListDiffKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -807,6 +828,7 @@
 				04BBF09A23C062E5001DCAB7 /* CollectionEmptyCell.m in Sources */,
 				04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */,
 				04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */,
+				041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */,
 				04BBF0A023C062E5001DCAB7 /* ImageLabelWHCell.m in Sources */,
 				04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */,
 				04BBF0AD23C062E5001DCAB7 /* FPBottomCommentView.m in Sources */,

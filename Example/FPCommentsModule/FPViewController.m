@@ -22,6 +22,8 @@
 #import "FPCommentReplayContainerController.h"
 #import <FPCommentSubCell.h>
 #import <FPCommentSubSectionController.h>
+#import "FPVideoPictureModel.h"
+#import <FPVideoPictureSectionController.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -59,6 +61,20 @@
             textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
             [subArr addObject:textModel];
         }
+        {
+            FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.sectionController = [FPVideoPictureSectionController new];
+            model.column = 3;
+            model.minimumLineSpacing = 10;
+            model.minimumInteritemSpacing = 10;
+            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
+            model.type = FPImageTypeShowImage;
+            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
+            CGFloat width = kSWidth - 68 - 20;
+            model.width = width;
+            [subArr addObject:model];
+        }
+
         {
             FPCommentBigModel *commentModel = [FPCommentBigModel new];
             

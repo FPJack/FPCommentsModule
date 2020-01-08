@@ -24,8 +24,9 @@
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     FPCommentSubCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPCommentSubCell.class forSectionController:self atIndex:index];
     cell.model = self.model;
+    __weak typeof(self) weakSelf = self;
     cell.tapLinkBlock = ^(id<FPHyperlinkProtocal>  _Nonnull link) {
-        
+        if (weakSelf.tapLinkBlock) weakSelf.tapLinkBlock(weakSelf, link);
     };
     return cell;
 }

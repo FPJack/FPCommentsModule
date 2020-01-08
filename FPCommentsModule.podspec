@@ -78,6 +78,13 @@ TODO: Add long description of the pod here.
    c.source_files = 'FPCommentsModule/Classes/Comment/*'
    c.dependency 'TTTAttributedLabel'
    end
+   
+   s.subspec 'VideoPicture' do |vp|
+   vp.ios.deployment_target = '9.0'
+   vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
+   vp.dependency 'FPImageVideoCell'
+   end
+
 
 
 

@@ -16,6 +16,8 @@
 #import "FPIgListBaseModel.h"
 #import "FPModuleProtocoal.h"
 #import "FPMainSectionController.h"
+#import "FPVideoPictureProtocal.h"
+#import "FPVideoPictureSectionController.h"
 #import "FPMainCollectionCell.h"
 
 FOUNDATION_EXPORT double FPCommentsModuleVersionNumber;
