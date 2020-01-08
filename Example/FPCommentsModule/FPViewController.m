@@ -80,7 +80,7 @@
             
             NSMutableArray *arr = [NSMutableArray array];
             CGFloat width = kSWidth - 68 - 12 * 2 - 20;
-            for (int i = 0; i < 50; i ++) {
+            for (int i = 0; i < 5; i ++) {
                 FPCommentSubModel *model = [FPCommentSubModel new];
                 model.sectionController = [FPCommentSubSectionController new];
                 model.commentText = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
@@ -106,21 +106,6 @@
             };
             
             commentModel.sectionController = sc;
-            
-            {
-                
-                FPTextModel *textModel = [FPTextModel new];
-                textModel.sectionController = [FPCommentContentSectionController new];
-                textModel.numberOfLines = 0;
-                textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
-                [commentModel.subSectionModels insertObject:textModel atIndex:5];
-                
-            }
-            
-            
-            
-            
-            
             [subArr addObject:commentModel];
         }
         {
@@ -138,7 +123,21 @@
             userModel.time = @"2019";
             [subArr addObject:userModel];
         }
-        
+        {
+            FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.sectionController = [FPVideoPictureSectionController new];
+            model.column = 3;
+            model.minimumLineSpacing = 10;
+            model.minimumInteritemSpacing = 10;
+            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
+            model.type = FPImageTypeShowImage;
+            model.oneItemSize = CGSizeMake(100, 150);
+            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
+            CGFloat width = kSWidth - 68 - 20;
+            model.width = width;
+            [subArr addObject:model];
+        }
+
         
         FPMainModel *mainModel = [FPMainModel new];
         mainModel.subSectionModels = subArr;
