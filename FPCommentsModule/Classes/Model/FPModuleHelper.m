@@ -4,7 +4,6 @@
 //
 //  Created by fanpeng on 2020/1/9.
 //
-
 #import "FPModuleHelper.h"
 #import <TTTAttributedLabel/TTTAttributedLabel.h>
 @implementation FPModuleHelper

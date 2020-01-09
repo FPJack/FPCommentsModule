@@ -34,3 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+NS_ASSUME_NONNULL_BEGIN
+@interface FPUserInfoCollectionCell : UICollectionViewCell
+@property (nonatomic,strong)UIImageView *imgView;
+@property (nonatomic,strong)UILabel *nameLabel;
+@property (nonatomic,strong)UILabel *timeLabel;
+@property (nonatomic,strong)UIButton *rightButton;
+@end
+NS_ASSUME_NONNULL_END
+

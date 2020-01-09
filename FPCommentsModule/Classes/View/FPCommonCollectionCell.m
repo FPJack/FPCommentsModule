@@ -72,3 +72,7 @@
 }
 @end
 
+@implementation FPUserInfoCollectionCell
+
+
+@end
