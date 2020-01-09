@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FPMainModel : FPIgListBaseModel<FPNestedSectionControllersModelProtocal>
+@interface FPMainModel : FPIgListBaseModel<FPNestedSectionControllerProtocal>
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);

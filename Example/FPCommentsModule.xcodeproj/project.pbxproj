@@ -12,6 +12,9 @@
 		041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */; };
 		041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */; };
 		041812D423C5A4E800311887 /* FPPreviewMoreCommentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812D323C5A4E800311887 /* FPPreviewMoreCommentsModel.m */; };
+		0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495BE6423C708D500EECE76 /* FPTestVC.m */; };
+		0495BE6723C708D500EECE76 /* FPTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495BE6523C708D500EECE76 /* FPTestVC.xib */; };
+		0495BE6B23C70CDC00EECE76 /* FPNumberItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */; };
 		04BBF02E23C05D15001DCAB7 /* FPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF02D23C05D15001DCAB7 /* FPUserModel.m */; };
 		04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF03123C05E24001DCAB7 /* FPMainModel.m */; };
 		04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */; };
@@ -104,6 +107,11 @@
 		041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPreviewMoreCommentsCell.xib; sourceTree = "<group>"; };
 		041812D223C5A4E800311887 /* FPPreviewMoreCommentsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPreviewMoreCommentsModel.h; sourceTree = "<group>"; };
 		041812D323C5A4E800311887 /* FPPreviewMoreCommentsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPreviewMoreCommentsModel.m; sourceTree = "<group>"; };
+		0495BE6323C708D500EECE76 /* FPTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTestVC.h; sourceTree = "<group>"; };
+		0495BE6423C708D500EECE76 /* FPTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTestVC.m; sourceTree = "<group>"; };
+		0495BE6523C708D500EECE76 /* FPTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPTestVC.xib; sourceTree = "<group>"; };
+		0495BE6923C70CDC00EECE76 /* FPNumberItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPNumberItemModel.h; sourceTree = "<group>"; };
+		0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPNumberItemModel.m; sourceTree = "<group>"; };
 		04BBF02C23C05D15001DCAB7 /* FPUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPUserModel.h; sourceTree = "<group>"; };
 		04BBF02D23C05D15001DCAB7 /* FPUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPUserModel.m; sourceTree = "<group>"; };
 		04BBF03023C05E24001DCAB7 /* FPMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPMainModel.h; sourceTree = "<group>"; };
@@ -269,6 +277,15 @@
 			name = PreviewMoreComments;
 			sourceTree = "<group>";
 		};
+		0495BE6823C70CC400EECE76 /* NumberItemModel */ = {
+			isa = PBXGroup;
+			children = (
+				0495BE6923C70CDC00EECE76 /* FPNumberItemModel.h */,
+				0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */,
+			);
+			name = NumberItemModel;
+			sourceTree = "<group>";
+		};
 		04BBF02723C05CA8001DCAB7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +300,7 @@
 		04BBF02823C05CB1001DCAB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0495BE6823C70CC400EECE76 /* NumberItemModel */,
 				041812D123C5A4CE00311887 /* PreviewMoreComments */,
 				041812C623C57F8600311887 /* PictureVideo */,
 				04BBF0D523C06E63001DCAB7 /* Comment */,
@@ -575,6 +593,9 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* FPViewController.h */,
 				6003F5A6195388D20070C39A /* FPViewController.m */,
+				0495BE6323C708D500EECE76 /* FPTestVC.h */,
+				0495BE6423C708D500EECE76 /* FPTestVC.m */,
+				0495BE6523C708D500EECE76 /* FPTestVC.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -730,6 +751,7 @@
 				04BBF0B623C062E5001DCAB7 /* FPCommentContentCell.xib in Resources */,
 				041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */,
 				04BBF0B323C062E5001DCAB7 /* CommentsTableCell.xib in Resources */,
+				0495BE6723C708D500EECE76 /* FPTestVC.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				04BBF0A123C062E5001DCAB7 /* ImageLabelCollectionCell.xib in Resources */,
 				04BBF09F23C062E5001DCAB7 /* ImageTextCollectionCell.xib in Resources */,
@@ -815,8 +837,6 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
-				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -829,8 +849,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -853,6 +871,7 @@
 				04BBF0B123C062E5001DCAB7 /* FPCommentCell.m in Sources */,
 				6003F59E195388D20070C39A /* FPAppDelegate.m in Sources */,
 				04BBF09A23C062E5001DCAB7 /* CollectionEmptyCell.m in Sources */,
+				0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */,
 				04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */,
 				04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */,
 				041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */,
@@ -876,6 +895,7 @@
 				04BBF09823C062E5001DCAB7 /* CollectionImageCell.m in Sources */,
 				04BBF0B823C062E5001DCAB7 /* FPCommentImgSectionController.m in Sources */,
 				04BBF0B923C062E5001DCAB7 /* FPCommentReplySectionController.m in Sources */,
+				0495BE6B23C70CDC00EECE76 /* FPNumberItemModel.m in Sources */,
 				04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */,
 				04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */,
 				04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */,

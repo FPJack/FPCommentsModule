@@ -9,7 +9,7 @@
 #import "FPNestedCollectionViewCell.h"
 @interface FPNestedSectionController()<IGListAdapterDataSource>
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)id<FPNestedSectionControllersModelProtocal> model;
+@property (nonatomic,strong)id<FPNestedSectionControllerProtocal> model;
 @end
 @implementation FPNestedSectionController
 - (IGListAdapter *)adapter{
@@ -34,7 +34,7 @@
     }
     return cell;
 }
-- (void)didUpdateToObject:(id<FPNestedSectionControllersModelProtocal>)object{
+- (void)didUpdateToObject:(id<FPNestedSectionControllerProtocal>)object{
     self.inset = object.inset;
     self.model = object;
 }
@@ -51,6 +51,9 @@
 }
 @end
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 @interface FPListSectionController()
 @property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal> model;
@@ -65,10 +68,12 @@
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     UICollectionViewCell *cell;
-    if (self.model.nibName && self.model.bundle) {
+    if ([self.model respondsToSelector:@selector(nibName)] &&
+        [self.model respondsToSelector:@selector(bundle)] &&
+        self.model.nibName && self.model.bundle) {
         cell = [self.collectionContext dequeueReusableCellWithNibName:self.model.nibName bundle:self.model.bundle forSectionController:self atIndex:index];
     }else{
-        cell = [self.collectionContext dequeueReusableCellOfClass:self.model.className forSectionController:self atIndex:index];
+        cell = [self.collectionContext dequeueReusableCellOfClass:self.model.class_name forSectionController:self atIndex:index];
     }
     if (self.configureCellBlock) self.configureCellBlock(self.model, cell);
     return cell;
@@ -79,3 +84,67 @@
 }
 @end
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+@interface FPNumberOfItemsSectionController()
+@property (nonatomic,strong)id<FPNumberOfItemsModelProtocal> model;
+@end
+@implementation FPNumberOfItemsSectionController
+- (NSInteger)numberOfItems{
+    return self.model.itemModels.count;
+}
+- (CGSize)sizeForItemAtIndex:(NSInteger)index{
+    id<FPItemSizeProtocal> model = self.model.itemModels[index];
+    CGSize size = CGSizeZero;
+    if (![model respondsToSelector:@selector(size)] || CGSizeEqualToSize(model.size, CGSizeZero)) {
+        if ([self.model respondsToSelector:@selector(size)] &&  !CGSizeEqualToSize(self.model.size, CGSizeZero)) {
+            size = self.model.size;
+        }else{
+            return self.collectionContext.containerSize;
+        }
+    }
+    if (size.width <= 0) {
+        return CGSizeMake(self.collectionContext.containerSize.width, size.height);
+    }
+    if (size.height <= 0) {
+        return CGSizeMake(size.width, self.collectionContext.containerSize.height);
+    }
+    return size;
+}
+- (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
+    id<FPItemSizeProtocal,FPDequeueReusableCellProtocal> model = self.model.itemModels[index];
+    UICollectionViewCell *cell = [self dequeueCell:model index:index];
+    if (!cell) {
+        cell = [self dequeueCell:self.model index:index];
+    }
+    if (self.configureCellBlock) self.configureCellBlock(model, cell);
+    return cell;
+}
+- (UICollectionViewCell*)dequeueCell:(id<FPDequeueReusableCellProtocal>)model index:(NSInteger)index{
+    UICollectionViewCell *cell;
+    if ([model respondsToSelector:@selector(nibName)] &&
+        [model respondsToSelector:@selector(bundle)] &&
+        model.nibName && model.bundle) {
+        cell = [self.collectionContext dequeueReusableCellWithNibName:model.nibName bundle:model.bundle forSectionController:self atIndex:index];
+    }else if([model respondsToSelector:@selector(class_name)] && model.class_name){
+        cell = [self.collectionContext dequeueReusableCellOfClass:model.class_name forSectionController:self atIndex:index];
+    }
+    return cell;
+}
+-(void)didUpdateToObject:(id<FPNumberOfItemsModelProtocal>)object{
+    if ([object respondsToSelector:@selector(inset)]) {
+        self.inset = object.inset;
+    }
+    if ([object respondsToSelector:@selector(minimumLineSpacing)]) {
+        self.minimumLineSpacing = object.minimumLineSpacing;
+    }
+    if ([object respondsToSelector:@selector(minimumInteritemSpacing)]) {
+        self.minimumInteritemSpacing = object.minimumInteritemSpacing;
+    }
+    self.model = object;
+}
+@end

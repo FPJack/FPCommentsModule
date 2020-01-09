@@ -26,10 +26,11 @@
 #import <FPVideoPictureSectionController.h>
 #import "FPPreviewMoreCommentsModel.h"
 #import "FPPreviewMoreCommentsCell.h"
+#import "FPTestVC.h"
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)NSMutableArray <id<FPNestedSectionControllersModelProtocal>> *datas;
+@property (nonatomic,strong)NSMutableArray <id<FPNestedSectionControllerProtocal>> *datas;
 @end
 
 @implementation FPViewController
@@ -84,7 +85,12 @@
             CGFloat width = kSWidth - 68 - 12 * 2 - 20;
             for (int i = 0; i < 5; i ++) {
                 FPCommentSubModel *model = [FPCommentSubModel new];
-                model.sectionController = [FPCommentSubSectionController new];
+                FPCommentSubSectionController *sectionController = [FPCommentSubSectionController new];
+                sectionController.tapLinkBlock = ^(FPCommentSubSectionController * _Nonnull sectionController, id<FPHyperlinkProtocal>  _Nonnull link) {
+                    FPTestVC *vc = [FPTestVC new];
+                    [self.navigationController pushViewController:vc animated:YES];
+                };
+                model.sectionController = sectionController;
                 model.commentText = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 model.commentByUserName = @"评论人";
                 model.commentUserName = @"回复人";
@@ -187,7 +193,7 @@
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     return self.datas;
 }
-- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllersModelProtocal>)object{
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllerProtocal>)object{
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{

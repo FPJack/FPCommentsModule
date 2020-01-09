@@ -23,3 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
 @end
 NS_ASSUME_NONNULL_END
+
+
+NS_ASSUME_NONNULL_BEGIN
+@interface FPNumberOfItemsSectionController : IGListSectionController<FPSectionControllerConfigureProtocal>
+@property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
+@end
+NS_ASSUME_NONNULL_END

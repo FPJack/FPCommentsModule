@@ -10,7 +10,7 @@
 #import <FPCommentSubProtocal.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FPCommentBigModel : FPIgListBaseModel<FPNestedSectionControllersModelProtocal>
+@interface FPCommentBigModel : FPIgListBaseModel<FPNestedSectionControllerProtocal>
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
 
