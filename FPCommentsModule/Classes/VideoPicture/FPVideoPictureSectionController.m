@@ -38,14 +38,12 @@
         self.tableCell.itemSize = self.model.oneItemSize;
         self.tableCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
         self.tableCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
-
     }
-    __weak typeof(self) weakSelf = self;
+    if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell);}
     return cell;
 }
 - (void)didUpdateToObject:(id<FPVideoPictureProtocal>)object{
     self.inset = object.inset;
     self.model = object;
 }
-
 @end

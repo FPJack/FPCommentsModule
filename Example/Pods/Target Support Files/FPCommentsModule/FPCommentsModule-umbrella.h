@@ -15,10 +15,10 @@
 #import "FPCommentSubSectionController.h"
 #import "FPIgListBaseModel.h"
 #import "FPModuleProtocoal.h"
-#import "FPMainSectionController.h"
+#import "FPNestedSectionController.h"
 #import "FPVideoPictureProtocal.h"
 #import "FPVideoPictureSectionController.h"
-#import "FPMainCollectionCell.h"
+#import "FPNestedCollectionViewCell.h"
 
 FOUNDATION_EXPORT double FPCommentsModuleVersionNumber;
 FOUNDATION_EXPORT const unsigned char FPCommentsModuleVersionString[];

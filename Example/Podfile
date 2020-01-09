@@ -6,6 +6,8 @@ target 'FPCommentsModule_Example' do
   pod 'FPCommentsModule', :path => '../'
 #  pod 'HPGrowingTextView'
   pod 'FPRefresh'
+  pod 'Masonry'
+
 
   target 'FPCommentsModule_Tests' do
     inherit! :search_paths

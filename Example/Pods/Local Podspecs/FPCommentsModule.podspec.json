@@ -21,9 +21,6 @@
   "dependencies": {
     "IGListKit": [
 
-    ],
-    "Masonry": [
-
     ]
   },
   "subspecs": [

@@ -23,14 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-
-NS_ASSUME_NONNULL_BEGIN
-@protocol FPSectionControllerProtocal <NSObject>
-@required
-@property (nonatomic,strong)IGListSectionController *sectionController;
-@end
-NS_ASSUME_NONNULL_END
-
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionModelProtocal <IGListDiffable>
 @required
@@ -41,6 +33,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)CGFloat width;
 @end
 NS_ASSUME_NONNULL_END
+
+
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPSectionControllerProtocal <NSObject>
+//必须实现一个
+@property (nonatomic,strong)IGListSectionController *sectionController;
+@property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
+@end
+NS_ASSUME_NONNULL_END
+
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSubSectionModelsProtocal <NSObject>

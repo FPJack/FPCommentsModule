@@ -9,8 +9,8 @@
 
 #import "FPViewController.h"
 #import <IGListKit/IGListKit.h>
-#import <FPCommentsModule/FPMainSectionController.h>
-#import <FPMainSectionController.h>
+#import <FPCommentsModule/FPNestedSectionController.h>
+#import <FPNestedSectionController.h>
 #import <FPCommentsModule/FPModuleProtocoal.h>
 #import "FPMainModel.h"
 #import "FPUserModel.h"
@@ -94,7 +94,7 @@
                 model.width = width;
                 if (i == 0) {
                     model.inset = UIEdgeInsetsMake(10, 12, 0, 12);
-                }else if (i == 49){
+                }else if (i == 5){
                     model.inset = UIEdgeInsetsMake(0, 12, 10, 12);
                 }
                 model.sectionController.inset = model.inset;
@@ -105,14 +105,14 @@
                 model.sectionController = [FPListSectionController new];
                 model.bundle = [NSBundle mainBundle];
                 model.nibName = @"FPPreviewMoreCommentsCell";
-                model.inset = UIEdgeInsetsMake(0, 12, 0, 0);
+                model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
                 [arr addObject:model];
                 
             }
             commentModel.subSectionModels = arr;
 
             
-            FPMainSectionController *sc = [FPMainSectionController new];
+            FPNestedSectionController *sc = [FPNestedSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
             };
@@ -122,7 +122,7 @@
         {
             FPTextModel *textModel = [FPTextModel new];
             textModel.sectionController = [FPCommentContentSectionController new];
-            textModel.numberOfLines = 0;
+            textModel.numberOfLines = 2;
             textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
             [subArr addObject:textModel];
         }
@@ -174,8 +174,10 @@
         
         FPMainModel *mainModel = [FPMainModel new];
         mainModel.subSectionModels = subArr;
-        mainModel.sectionController = [FPMainSectionController new];
-        
+//        mainModel.sectionController = [FPMainSectionController new];
+        mainModel.sectionControllerBlock = ^IGListSectionController * _Nonnull(id<FPSectionModelProtocal> _Nonnull model) {
+            return [FPNestedSectionController new];
+        };
         [datas addObject:mainModel];
     }
     
@@ -186,7 +188,11 @@
     return self.datas;
 }
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPListModuleProtocoal>)object{
-    return object.sectionController;
+    if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
+        return object.sectionController;
+    }else{
+        return object.sectionControllerBlock(object);
+    }
 }
 - (nullable UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
     

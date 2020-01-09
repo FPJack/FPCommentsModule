@@ -6,9 +6,11 @@
 //
 
 #import <IGListKit/IGListKit.h>
+#import "FPModuleProtocoal.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FPVideoPictureSectionController : IGListSectionController
+@interface FPVideoPictureSectionController : IGListSectionController<FPSectionControllerConfigureProtocal>
+@property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
 
 @end
 
