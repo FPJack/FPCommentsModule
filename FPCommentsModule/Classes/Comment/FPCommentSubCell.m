@@ -21,10 +21,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        [self.contentView addSubview:self.commentLab];
-//        [self.commentLab mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.bottom.top.right.mas_equalTo(0);
-//        }];
         [self setUI];
     }
     return self;
@@ -37,7 +33,6 @@
     NSLayoutConstraint *constraint3 = [NSLayoutConstraint constraintWithItem:self.commentLab attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
     NSLayoutConstraint *constraint4 = [NSLayoutConstraint constraintWithItem:self.commentLab attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
     [self.contentView addConstraints:@[constraint1,constraint2,constraint3,constraint4]];
-
 }
 - (void)setModel:(id<FPCommentSubProtocal>)model{
     _model = model;

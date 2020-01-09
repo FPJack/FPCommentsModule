@@ -27,6 +27,7 @@
 #import "FPPreviewMoreCommentsModel.h"
 #import "FPPreviewMoreCommentsCell.h"
 #import "FPTestVC.h"
+#import <FPCommonCollectionCell.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -45,6 +46,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
     {
@@ -59,10 +61,22 @@
         }
         {
             FPTextModel *textModel = [FPTextModel new];
-            textModel.sectionController = [FPCommentContentSectionController new];
-            textModel.numberOfLines = 3;
-            textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
+            textModel.class_name = FPTextCollectionCell.class;
+            FPListSectionController *sectonController = [FPListSectionController new];
+            textModel.font = [UIFont systemFontOfSize:13];
+            sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
+                cell.label.text = item.content;
+                cell.label.numberOfLines = item.numberOfLines;
+                cell.label.font = item.font;
+            };
+            textModel.sectionController = sectonController;
+            textModel.numberOfLines = 0;
+            textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
+            textModel.inset = UIEdgeInsetsMake(20, 100, 10, 50);
+            textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
             [subArr addObject:textModel];
+            
+            
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
@@ -77,7 +91,7 @@
             model.width = width;
             [subArr addObject:model];
         }
-
+        
         {
             FPCommentBigModel *commentModel = [FPCommentBigModel new];
             
@@ -116,7 +130,7 @@
                 
             }
             commentModel.subSectionModels = arr;
-
+            
             
             FPNestedSectionController *sc = [FPNestedSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell) {
@@ -127,9 +141,20 @@
         }
         {
             FPTextModel *textModel = [FPTextModel new];
-            textModel.sectionController = [FPCommentContentSectionController new];
-            textModel.numberOfLines = 2;
-            textModel.content = @"44444FPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentContentSectionControllerFPCommentctionControllerFPCommentContentSectionControllerFPCommentContentSectionController";
+            textModel.class_name = FPTextCollectionCell.class;
+            FPListSectionController *sectonController = [FPListSectionController new];
+            textModel.font = [UIFont systemFontOfSize:15];
+            sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
+                cell.label.text = item.content;
+                cell.label.numberOfLines = item.numberOfLines;
+                cell.label.font = item.font;
+            };
+            textModel.sectionController = sectonController;
+            textModel.numberOfLines = 0;
+            textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
+            textModel.inset = UIEdgeInsetsMake(0, 50, 0, 50);
+            textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
+
             [subArr addObject:textModel];
         }
         {
@@ -175,12 +200,12 @@
             model.sources = [@[item] mutableCopy];
             [subArr addObject:model];
         }
-
-
+        
+        
         
         FPMainModel *mainModel = [FPMainModel new];
         mainModel.subSectionModels = subArr;
-//        mainModel.sectionController = [FPMainSectionController new];
+        //        mainModel.sectionController = [FPMainSectionController new];
         mainModel.sectionControllerBlock = ^IGListSectionController * _Nonnull(id<FPSectionModelProtocal> _Nonnull model) {
             return [FPNestedSectionController new];
         };
@@ -189,6 +214,7 @@
     
     self.datas = datas;
     self.adapter.collectionView = self.collectionView;
+    
 }
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     return self.datas;

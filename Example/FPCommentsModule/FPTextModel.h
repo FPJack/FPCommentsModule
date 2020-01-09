@@ -10,10 +10,12 @@
 #import "FPCommentProtocal.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FPTextModel : FPIgListBaseModel<FPSectionControllerProtocal,FPCommentContentProtocal>
+@interface FPTextModel : FPIgListBaseModel<FPSectionControllerProtocal,FPCommentContentProtocal,FPDequeueReusableCellProtocal>
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property(nonatomic,copy)NSString *content;
 @property (nonatomic,assign)int numberOfLines;
+@property (nonatomic,strong)UIFont *font;
+@property (nonatomic,strong)Class class_name;
 
 
 @end

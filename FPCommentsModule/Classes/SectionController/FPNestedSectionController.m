@@ -103,10 +103,12 @@
     if (![model respondsToSelector:@selector(size)] || CGSizeEqualToSize(model.size, CGSizeZero)) {
         if ([self.model respondsToSelector:@selector(size)] &&  !CGSizeEqualToSize(self.model.size, CGSizeZero)) {
             size = self.model.size;
-        }else{
-            return self.collectionContext.containerSize;
         }
     }
+    if (CGSizeEqualToSize(size, CGSizeZero)) {
+        return self.collectionContext.containerSize;
+    }
+    
     if (size.width <= 0) {
         return CGSizeMake(self.collectionContext.containerSize.width, size.height);
     }

@@ -14,15 +14,14 @@
 
 - (CGFloat)height{
     if (self.content != nil && self.content.length > 0) {
-        CGFloat width = kSWidth - 68 - 16;
+      CGFloat width = self.width;
         if (self.numberOfLines == 0) {
-            _height = [FPCommentHelper configurTextHeight:self.content font:kContentFont widht:width];
+            _height = [FPCommentHelper configurTextHeight:self.content font:self.font widht:width];
         }else{
-          CGFloat  cHeight = [FPCommentHelper configurTextHeight:self.content font:kContentFont widht:width];
-           CGFloat  sHeight = [FPCommentHelper configurTextHeightText:self.content font:kContentFont widht:width numberOfLines:self.numberOfLines];
+          CGFloat  cHeight = [FPCommentHelper configurTextHeight:self.content font:self.font widht:width];
+           CGFloat  sHeight = [FPCommentHelper configurTextHeightText:self.content font:self.font widht:width numberOfLines:self.numberOfLines];
             _height = sHeight > cHeight ? cHeight : sHeight;
         }
-        _height += 5 * 2;
     }
     return _height;
 }
