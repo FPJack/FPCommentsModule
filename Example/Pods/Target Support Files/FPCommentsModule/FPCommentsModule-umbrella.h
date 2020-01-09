@@ -14,6 +14,7 @@
 #import "FPCommentSubProtocal.h"
 #import "FPCommentSubSectionController.h"
 #import "FPIgListBaseModel.h"
+#import "FPModuleHelper.h"
 #import "FPModuleProtocoal.h"
 #import "FPNestedSectionController.h"
 #import "FPVideoPictureProtocal.h"
