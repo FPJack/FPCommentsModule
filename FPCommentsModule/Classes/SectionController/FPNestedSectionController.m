@@ -9,7 +9,7 @@
 #import "FPNestedCollectionViewCell.h"
 @interface FPNestedSectionController()<IGListAdapterDataSource>
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)id<FPListModuleProtocoal> model;
+@property (nonatomic,strong)id<FPNestedSectionControllersModelProtocal> model;
 @end
 @implementation FPNestedSectionController
 - (IGListAdapter *)adapter{
@@ -34,7 +34,7 @@
     }
     return cell;
 }
-- (void)didUpdateToObject:(id<FPListModuleProtocoal>)object{
+- (void)didUpdateToObject:(id<FPNestedSectionControllersModelProtocal>)object{
     self.inset = object.inset;
     self.model = object;
 }

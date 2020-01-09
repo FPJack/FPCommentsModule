@@ -8,7 +8,6 @@
 #import "FPCommentSubSectionController.h"
 #import "FPCommentSubProtocal.h"
 #import "FPCommentSubCell.h"
-
 @interface FPCommentSubSectionController()
 @property (nonatomic,strong)id<FPCommentSubProtocal> model;
 

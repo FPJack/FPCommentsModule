@@ -6,6 +6,7 @@
 //
 
 #import <IGListKit/IGListKit.h>
+
 @protocol FPHyperlinkProtocal;
 NS_ASSUME_NONNULL_BEGIN
 

@@ -29,7 +29,7 @@
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)NSMutableArray <id<FPListModuleProtocoal>> *datas;
+@property (nonatomic,strong)NSMutableArray <id<FPNestedSectionControllersModelProtocal>> *datas;
 @end
 
 @implementation FPViewController
@@ -187,7 +187,7 @@
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     return self.datas;
 }
-- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPListModuleProtocoal>)object{
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllersModelProtocal>)object{
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{

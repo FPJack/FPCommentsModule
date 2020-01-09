@@ -8,12 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <IGListKit/IGListKit.h>
 
-
+//配置cell
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerConfigureProtocal <NSObject>
 @property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
 @end
 NS_ASSUME_NONNULL_END
+
+//DequeueCell
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPDequeueReusableCellProtocal <NSObject>
 @property (nonatomic,strong)Class className;
@@ -23,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+
+//配置SectionController宽高 SectionInset
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionModelProtocal <IGListDiffable>
 @required
@@ -35,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 
+//SectionController生成
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerProtocal <NSObject>
 //必须实现一个
@@ -43,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-
+//子SectionControllers
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSubSectionModelsProtocal <NSObject>
 @required
@@ -51,13 +56,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-
+//嵌套SectionControllers
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPListModuleProtocoal <FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>
-
+@protocol FPNestedSectionControllersModelProtocal  <FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>
 @end
 NS_ASSUME_NONNULL_END
-
-
 
 
