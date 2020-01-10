@@ -69,7 +69,8 @@
         videoImageCell.itemSize = self.model.oneItemSize;
         videoImageCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
         videoImageCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
-        videoImageCell.source = [self.model.sources mutableCopy];
+        videoImageCell.source = self.model.sources;
+//        videoImageCell.source = [self.model.sources mutableCopy];
     }
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell,self);}
     return cell;

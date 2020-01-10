@@ -55,6 +55,8 @@
 - (id)createModel:(int)index{
     {
         NSMutableArray *subArr = [NSMutableArray array];
+        FPNestedSectionController *nestedSC = [FPNestedSectionController new];
+         FPNestedModel *mainModel = [FPNestedModel new];
         {
             FPUserModel *userModel = [FPUserModel new];
             userModel.userName = [NSString stringWithFormat:@"%d--Jack",index];
@@ -77,6 +79,7 @@
             FPTextModel *textModel = [FPTextModel new];
             textModel.class_name = FPTextCollectionCell.class;
             FPListSectionController *sectonController = [FPListSectionController new];
+            
             textModel.font = [UIFont systemFontOfSize:13];
             sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell,IGListSectionController * sectionController) {
                 cell.label.text = item.content;
@@ -89,8 +92,6 @@
             textModel.inset = UIEdgeInsetsMake(0, 68, 10, 50);
             textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
             [subArr addObject:textModel];
-            
-            
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
@@ -104,12 +105,19 @@
                     cell.deleteBtn.hidden = NO;
                 };
                 cell.imageVideoCell.deleteSourceBlock = ^(id  _Nonnull deleteObject, NSIndexPath * _Nonnull indexPath, FPImageVideoCell * _Nonnull cell) {
-                    [sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
-                        model.height = model.height - 20;
-                        [batchContext reloadSectionController:sectionController];
+                    item.height = 0;
+                    mainModel.height = 0;
+                    [nestedSC.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                        [batchContext reloadSectionController:nestedSC];
                     } completion:^(BOOL finished) {
                         
                     }];
+//                    [sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+//                        model.height = model.height - 20;
+//                        [batchContext reloadSectionController:sectionController];
+//                    } completion:^(BOOL finished) {
+//
+//                    }];
                 };
             };
             model.sectionController = sectionController;
@@ -245,13 +253,10 @@
         }
         
         
-        
-        FPNestedModel *mainModel = [FPNestedModel new];
+       
         mainModel.subSectionModels = subArr;
-        //        mainModel.sectionController = [FPMainSectionController new];
-        mainModel.sectionControllerBlock = ^IGListSectionController * _Nonnull(id<FPSectionModelProtocal> _Nonnull model) {
-            return [FPNestedSectionController new];
-        };
+        mainModel.inset = UIEdgeInsetsMake(5, 0, 5, 0);
+        mainModel.sectionController = nestedSC;
         return mainModel;
     }
 
