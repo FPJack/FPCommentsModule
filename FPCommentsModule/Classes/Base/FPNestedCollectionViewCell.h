@@ -7,12 +7,16 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
+
+NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic)UICollectionView *collectionView;
 @end
 NS_ASSUME_NONNULL_END
+
+
+
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -26,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+
+
+
+
 NS_ASSUME_NONNULL_BEGIN
 @interface FPTextCollectionCell : UICollectionViewCell
 @property (nonatomic,strong)UILabel *label;
@@ -36,9 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+
+
+
+
 NS_ASSUME_NONNULL_BEGIN
 @interface FPUserInfoCollectionCell : UICollectionViewCell
-
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
