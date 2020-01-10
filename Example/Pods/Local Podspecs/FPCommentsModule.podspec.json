@@ -18,12 +18,6 @@
   "platforms": {
     "ios": "9.0"
   },
-  "resource_bundles": {
-    "FPCommentsModule": [
-      "FPCommentsModule/Assets/*.png",
-      "FPCommentsModule/Assets/*.xib"
-    ]
-  },
   "dependencies": {
     "IGListKit": [
 
@@ -31,32 +25,11 @@
   },
   "subspecs": [
     {
-      "name": "Protocal",
+      "name": "Base",
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/Protocal/*"
-    },
-    {
-      "name": "Model",
-      "platforms": {
-        "ios": "9.0"
-      },
-      "source_files": "FPCommentsModule/Classes/Model/*"
-    },
-    {
-      "name": "View",
-      "platforms": {
-        "ios": "9.0"
-      },
-      "source_files": "FPCommentsModule/Classes/View/*"
-    },
-    {
-      "name": "SectionController",
-      "platforms": {
-        "ios": "9.0"
-      },
-      "source_files": "FPCommentsModule/Classes/SectionController/*"
+      "source_files": "FPCommentsModule/Classes/Base/*"
     },
     {
       "name": "Comment",
@@ -79,6 +52,11 @@
       "dependencies": {
         "FPImageVideoCell": [
 
+        ]
+      },
+      "resource_bundles": {
+        "FPCommentsModule": [
+          "FPCommentsModule/Assets/*.xib"
         ]
       }
     }

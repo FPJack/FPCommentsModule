@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
 #  s.source_files = 'FPCommentsModule/Classes/**/*'
   
-   s.resource_bundles = {
-     'FPCommentsModule' => ['FPCommentsModule/Assets/*.png','FPCommentsModule/Assets/*.xib']
-   }
+#   s.resource_bundles = {
+#     'FPCommentsModule' => ['FPCommentsModule/Assets/*.png','FPCommentsModule/Assets/*.xib']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -43,33 +43,13 @@ TODO: Add long description of the pod here.
 
 
 
-   s.subspec 'Protocal' do |p|
-   p.ios.deployment_target = '9.0'
-   
-   ##########--协议---#########
-   p.source_files = 'FPCommentsModule/Classes/Protocal/*'
-#   p.resource_bundles = {
-#     'XLPagerTabStripObjcContinue' => ['XLPagerTabStripObjcContinue/Assets/*.png','XLPagerTabStripObjcContinue/Assets/*.xib']
-#   }
-   end
-   
    ##########--模型---#########
-   s.subspec 'Model' do |m|
-   m.ios.deployment_target = '9.0'
-   m.source_files = 'FPCommentsModule/Classes/Model/*'
+   s.subspec 'Base' do |b|
+   b.ios.deployment_target = '9.0'
+   b.source_files = 'FPCommentsModule/Classes/Base/*'
    end
+
    
-   ##########--View---#########
-   s.subspec 'View' do |v|
-   v.ios.deployment_target = '9.0'
-   v.source_files = 'FPCommentsModule/Classes/View/*'
-   end
-   
-   ##########--SectionController---#########
-   s.subspec 'SectionController' do |sc|
-   sc.ios.deployment_target = '9.0'
-   sc.source_files = 'FPCommentsModule/Classes/SectionController/*'
-   end
    
    ##########--Comment---#########
    s.subspec 'Comment' do |c|
@@ -78,10 +58,15 @@ TODO: Add long description of the pod here.
    c.dependency 'TTTAttributedLabel'
    end
    
+   
    s.subspec 'VideoPicture' do |vp|
    vp.ios.deployment_target = '9.0'
    vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
-   vp.dependency 'FPImageVideoCell' 
+   vp.dependency 'FPImageVideoCell'
+   vp.resource_bundles = {
+     'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
+   }
+
    end
 
 
