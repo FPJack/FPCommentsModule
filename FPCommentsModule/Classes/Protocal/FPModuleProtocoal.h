@@ -49,6 +49,7 @@ NS_ASSUME_NONNULL_END
 //SectionController生成器
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerProtocal <NSObject>
+@optional
 //必须实现一个
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);

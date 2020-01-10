@@ -55,8 +55,6 @@
 - (void)attributedLabel:(TTTAttributedLabel *)label
 didSelectLinkWithTransitInformation:(NSDictionary *)components{
     id<FPHyperlinkProtocal> obj = components[@"obj"];
-    if (self.tapLinkBlock) {
-        self.tapLinkBlock(obj);
-    }
+    if (self.tapLinkBlock) self.tapLinkBlock(obj);
 }
 @end

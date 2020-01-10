@@ -6,9 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
-
 @interface FPModuleHelper : NSObject
 + (CGFloat)configureTextHeight:(NSString*)text font:(UIFont*)font widht:(CGFloat)width;
 + (CGFloat)configureTextHeightText:(NSString*)text font:(UIFont*)font widht:(CGFloat)width numberOfLines:(int)numberOfLines;
