@@ -45,6 +45,14 @@
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
+    for (int i = 0 ; i < 10; i ++) {
+        [datas addObject:[self createModel]];
+    }
+    self.datas = datas;
+    self.adapter.collectionView = self.collectionView;
+    
+}
+- (id)createModel{
     {
         NSMutableArray *subArr = [NSMutableArray array];
         {
@@ -98,6 +106,7 @@
                 cell.imageVideoCell.deleteSourceBlock = ^(id  _Nonnull deleteObject, NSIndexPath * _Nonnull indexPath, FPImageVideoCell * _Nonnull cell) {
                     [sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                         model.height = model.height - 20;
+                        [batchContext reloadSectionController:sectionController];
                     } completion:^(BOOL finished) {
                         
                     }];
@@ -236,11 +245,9 @@
         mainModel.sectionControllerBlock = ^IGListSectionController * _Nonnull(id<FPSectionModelProtocal> _Nonnull model) {
             return [FPNestedSectionController new];
         };
-        [datas addObject:mainModel];
+        return mainModel;
     }
-    
-    self.datas = datas;
-    self.adapter.collectionView = self.collectionView;
+
     
 }
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{

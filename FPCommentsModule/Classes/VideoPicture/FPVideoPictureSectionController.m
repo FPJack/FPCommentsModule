@@ -24,7 +24,6 @@
     return _height;
 }
 @end
-
 @interface FPVideoPictureCollectionCell()
 @property (nonatomic,strong)FPImageVideoCell *imageVideoCell;
 @end
@@ -48,8 +47,6 @@
     self.imageVideoCell.frame = self.contentView.bounds;
 }
 @end
-
-
 @interface FPVideoPictureSectionController()
 @property (nonatomic,strong)id <FPVideoPictureProtocal> model;
 @end
@@ -65,7 +62,6 @@
     FPVideoPictureCollectionCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPVideoPictureCollectionCell.class forSectionController:self atIndex:index];
     FPImageVideoCell *videoImageCell = cell.imageVideoCell;
     {
-        videoImageCell.source = self.model.sources;
         videoImageCell.type = self.model.type;
         videoImageCell.minimumLineSpacing = self.model.minimumLineSpacing;
         videoImageCell.minimumInteritemSpacing = self.model.minimumInteritemSpacing;
@@ -73,6 +69,7 @@
         videoImageCell.itemSize = self.model.oneItemSize;
         videoImageCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
         videoImageCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
+        videoImageCell.source = [self.model.sources mutableCopy];
     }
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell,self);}
     return cell;
