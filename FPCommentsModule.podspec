@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
 #  s.source_files = 'FPCommentsModule/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'FPCommentsModule' => ['FPCommentsModule/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'FPCommentsModule' => ['FPCommentsModule/Assets/*.png','FPCommentsModule/Assets/*.xib']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -81,7 +81,7 @@ TODO: Add long description of the pod here.
    s.subspec 'VideoPicture' do |vp|
    vp.ios.deployment_target = '9.0'
    vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
-   vp.dependency 'FPImageVideoCell'
+   vp.dependency 'FPImageVideoCell' 
    end
 
 

@@ -18,6 +18,12 @@
   "platforms": {
     "ios": "9.0"
   },
+  "resource_bundles": {
+    "FPCommentsModule": [
+      "FPCommentsModule/Assets/*.png",
+      "FPCommentsModule/Assets/*.xib"
+    ]
+  },
   "dependencies": {
     "IGListKit": [
 

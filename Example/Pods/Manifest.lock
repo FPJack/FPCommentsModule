@@ -21,8 +21,7 @@ PODS:
     - IGListKit
   - FPCommentsModule/View (0.1.0):
     - IGListKit
-  - FPImageVideoCell (0.2.0):
-    - SDWebImage
+  - FPImageVideoCell (0.2.2)
   - FPRefresh (0.1.3):
     - MJRefresh
   - IGListDiffKit (4.0.0)
@@ -39,16 +38,18 @@ DEPENDENCIES:
   - FPCommentsModule (from `../`)
   - FPRefresh
   - Masonry
+  - SDWebImage
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - FPImageVideoCell
+    - SDWebImage
+  trunk:
     - FPRefresh
     - IGListDiffKit
     - IGListKit
     - Masonry
     - MJRefresh
-    - SDWebImage
     - TTTAttributedLabel
 
 EXTERNAL SOURCES:
@@ -56,8 +57,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FPCommentsModule: 0ec57383cba6d08550ef3324f78ffdef8e2fe24e
-  FPImageVideoCell: e2ec103953b1aba5bef22baf7683349cb174527f
+  FPCommentsModule: 1c6ddda2eaa389d0abae64e8714d7250b8b5ca17
+  FPImageVideoCell: e0c1a0df04dabda2cb97acf8f10cf2fa01796292
   FPRefresh: 446483b154c6b363d4f56f6b69a59f8f87c6cd1f
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
@@ -66,6 +67,6 @@ SPEC CHECKSUMS:
   SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 34ec9416a2138f431c7cfc9d8fa9e74ef0a0951f
+PODFILE CHECKSUM: f198f7e8094aa12a9ce295a1b63fcd26e6727c02
 
 COCOAPODS: 1.9.0.beta.2

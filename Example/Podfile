@@ -1,5 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
-
 platform :ios, '9.0'
 
 target 'FPCommentsModule_Example' do
@@ -7,6 +7,7 @@ target 'FPCommentsModule_Example' do
 #  pod 'HPGrowingTextView'
   pod 'FPRefresh'
   pod 'Masonry'
+  pod 'SDWebImage'
 
 
   target 'FPCommentsModule_Tests' do

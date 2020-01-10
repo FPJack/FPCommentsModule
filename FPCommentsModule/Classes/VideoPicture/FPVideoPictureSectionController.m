@@ -15,6 +15,7 @@
 - (FPImageVideoCell *)tableCell{
     if (!_tableCell) {
         _tableCell = [[FPImageVideoCell alloc]initWithFrame:CGRectZero];
+        _tableCell.loadNetworkImageBlock = self.loadNetworkImageBlock;
     }
     return _tableCell;
 }

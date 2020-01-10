@@ -27,7 +27,8 @@
 #import "FPPreviewMoreCommentsModel.h"
 #import "FPPreviewMoreCommentsCell.h"
 #import "FPTestVC.h"
-#import <FPCommonCollectionCell.h>
+#import <FPNestedCollectionViewCell.h>
+#import <SDWebImage/SDWebImage.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -53,10 +54,17 @@
         NSMutableArray *subArr = [NSMutableArray array];
         {
             FPUserModel *userModel = [FPUserModel new];
-            userModel.sectionController = [FPCommentUserInfSectionController new];
-            userModel.height = 50;
+            FPListSectionController *sectonController = [FPListSectionController new];
+            sectonController.configureCellBlock = ^(id  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell) {
+                cell.imgView.backgroundColor = [UIColor orangeColor];
+                
+            };
+            userModel.sectionController = sectonController;
+            userModel.height = 60;
             userModel.userName = @"dkdkd";
             userModel.time = @"2019";
+            userModel.nibName = @"FPUserInfoCollectionCell";
+            userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
             [subArr addObject:userModel];
         }
         {
@@ -80,7 +88,11 @@
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
-            model.sectionController = [FPVideoPictureSectionController new];
+            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
+            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            };
+            model.sectionController = sectionController;
             model.column = 3;
             model.minimumLineSpacing = 10;
             model.minimumInteritemSpacing = 10;
@@ -167,11 +179,16 @@
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
-            model.sectionController = [FPVideoPictureSectionController new];
             model.column = 3;
             model.minimumLineSpacing = 10;
             model.minimumInteritemSpacing = 10;
             model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
+            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
+            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            };
+            model.sectionController = sectionController;
+
             model.type = FPImageTypeShowImage;
             model.maxImageCount = 1;
             model.oneItemSize = CGSizeMake(200, 300);
@@ -182,7 +199,6 @@
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
-            model.sectionController = [FPVideoPictureSectionController new];
             model.column = 3;
             model.minimumLineSpacing = 10;
             model.minimumInteritemSpacing = 10;
@@ -195,6 +211,11 @@
             item.coverUrl =  @"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg";
             NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
             item.videoUrl = url;
+            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
+            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            };
+            model.sectionController = sectionController;
             item.itemSize = CGSizeMake(300, 300);
             model.oneItemSize = item.itemSize;
             model.sources = [@[item] mutableCopy];
