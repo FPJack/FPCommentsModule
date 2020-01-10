@@ -29,6 +29,7 @@
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     FPNestedCollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
     self.adapter.collectionView = cell.collectionView;
+    [self.adapter reloadDataWithCompletion:nil];
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {
         self.configureCellBlock(self.model, cell,self);
     }

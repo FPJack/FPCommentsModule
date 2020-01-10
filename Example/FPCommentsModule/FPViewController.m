@@ -46,18 +46,18 @@
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
     for (int i = 0 ; i < 10; i ++) {
-        [datas addObject:[self createModel]];
+        [datas addObject:[self createModel:i]];
     }
     self.datas = datas;
     self.adapter.collectionView = self.collectionView;
     
 }
-- (id)createModel{
+- (id)createModel:(int)index{
     {
         NSMutableArray *subArr = [NSMutableArray array];
         {
             FPUserModel *userModel = [FPUserModel new];
-            userModel.userName = @"Jack";
+            userModel.userName = [NSString stringWithFormat:@"%d--Jack",index];
             userModel.time = @"2019-09-02";
             FPListSectionController *sectonController = [FPListSectionController new];
             sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
@@ -134,6 +134,10 @@
                 cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
                     [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
                 };
+                cell.imageVideoCell.configureCell = ^(FPImageCCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSArray * _Nonnull source) {
+                    cell.deleteBtn.hidden = YES;
+                };
+
             };
             model.sectionController = sectionController;
 
@@ -163,6 +167,9 @@
             sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
                     [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
+                cell.imageVideoCell.configureCell = ^(FPImageCCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSArray * _Nonnull source) {
+                    cell.deleteBtn.hidden = YES;
                 };
             };
             model.sectionController = sectionController;
@@ -202,7 +209,7 @@
                 model.textFont = [UIFont systemFontOfSize:13];
                 model.sectionController = sectionController;
                 model.commentText = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
-                model.commentByUserName = @"评论人";
+                model.commentByUserName = [NSString stringWithFormat:@"%d--评论人",i * index];
                 model.commentUserName = @"回复人";
                 model.commentByUserId = @"444";
                 model.commentUserId = @"333";
