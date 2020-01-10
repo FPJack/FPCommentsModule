@@ -11,10 +11,8 @@
 #import <FPCommentsModule/FPNestedSectionController.h>
 #import <FPNestedSectionController.h>
 #import <FPCommentsModule/FPModuleProtocoal.h>
-#import "FPMainModel.h"
-#import "FPUserModel.h"
+
 #import "FPCommentUserInfSectionController.h"
-#import "FPTextModel.h"
 #import "FPCommentContentSectionController.h"
 #import "FPCommentBigModel.h"
 
@@ -22,7 +20,6 @@
 #import <FPCommentSubCell.h>
 #import <FPCommentSubSectionController.h>
 #import <FPVideoPictureSectionController.h>
-#import "FPPreviewMoreCommentsModel.h"
 #import "FPPreviewMoreCommentsCell.h"
 #import "FPTestVC.h"
 #import <FPNestedCollectionViewCell.h>
@@ -52,15 +49,18 @@
         NSMutableArray *subArr = [NSMutableArray array];
         {
             FPUserModel *userModel = [FPUserModel new];
+            userModel.userName = @"Jack";
+            userModel.time = @"2019-09-02";
             FPListSectionController *sectonController = [FPListSectionController new];
-            sectonController.configureCellBlock = ^(id  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell) {
+            sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell) {
                 cell.imgView.backgroundColor = [UIColor orangeColor];
-                
+                cell.label1.text = item.userName;
+                cell.label2.text = item.time;
+                cell.imgView.layer.cornerRadius = 22.5;
+                cell.imgView.layer.masksToBounds = YES;
             };
             userModel.sectionController = sectonController;
             userModel.height = 60;
-            userModel.userName = @"dkdkd";
-            userModel.time = @"2019";
             userModel.nibName = @"FPUserInfoCollectionCell";
             userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
             [subArr addObject:userModel];
@@ -78,7 +78,7 @@
             textModel.sectionController = sectonController;
             textModel.numberOfLines = 0;
             textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
-            textModel.inset = UIEdgeInsetsMake(20, 100, 10, 50);
+            textModel.inset = UIEdgeInsetsMake(0, 68, 10, 50);
             textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
             [subArr addObject:textModel];
             
@@ -97,14 +97,77 @@
             model.column = 3;
             model.minimumLineSpacing = 10;
             model.minimumInteritemSpacing = 10;
-            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
+            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
             model.type = FPImageTypeShowImage;
-            model.inset = UIEdgeInsetsMake(5, 68, 20, 20);
+            model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
             CGFloat width = kSWidth - 68 - 20;
             model.width = width;
             [subArr addObject:model];
         }
-        
+        {
+            FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.column = 3;
+            model.minimumLineSpacing = 10;
+            model.minimumInteritemSpacing = 10;
+            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
+            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
+            };
+            model.sectionController = sectionController;
+
+            model.type = FPImageTypeShowImage;
+            model.maxImageCount = 1;
+            model.oneItemSize = CGSizeMake(200, 220);
+            model.inset = UIEdgeInsetsMake(10, 68, 10, 20);
+            CGFloat width = kSWidth - 68 - 20;
+            model.width = width;
+            [subArr addObject:model];
+        }
+        {
+            FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.column = 3;
+            model.minimumLineSpacing = 10;
+            model.minimumInteritemSpacing = 10;
+            model.type = FPImageTypeShowVideo;
+            model.maxVideoCount = 1;
+            model.inset = UIEdgeInsetsMake(10, 68, 5, 20);
+            CGFloat width = kSWidth - 68 - 20;
+            model.width = width;
+            FPVideoItem *item = [FPVideoItem new];
+            item.coverUrl =  @"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg";
+            NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
+            item.videoUrl = url;
+            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
+            };
+            model.sectionController = sectionController;
+            item.itemSize = CGSizeMake(150, 150);
+            model.oneItemSize = item.itemSize;
+            model.sources = [@[item] mutableCopy];
+            [subArr addObject:model];
+        }
+
+        {
+            FPTextModel *model = [FPTextModel new];
+            FPListSectionController *sectionController = [FPListSectionController new];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
+                cell.label.text = @"两小时前";
+                cell.label.font = [UIFont systemFontOfSize:12];
+                cell.label.textColor = [UIColor grayColor];
+            };
+            model.sectionController = sectionController;
+            model.class_name = FPTextCollectionCell.class;
+            model.height = 30;
+            model.inset = UIEdgeInsetsMake(10, 68, 10, 0);
+            [subArr addObject:model];
+        }
+
         {
             FPCommentBigModel *commentModel = [FPCommentBigModel new];
             
@@ -135,10 +198,11 @@
                 [arr addObject:model];
             }
             {
-                FPPreviewMoreCommentsModel *model = [FPPreviewMoreCommentsModel new];
+                FPTextModel *model = [FPTextModel new];
                 model.sectionController = [FPListSectionController new];
                 model.bundle = [NSBundle mainBundle];
                 model.nibName = @"FPPreviewMoreCommentsCell";
+                model.height = 30;
                 model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
                 [arr addObject:model];
                 
@@ -153,84 +217,10 @@
             commentModel.sectionController = sc;
             [subArr addObject:commentModel];
         }
-        {
-            FPTextModel *textModel = [FPTextModel new];
-            textModel.class_name = FPTextCollectionCell.class;
-            FPListSectionController *sectonController = [FPListSectionController new];
-            textModel.font = [UIFont systemFontOfSize:15];
-            sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
-                cell.label.text = item.content;
-                cell.label.numberOfLines = item.numberOfLines;
-                cell.label.font = item.font;
-            };
-            textModel.sectionController = sectonController;
-            textModel.numberOfLines = 0;
-            textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
-            textModel.inset = UIEdgeInsetsMake(0, 50, 0, 50);
-            textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
-
-            [subArr addObject:textModel];
-        }
-        {
-            FPUserModel *userModel = [FPUserModel new];
-            userModel.sectionController = [FPCommentUserInfSectionController new];
-            userModel.height = 50;
-            userModel.userName = @"dkdkd";
-            userModel.time = @"2019";
-            [subArr addObject:userModel];
-        }
-        {
-            FPVideoPictureModel *model = [FPVideoPictureModel new];
-            model.column = 3;
-            model.minimumLineSpacing = 10;
-            model.minimumInteritemSpacing = 10;
-            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
-            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
-                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
-                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
-                };
-            };
-            model.sectionController = sectionController;
-
-            model.type = FPImageTypeShowImage;
-            model.maxImageCount = 1;
-            model.oneItemSize = CGSizeMake(200, 300);
-            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
-            CGFloat width = kSWidth - 68 - 20;
-            model.width = width;
-            [subArr addObject:model];
-        }
-        {
-            FPVideoPictureModel *model = [FPVideoPictureModel new];
-            model.column = 3;
-            model.minimumLineSpacing = 10;
-            model.minimumInteritemSpacing = 10;
-            model.type = FPImageTypeShowVideo;
-            model.maxVideoCount = 1;
-            model.inset = UIEdgeInsetsMake(20, 68, 20, 20);
-            CGFloat width = kSWidth - 68 - 20;
-            model.width = width;
-            FPVideoItem *item = [FPVideoItem new];
-            item.coverUrl =  @"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg";
-            NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
-            item.videoUrl = url;
-            FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
-                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
-                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
-                };
-            };
-            model.sectionController = sectionController;
-            item.itemSize = CGSizeMake(300, 300);
-            model.oneItemSize = item.itemSize;
-            model.sources = [@[item] mutableCopy];
-            [subArr addObject:model];
-        }
         
         
         
-        FPMainModel *mainModel = [FPMainModel new];
+        FPNestedModel *mainModel = [FPNestedModel new];
         mainModel.subSectionModels = subArr;
         //        mainModel.sectionController = [FPMainSectionController new];
         mainModel.sectionControllerBlock = ^IGListSectionController * _Nonnull(id<FPSectionModelProtocal> _Nonnull model) {

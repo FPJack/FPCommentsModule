@@ -56,6 +56,8 @@ TODO: Add long description of the pod here.
    c.ios.deployment_target = '9.0'
    c.source_files = 'FPCommentsModule/Classes/Comment/*'
    c.dependency 'TTTAttributedLabel'
+   c.dependency 'FPCommentsModule/Base'
+
    end
    
    
@@ -63,6 +65,7 @@ TODO: Add long description of the pod here.
    vp.ios.deployment_target = '9.0'
    vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
    vp.dependency 'FPImageVideoCell'
+   vp.dependency 'FPCommentsModule/Base'
    vp.resource_bundles = {
      'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
    }

@@ -40,6 +40,9 @@
       "dependencies": {
         "TTTAttributedLabel": [
 
+        ],
+        "FPCommentsModule/Base": [
+
         ]
       }
     },
@@ -51,6 +54,9 @@
       "source_files": "FPCommentsModule/Classes/VideoPicture/*",
       "dependencies": {
         "FPImageVideoCell": [
+
+        ],
+        "FPCommentsModule/Base": [
 
         ]
       },

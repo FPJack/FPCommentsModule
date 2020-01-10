@@ -7,9 +7,11 @@ PODS:
   - FPCommentsModule/Base (0.1.0):
     - IGListKit
   - FPCommentsModule/Comment (0.1.0):
+    - FPCommentsModule/Base
     - IGListKit
     - TTTAttributedLabel
   - FPCommentsModule/VideoPicture (0.1.0):
+    - FPCommentsModule/Base
     - FPImageVideoCell
     - IGListKit
   - FPImageVideoCell (0.2.2)
@@ -48,7 +50,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FPCommentsModule: 342b00e7cba5315b01ee551ba958bc2269ad97fb
+  FPCommentsModule: 779fbb6d4d8ad0cce0e4d905c55c78640b55930d
   FPImageVideoCell: e0c1a0df04dabda2cb97acf8f10cf2fa01796292
   FPRefresh: 446483b154c6b363d4f56f6b69a59f8f87c6cd1f
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
