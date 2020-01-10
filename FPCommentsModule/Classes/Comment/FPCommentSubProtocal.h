@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPCommentSubProtocal <FPSectionModelProtocal,FPSectionControllerProtocal>
+@required
+@property (nonatomic,strong)UIFont *textFont;
+@optional
 @property(nonatomic,copy)NSString *parentId;
 @property(nonatomic,copy)NSString *commentId;
 @property(nonatomic,copy)NSString *commentUserId;

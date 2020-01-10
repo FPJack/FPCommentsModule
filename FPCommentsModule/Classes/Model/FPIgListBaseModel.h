@@ -19,15 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-NS_ASSUME_NONNULL_BEGIN
-@interface FPHyperlinkModel : NSObject<FPHyperlinkProtocal>
-@property(nonatomic,assign)NSRange range;
-@property(nonatomic,copy)NSString *text;
-@property(nonatomic,copy)NSString *mid;
-@property(nonatomic,assign)BOOL enableTap;
-@property(nonatomic,strong)NSDictionary* configure;
-@end
-NS_ASSUME_NONNULL_END
 
 
 

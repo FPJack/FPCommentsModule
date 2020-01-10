@@ -17,7 +17,7 @@
 #import "FPTextModel.h"
 #import "FPCommentContentSectionController.h"
 #import "FPCommentBigModel.h"
-#import "FPCommentSubModel.h"
+
 #import "FPCommentReplayContainerController.h"
 #import <FPCommentSubCell.h>
 #import <FPCommentSubSectionController.h>
@@ -117,6 +117,7 @@
                     FPTestVC *vc = [FPTestVC new];
                     [self.navigationController pushViewController:vc animated:YES];
                 };
+                model.textFont = [UIFont systemFontOfSize:13];
                 model.sectionController = sectionController;
                 model.commentText = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 model.commentByUserName = @"评论人";

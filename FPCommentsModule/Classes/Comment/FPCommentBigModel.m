@@ -1,17 +1,19 @@
 //
-//  FPCommentSubModel.m
+//  FPCommentBigModel.m
 //  FPCommentsModule_Example
 //
 //  Created by fanpeng on 2020/1/4.
 //  Copyright © 2020 FPJack. All rights reserved.
 //
 
-#import "FPCommentSubModel.h"
-
-#define kCommentFont [UIFont systemFontOfSize:13]
-
-#define kSWidth [UIScreen mainScreen].bounds.size.width
+#import "FPCommentBigModel.h"
 #import <TTTAttributedLabel/TTTAttributedLabel.h>
+
+@implementation FPHyperlinkModel
+@end
+
+
+
 static TTTAttributedLabel *label;
 @implementation FPCommentSubModel
 @synthesize height = _height;
@@ -26,7 +28,7 @@ static TTTAttributedLabel *label;
         NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
         paragraphStyle.lineSpacing = 3;
         [label setText:self.attrText.string afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
-            [mutableAttributedString setAttributes:@{NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle} range:NSMakeRange(0, mutableAttributedString.length)];
+            [mutableAttributedString setAttributes:@{NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle} range:NSMakeRange(0, mutableAttributedString.length)];
             return mutableAttributedString;
         }];
        _height =  ceil([label sizeThatFits:CGSizeMake(width, MAXFLOAT)].height);
@@ -50,7 +52,7 @@ static TTTAttributedLabel *label;
                 model.mid = self.commentUserId;
                 model.text = self.commentUserName;
                 model.enableTap = YES;
-                model.configure = @{NSForegroundColorAttributeName : highColor,NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle};
+                model.configure = @{NSForegroundColorAttributeName : highColor,NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle};
                 [links addObject:model];
                 [mAttr appendAttributedString:userAttr];
         }
@@ -62,7 +64,7 @@ static TTTAttributedLabel *label;
                 model.range = range;
                 model.enableTap = NO;
                 model.text = attr.string;
-                model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle};
+                model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle};
                 [links addObject:model];
                 [mAttr appendAttributedString:attr];
         }
@@ -75,7 +77,7 @@ static TTTAttributedLabel *label;
                 model.mid = self.commentByUserId;
                 model.text = self.commentByUserName;
                 model.enableTap = YES;
-                model.configure = @{NSForegroundColorAttributeName : highColor,NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle};
+                model.configure = @{NSForegroundColorAttributeName : highColor,NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle};
                 [links addObject:model];
             [mAttr appendAttributedString:commentAttr];
         }
@@ -87,7 +89,7 @@ static TTTAttributedLabel *label;
                 model.range = range;
                 model.enableTap = NO;
                 model.text = attr.string;
-                model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle};
+                model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle};
                 [links addObject:model];
                 [mAttr appendAttributedString:attr];
         }
@@ -101,14 +103,32 @@ static TTTAttributedLabel *label;
             model.mid = self.commentId;
             model.text = attr.string;
             model.enableTap = NO;
-            model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : kCommentFont,NSParagraphStyleAttributeName:paragraphStyle};
+            model.configure = @{NSForegroundColorAttributeName : norColor,NSFontAttributeName : self.textFont,NSParagraphStyleAttributeName:paragraphStyle};
             [links addObject:model];
             [mAttr appendAttributedString:attr];
         }
         self.links = links;
         _attrText = mAttr;
-        
     }
     return _attrText;
+}
+@end
+
+
+@implementation FPCommentBigModel
+@synthesize height = _height;
+- (CGFloat)height{
+    if (_height == 0 && self.subSectionModels.count > 0) {
+        __block CGFloat height = 0;
+        [self.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            height += (obj.height + obj.inset.bottom + obj.inset.top);
+        }];
+        height += (self.inset.bottom + self.inset.top);
+        _height = height;
+    }
+    return _height;
+}
+- (UIEdgeInsets)inset{
+    return UIEdgeInsetsMake(0, 68, 0, 20);
 }
 @end

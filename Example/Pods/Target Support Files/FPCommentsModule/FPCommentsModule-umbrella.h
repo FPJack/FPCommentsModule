@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "FPCommentBigModel.h"
 #import "FPCommentSubCell.h"
 #import "FPCommentSubProtocal.h"
 #import "FPCommentSubSectionController.h"

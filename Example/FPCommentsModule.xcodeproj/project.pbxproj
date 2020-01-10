@@ -65,8 +65,6 @@
 		04BBF0CD23C0639A001DCAB7 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF0C923C0639A001DCAB7 /* LICENSE.txt */; };
 		04BBF0D023C06488001DCAB7 /* FPCommentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */; };
 		04BBF0D423C06B01001DCAB7 /* FPTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0D323C06B01001DCAB7 /* FPTextModel.m */; };
-		04BBF0DB23C06F19001DCAB7 /* FPCommentBigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0DA23C06F19001DCAB7 /* FPCommentBigModel.m */; };
-		04BBF0DE23C06F26001DCAB7 /* FPCommentSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0DD23C06F26001DCAB7 /* FPCommentSubModel.m */; };
 		5E1303E22CC09F1455E3E818 /* Pods_FPCommentsModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -195,10 +193,6 @@
 		04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentHelper.m; sourceTree = "<group>"; };
 		04BBF0D223C06B01001DCAB7 /* FPTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTextModel.h; sourceTree = "<group>"; };
 		04BBF0D323C06B01001DCAB7 /* FPTextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTextModel.m; sourceTree = "<group>"; };
-		04BBF0D923C06F19001DCAB7 /* FPCommentBigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPCommentBigModel.h; sourceTree = "<group>"; };
-		04BBF0DA23C06F19001DCAB7 /* FPCommentBigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPCommentBigModel.m; sourceTree = "<group>"; };
-		04BBF0DC23C06F26001DCAB7 /* FPCommentSubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPCommentSubModel.h; sourceTree = "<group>"; };
-		04BBF0DD23C06F26001DCAB7 /* FPCommentSubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPCommentSubModel.m; sourceTree = "<group>"; };
 		0A785B1AF93FC82DE9D7F6CE /* Pods-FPCommentsModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCommentsModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2787FEE5C00616CCB645CC74 /* Pods-FPCommentsModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCommentsModule_Example.release.xcconfig"; path = "Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49E8A0E4E275ADBFFCD9056D /* FPCommentsModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FPCommentsModule.podspec; path = ../FPCommentsModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -536,10 +530,6 @@
 		04BBF0D523C06E63001DCAB7 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
-				04BBF0D923C06F19001DCAB7 /* FPCommentBigModel.h */,
-				04BBF0DA23C06F19001DCAB7 /* FPCommentBigModel.m */,
-				04BBF0DC23C06F26001DCAB7 /* FPCommentSubModel.h */,
-				04BBF0DD23C06F26001DCAB7 /* FPCommentSubModel.m */,
 			);
 			name = Comment;
 			sourceTree = "<group>";
@@ -857,7 +847,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BBF0DE23C06F26001DCAB7 /* FPCommentSubModel.m in Sources */,
 				04BBF0A623C062E5001DCAB7 /* FPCommentToolView.m in Sources */,
 				04BBF0A823C062E5001DCAB7 /* FPLinkModel.m in Sources */,
 				04BBF0A923C062E5001DCAB7 /* FPCommentModel.m in Sources */,
@@ -893,7 +882,6 @@
 				04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */,
 				04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */,
 				04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */,
-				04BBF0DB23C06F19001DCAB7 /* FPCommentBigModel.m in Sources */,
 				04BBF0BD23C062E5001DCAB7 /* FPCommentExpandSectionController.m in Sources */,
 				04BBF0A723C062E5001DCAB7 /* FPCommentAccessoryView.m in Sources */,
 				04BBF02E23C05D15001DCAB7 /* FPUserModel.m in Sources */,
