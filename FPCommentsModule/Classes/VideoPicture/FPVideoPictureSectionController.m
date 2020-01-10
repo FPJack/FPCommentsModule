@@ -6,19 +6,54 @@
 //
 
 #import "FPVideoPictureSectionController.h"
-#import "FPVideoPictureProtocal.h"
+@implementation FPVideoPictureModel
+@synthesize height = _height;
+- (CGFloat)height{
+    if (!_height) {
+        if (self.sources.count == 1 && !CGSizeEqualToSize(self.oneItemSize, CGSizeZero)) {
+            _height = self.oneItemSize.height;
+        }else{
+            NSInteger column = self.column <= 0 ? 1 : self.column;
+            NSInteger line = (self.sources.count - 1)/column + 1;
+            CGFloat itemWidth = (self.width - (column - 1) * self.minimumInteritemSpacing)/column;
+            CGFloat itemHeight = itemWidth * line;
+            CGFloat spaceHeight = (line - 1) * self.minimumLineSpacing;
+            _height = itemHeight + spaceHeight;
+        }
+    }
+    return _height;
+}
+@end
+
+@interface FPVideoPictureCollectionCell()
+@property (nonatomic,strong)FPImageVideoCell *imageVideoCell;
+@end
+@implementation FPVideoPictureCollectionCell
+- (FPImageVideoCell *)imageVideoCell{
+    if (!_imageVideoCell) {
+        _imageVideoCell = [[FPImageVideoCell alloc]initWithFrame:CGRectZero];
+    }
+    return _imageVideoCell;
+}
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self.contentView addSubview:self.imageVideoCell];
+    }
+    return self;
+}
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.imageVideoCell.frame = self.contentView.bounds;
+}
+@end
+
+
 @interface FPVideoPictureSectionController()
 @property (nonatomic,strong)id <FPVideoPictureProtocal> model;
-@property (nonatomic,strong)FPImageVideoCell *tableCell;
 @end
 @implementation FPVideoPictureSectionController
-- (FPImageVideoCell *)tableCell{
-    if (!_tableCell) {
-        _tableCell = [[FPImageVideoCell alloc]initWithFrame:CGRectZero];
-        _tableCell.loadNetworkImageBlock = self.loadNetworkImageBlock;
-    }
-    return _tableCell;
-}
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
     if (width <= 0) {
@@ -27,18 +62,17 @@
     return CGSizeMake(width, self.model.height);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
-    UICollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:UICollectionViewCell.class forSectionController:self atIndex:index];
-    [cell.contentView addSubview:self.tableCell];
-    self.tableCell.frame = CGRectMake(0, 0, [self sizeForItemAtIndex:index].width, [self sizeForItemAtIndex:index].height);
+    FPVideoPictureCollectionCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPVideoPictureCollectionCell.class forSectionController:self atIndex:index];
+    FPImageVideoCell *videoImageCell = cell.imageVideoCell;
     {
-        self.tableCell.source = self.model.sources;
-        self.tableCell.type = self.model.type;
-        self.tableCell.minimumLineSpacing = self.model.minimumLineSpacing;
-        self.tableCell.minimumInteritemSpacing = self.model.minimumInteritemSpacing;
-        self.tableCell.column = self.model.column;
-        self.tableCell.itemSize = self.model.oneItemSize;
-        self.tableCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
-        self.tableCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
+        videoImageCell.source = self.model.sources;
+        videoImageCell.type = self.model.type;
+        videoImageCell.minimumLineSpacing = self.model.minimumLineSpacing;
+        videoImageCell.minimumInteritemSpacing = self.model.minimumInteritemSpacing;
+        videoImageCell.column = self.model.column;
+        videoImageCell.itemSize = self.model.oneItemSize;
+        videoImageCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
+        videoImageCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
     }
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell);}
     return cell;
@@ -48,3 +82,4 @@
     self.model = object;
 }
 @end
+

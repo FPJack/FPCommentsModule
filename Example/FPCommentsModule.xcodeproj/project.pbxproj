@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812C823C57F9900311887 /* FPVideoPictureModel.m */; };
 		041812CB23C5A17400311887 /* example.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041812CA23C5A17400311887 /* example.mp4 */; };
 		041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */; };
 		041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */; };
@@ -99,8 +98,6 @@
 
 /* Begin PBXFileReference section */
 		025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCommentsModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		041812C723C57F9900311887 /* FPVideoPictureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPVideoPictureModel.h; sourceTree = "<group>"; };
-		041812C823C57F9900311887 /* FPVideoPictureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPVideoPictureModel.m; sourceTree = "<group>"; };
 		041812CA23C5A17400311887 /* example.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.mp4; sourceTree = "<group>"; };
 		041812CC23C5A4BF00311887 /* FPPreviewMoreCommentsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPreviewMoreCommentsCell.h; sourceTree = "<group>"; };
 		041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPreviewMoreCommentsCell.m; sourceTree = "<group>"; };
@@ -262,8 +259,6 @@
 		041812C623C57F8600311887 /* PictureVideo */ = {
 			isa = PBXGroup;
 			children = (
-				041812C723C57F9900311887 /* FPVideoPictureModel.h */,
-				041812C823C57F9900311887 /* FPVideoPictureModel.m */,
 			);
 			name = PictureVideo;
 			sourceTree = "<group>";
@@ -874,7 +869,6 @@
 				0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */,
 				04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */,
 				04BBF03223C05E25001DCAB7 /* FPMainModel.m in Sources */,
-				041812C923C57F9900311887 /* FPVideoPictureModel.m in Sources */,
 				04BBF0A023C062E5001DCAB7 /* ImageLabelWHCell.m in Sources */,
 				04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */,
 				04BBF0AD23C062E5001DCAB7 /* FPBottomCommentView.m in Sources */,

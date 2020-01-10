@@ -13,6 +13,5 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPCommentBigModel : FPIgListBaseModel<FPNestedSectionControllerProtocal>
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
-
 @end
 NS_ASSUME_NONNULL_END

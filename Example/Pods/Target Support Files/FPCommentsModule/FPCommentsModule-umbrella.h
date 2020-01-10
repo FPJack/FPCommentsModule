@@ -17,9 +17,7 @@
 #import "FPModuleHelper.h"
 #import "FPModuleProtocoal.h"
 #import "FPNestedSectionController.h"
-#import "FPVideoPictureProtocal.h"
 #import "FPVideoPictureSectionController.h"
-#import "FPCommonCollectionCell.h"
 #import "FPNestedCollectionViewCell.h"
 
 FOUNDATION_EXPORT double FPCommentsModuleVersionNumber;

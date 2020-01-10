@@ -6,7 +6,6 @@
 //  Copyright (c) 2020 FPJack. All rights reserved.
 //
 #define kSWidth [UIScreen mainScreen].bounds.size.width
-
 #import "FPViewController.h"
 #import <IGListKit/IGListKit.h>
 #import <FPCommentsModule/FPNestedSectionController.h>
@@ -22,7 +21,6 @@
 #import "FPCommentReplayContainerController.h"
 #import <FPCommentSubCell.h>
 #import <FPCommentSubSectionController.h>
-#import "FPVideoPictureModel.h"
 #import <FPVideoPictureSectionController.h>
 #import "FPPreviewMoreCommentsModel.h"
 #import "FPPreviewMoreCommentsCell.h"
@@ -89,8 +87,11 @@
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
-                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+                cell.imageVideoCell.cornerRadius = 5;
+                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
             };
             model.sectionController = sectionController;
             model.column = 3;
@@ -184,8 +185,10 @@
             model.minimumInteritemSpacing = 10;
             model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
-                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
             };
             model.sectionController = sectionController;
 
@@ -212,8 +215,10 @@
             NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
             item.videoUrl = url;
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
-                [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+                cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
+                    [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
             };
             model.sectionController = sectionController;
             item.itemSize = CGSizeMake(300, 300);
@@ -248,7 +253,6 @@
     }
 }
 - (nullable UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
-    
     return nil;
 }
 @end
