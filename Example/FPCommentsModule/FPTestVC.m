@@ -11,9 +11,8 @@
 #import <IGListKit/IGListKit.h>
 #import <FPCommentsModule/FPModuleProtocoal.h>
 #import <FPNestedSectionController.h>
-#import "FPNumberItemModel.h"
 #import "FPPreviewMoreCommentsCell.h"
-
+#import <FPIgListBaseModel.h>
 @interface FPTestVC ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;

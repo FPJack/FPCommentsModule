@@ -12,7 +12,6 @@
 		041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */; };
 		0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495BE6423C708D500EECE76 /* FPTestVC.m */; };
 		0495BE6723C708D500EECE76 /* FPTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495BE6523C708D500EECE76 /* FPTestVC.xib */; };
-		0495BE6B23C70CDC00EECE76 /* FPNumberItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */; };
 		04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */; };
 		04BBF09623C062E5001DCAB7 /* ImageLabelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04A23C062E5001DCAB7 /* ImageLabelCollectionCell.m */; };
 		04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04B23C062E5001DCAB7 /* CollectionLabelCell.m */; };
@@ -99,8 +98,6 @@
 		0495BE6323C708D500EECE76 /* FPTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTestVC.h; sourceTree = "<group>"; };
 		0495BE6423C708D500EECE76 /* FPTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTestVC.m; sourceTree = "<group>"; };
 		0495BE6523C708D500EECE76 /* FPTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPTestVC.xib; sourceTree = "<group>"; };
-		0495BE6923C70CDC00EECE76 /* FPNumberItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPNumberItemModel.h; sourceTree = "<group>"; };
-		0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPNumberItemModel.m; sourceTree = "<group>"; };
 		04BBF04523C062E5001DCAB7 /* FPCommentProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentProtocal.h; sourceTree = "<group>"; };
 		04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLabelWHCell.xib; sourceTree = "<group>"; };
 		04BBF04923C062E5001DCAB7 /* ImageTextCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCollectionCell.h; sourceTree = "<group>"; };
@@ -238,15 +235,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0495BE6823C70CC400EECE76 /* NumberItemModel */ = {
-			isa = PBXGroup;
-			children = (
-				0495BE6923C70CDC00EECE76 /* FPNumberItemModel.h */,
-				0495BE6A23C70CDC00EECE76 /* FPNumberItemModel.m */,
-			);
-			name = NumberItemModel;
-			sourceTree = "<group>";
-		};
 		04BBF02723C05CA8001DCAB7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +249,6 @@
 		04BBF02823C05CB1001DCAB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0495BE6823C70CC400EECE76 /* NumberItemModel */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -808,7 +795,6 @@
 				04BBF09823C062E5001DCAB7 /* CollectionImageCell.m in Sources */,
 				04BBF0B823C062E5001DCAB7 /* FPCommentImgSectionController.m in Sources */,
 				04BBF0B923C062E5001DCAB7 /* FPCommentReplySectionController.m in Sources */,
-				0495BE6B23C70CDC00EECE76 /* FPNumberItemModel.m in Sources */,
 				04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */,
 				04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */,
 				04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */,
