@@ -74,7 +74,7 @@
         videoImageCell.maxImageCount = self.model.maxImageCount <= 0 ? 9 : self.model.maxImageCount;
         videoImageCell.maxVideoCount = self.model.maxVideoCount <= 0 ? 1 : self.model.maxVideoCount;
     }
-    if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell);}
+    if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {self.configureCellBlock(self.model, cell,self);}
     return cell;
 }
 - (void)didUpdateToObject:(id<FPVideoPictureProtocal>)object{

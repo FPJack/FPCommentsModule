@@ -52,7 +52,7 @@
             userModel.userName = @"Jack";
             userModel.time = @"2019-09-02";
             FPListSectionController *sectonController = [FPListSectionController new];
-            sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell) {
+            sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imgView.backgroundColor = [UIColor orangeColor];
                 cell.label1.text = item.userName;
                 cell.label2.text = item.time;
@@ -70,7 +70,7 @@
             textModel.class_name = FPTextCollectionCell.class;
             FPListSectionController *sectonController = [FPListSectionController new];
             textModel.font = [UIFont systemFontOfSize:13];
-            sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
+            sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell,IGListSectionController * sectionController) {
                 cell.label.text = item.content;
                 cell.label.numberOfLines = item.numberOfLines;
                 cell.label.font = item.font;
@@ -87,10 +87,20 @@
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+            sectionController.configureCellBlock = ^(FPVideoPictureModel*  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imageVideoCell.cornerRadius = 5;
                 cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
                     [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+                };
+                cell.imageVideoCell.configureCell = ^(FPImageCCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSArray * _Nonnull source) {
+                    cell.deleteBtn.hidden = NO;
+                };
+                cell.imageVideoCell.deleteSourceBlock = ^(id  _Nonnull deleteObject, NSIndexPath * _Nonnull indexPath, FPImageVideoCell * _Nonnull cell) {
+                    [sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                        model.height = model.height - 20;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
                 };
             };
             model.sectionController = sectionController;
@@ -111,7 +121,7 @@
             model.minimumInteritemSpacing = 10;
             model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
                     [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
                 };
@@ -141,7 +151,7 @@
             NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
             item.videoUrl = url;
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell) {
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imageVideoCell.loadNetworkImageBlock = ^(UIImageView * _Nonnull imageView, NSURL * _Nonnull url, UIImage * _Nonnull placeholderImage) {
                     [imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
                 };
@@ -156,7 +166,7 @@
         {
             FPTextModel *model = [FPTextModel new];
             FPListSectionController *sectionController = [FPListSectionController new];
-            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell) {
+            sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell,IGListSectionController * sectionController) {
                 cell.label.text = @"两小时前";
                 cell.label.font = [UIFont systemFontOfSize:12];
                 cell.label.textColor = [UIColor grayColor];
@@ -211,7 +221,7 @@
             
             
             FPNestedSectionController *sc = [FPNestedSectionController new];
-            sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell) {
+            sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
             };
             commentModel.sectionController = sc;

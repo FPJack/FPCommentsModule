@@ -30,7 +30,7 @@
     FPNestedCollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
     self.adapter.collectionView = cell.collectionView;
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {
-        self.configureCellBlock(self.model, cell);
+        self.configureCellBlock(self.model, cell,self);
     }
     return cell;
 }
@@ -75,7 +75,7 @@
     }else{
         cell = [self.collectionContext dequeueReusableCellOfClass:self.model.class_name forSectionController:self atIndex:index];
     }
-    if (self.configureCellBlock) self.configureCellBlock(self.model, cell);
+    if (self.configureCellBlock) self.configureCellBlock(self.model, cell,self);
     return cell;
 }
 -(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal>)object{
@@ -123,7 +123,7 @@
     if (!cell) {
         cell = [self dequeueCell:self.model index:index];
     }
-    if (self.configureCellBlock) self.configureCellBlock(model, cell);
+    if (self.configureCellBlock) self.configureCellBlock(model, cell,self);
     return cell;
 }
 - (UICollectionViewCell*)dequeueCell:(id<FPDequeueReusableCellProtocal>)model index:(NSInteger)index{

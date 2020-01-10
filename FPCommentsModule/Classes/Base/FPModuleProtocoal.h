@@ -7,12 +7,13 @@
 
 #import <Foundation/Foundation.h>
 #import <IGListKit/IGListKit.h>
+typedef void (^FPListSingleSectionCellConfigureBlock)(id __nullable item, __kindof UICollectionViewCell * __nullable cell,IGListSectionController * __nullable sectionController);
 
 
 //配置cell
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerConfigureProtocal <NSObject>
-@property (nonatomic,strong)IGListSingleSectionCellConfigureBlock configureCellBlock;
+@property (nonatomic,strong)FPListSingleSectionCellConfigureBlock configureCellBlock;
 @end
 NS_ASSUME_NONNULL_END
 
