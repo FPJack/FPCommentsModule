@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPCommentsModule'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of FPCommentsModule.'
 
 # This description is used to generate tags and improve search results.
@@ -45,6 +45,9 @@ TODO: Add long description of the pod here.
    s.subspec 'Base' do |b|
    b.ios.deployment_target = '9.0'
    b.source_files = 'FPCommentsModule/Classes/Base/**/*.{h,m}'
+   b.resource_bundles = {
+     'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
+   }
    end
 
    
@@ -63,9 +66,6 @@ TODO: Add long description of the pod here.
    vp.source_files = 'FPCommentsModule/Classes/VideoPicture/**/*.{h,m}'
    vp.dependency 'FPImageVideoCell'
    vp.dependency 'FPCommentsModule/Base'
-   vp.resource_bundles = {
-     'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
-   }
    end
    ##########--输入框---#########
    s.subspec 'InputView' do |input|

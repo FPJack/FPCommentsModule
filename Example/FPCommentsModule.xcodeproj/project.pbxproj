@@ -541,6 +541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPCommentsModule/FPCommentsModule-Prefix.pch";
 				INFOPLIST_FILE = "FPCommentsModule/FPCommentsModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhichongjia.ZhiChongRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +559,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPCommentsModule/FPCommentsModule-Prefix.pch";
 				INFOPLIST_FILE = "FPCommentsModule/FPCommentsModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhichongjia.ZhiChongRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
