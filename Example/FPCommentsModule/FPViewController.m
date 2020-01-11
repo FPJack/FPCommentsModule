@@ -14,7 +14,7 @@
 
 #import "FPCommentUserInfSectionController.h"
 #import "FPCommentContentSectionController.h"
-#import "FPCommentBigModel.h"
+#import <FPCommentSubModel.h>
 
 #import "FPCommentReplayContainerController.h"
 #import <FPCommentSubCell.h>
@@ -242,8 +242,8 @@
         }
         
         {
-            FPCommentBigModel *commentModel = [FPCommentBigModel new];
-            
+            FPNestedModel *commentModel = [FPNestedModel new];
+            commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
             NSMutableArray *arr = [NSMutableArray array];
             CGFloat width = kSWidth - 68 - 12 * 2 - 20;
             for (int i = 0; i < 5; i ++) {
