@@ -12,7 +12,7 @@
 		027CE9CC51E9E25D853BCBA2B72F72C8 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF9BA6631E31C18652D2E28F70938ED /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02EEC7F6CB1C12F51EAD4E51D961A5D1 /* UIScrollView+IGListKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0093A6DDCE7EA436A00E6ACB1C623 /* UIScrollView+IGListKit.m */; };
 		02FCDF0FB3C176497D2B4F158EAD8BB8 /* IGListSupplementaryViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 420F845532FD30016FD25E7DC7DA6F37 /* IGListSupplementaryViewSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04C07CCE9878BBE09D48D18001A98060 /* FPNestedSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A691FB06AF2E6F65D8D7B277E67811B /* FPNestedSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C07CCE9878BBE09D48D18001A98060 /* FPNestedSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AB1004C83F2E7B5A8E929EAE00AE13 /* FPNestedSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052C5E07344A7A7953FBBA67076DC0E3 /* UIScrollView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 725996E497CA0B872E8366DB399CC3E5 /* UIScrollView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A040F35BF1C88F869404E1A940B493 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AA319227E815A050B1FFBBF07ED26B /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05B1F51830812CE9758896D52B25E974 /* MJRefreshConst.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C1FEA0AB12658952737B45850CE1AC /* MJRefreshConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +80,7 @@
 		29583F54F676F817D35ECAF46223E483 /* SDImageIOAnimatedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB60D4A4449F95BD996769E3B616D11F /* SDImageIOAnimatedCoder.m */; };
 		297A3627CF2F032CBFDC61D1A3786E63 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = FE01CAEFC42D39408BBE8BE2BD3F7170 /* MASViewAttribute.m */; };
 		2AFC358F70C8A7CCBCF4B7E3951AB88F /* SDAnimatedImagePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA488AB40CC9DC4F40E91454A7CA25 /* SDAnimatedImagePlayer.m */; };
-		2BD9454AD362C62DEF35A24DAF37B7FE /* FPVideoPictureSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD86C2FCB00F4C675860B980A8BF11D9 /* FPVideoPictureSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BD9454AD362C62DEF35A24DAF37B7FE /* FPVideoPictureSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = C830746E5F5BD995EA22F2701A49B820 /* FPVideoPictureSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD70862F9B96E20FC315CDC49AC6174 /* IGListBindingSectionController+DebugDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BCA5A27E3F840A2C79CEAA4A560F8 /* IGListBindingSectionController+DebugDescription.m */; };
 		2CF9A27A4ECC99F0F27B1D670449DFE0 /* IGListAdapter+UICollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 008BF3F0BD155E9D1DEAB8C1F9D97B41 /* IGListAdapter+UICollectionView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		2DDABE4EEA63626D9EF3D45D3805F8FF /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C897B467119FC6F15B231B32BD44B /* SDWebImageManager.m */; };
@@ -110,11 +110,11 @@
 		3E0C13C38A277883DE7F779BC32504C8 /* HPGrowingTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEEB321E56C46957FEB099B925759E6 /* HPGrowingTextView.framework */; };
 		3F2EEAD1B61827F01E41F20FF40A18D7 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3160E48F360210C5DC7AD34E76FCFB50 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F3F13DFD3AC2B76E06FC7894980895C /* FPImageVideoCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21BCA463A48EFCA61F51DD22B53547D5 /* FPImageVideoCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F81AE7C1F28DCE752667C8E6672F651 /* FPCommentSubCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E14139017212D6776368DFBDC9ABB809 /* FPCommentSubCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F81AE7C1F28DCE752667C8E6672F651 /* FPCommentSubCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F10CC9ADA384E17A386CB26D44FAB83E /* FPCommentSubCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDE40E27AC1D71BA22E5F0C3DFCE561 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C39F514B2B5B418773BAF5A09EA3FED6 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4030DC9ABFD136AF933B097FF0F32DF2 /* IGListWorkingRangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF6CC78C867C01C323290673658CFD1 /* IGListWorkingRangeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		407F16560A12D27CE89F3FF4E9DF6133 /* SDDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FF87D95332BF66DB99F956B313AD0E61 /* SDDeviceHelper.m */; };
-		416DAF9608F8C7940DC2D4C3C0EFE8C9 /* FPCommentSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA08BAC29B6F30A9EEDF21E7A6925BCF /* FPCommentSubCell.m */; };
+		416DAF9608F8C7940DC2D4C3C0EFE8C9 /* FPCommentSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1860C3ECED2CCB4A8A552F71294E4FE /* FPCommentSubCell.m */; };
 		423C503AF7222014AE34E4EAA759D8A9 /* IGListMoveIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0C7E60D2363FBDAEFCA8A6FD034706 /* IGListMoveIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43065ED9D0017B73706D7E9EFEEBE308 /* IGListSingleSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 176A905ECEB96923EC67E5C3683BD860 /* IGListSingleSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43582BC3FA55B837CB63F3B7BC6B77DF /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B17AB5B0B005D81EC4A8DF493BE1B36F /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -129,7 +129,7 @@
 		4925B40927939E6E8BC224218D50E870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */; };
 		495D33CB4E778373B93E14719393863D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B431B994535165FF627813B7A6FF845 /* NSData+ImageContentType.m */; };
 		4A2271A2BB455510FADE48FEFDF8EE89 /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2D787B5C8359CBEFD3C365662E3E9 /* SDImageCoderHelper.m */; };
-		4A4D72D86B67DEF444C654C1EC516625 /* FPCommentsModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C80E0CB21A6829BD6D47B0896EB2A0D /* FPCommentsModule-dummy.m */; };
+		4A4D72D86B67DEF444C654C1EC516625 /* FPCommentsModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B72DB8677858EBA5863A20AAD7C1596 /* FPCommentsModule-dummy.m */; };
 		4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E05752E0C1A7326BCF5C0819F4C6A4 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BCC79AD0F425CEC920E9F057D0EA942 /* IGListBatchContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E836610560F350D64399FF6AB587FD /* IGListBatchContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C575C37306570EB9A885E91087F51BD /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B9200F6287E64BF39D8296D14B6BA7FF /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -141,7 +141,7 @@
 		511F0AD4DE4ECB2B28AC20729AAD9703 /* IGListAdapterMoveDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3A853A9A546922FADBB804C90B41C2 /* IGListAdapterMoveDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51E7D6AFD75668350AF7696D2BC564B1 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA47AEC841817A4C86744EFAD29257 /* SDMemoryCache.m */; };
 		52248DEB7E53A239A961C1EC3EF77EEC /* SDAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F8717C834275263C0C9178CEE2BBD8 /* SDAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53725FC7DE6005FE512C396BBABF34EA /* FPNestedSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072035E0F558C983282372F0BAF82513 /* FPNestedSectionController.m */; };
+		53725FC7DE6005FE512C396BBABF34EA /* FPNestedSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE795EDCD788753BF2FE3A6ED596EB31 /* FPNestedSectionController.m */; };
 		539879275008800929EA3091C4560318 /* Pods-FPCommentsModule_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AFB440894DC0B0236FDE5A0D2C2015 /* Pods-FPCommentsModule_Tests-dummy.m */; };
 		5398BDED49045A34CFECF9D02D9B48DB /* SDWebImageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E9DE4CDE6A842595B85F1BBF749F70 /* SDWebImageDefine.m */; };
 		547E46FDA1C4E8996B88154C6CD62A39 /* MJRefreshHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E132CFE3EADFE39643793437C759BF7 /* MJRefreshHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,7 +152,7 @@
 		567FF112D49A6D0AD49009804EEDCAC1 /* IGListExperiments.h in Headers */ = {isa = PBXBuildFile; fileRef = C47CD5CCF511BB504CC4439333C4EF83 /* IGListExperiments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		575285C9F8612E7075EED4628FB87306 /* SDWebImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DB49EEC54B28F0C5DDB86E80EBA54168 /* SDWebImageDownloaderConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57E3CD133EB1206F25E9E720E9E7DFEE /* SDWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F73BEBE6B0383DFCA97BBFCF2B6407 /* SDWebImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		583D316CE4960B306DE32A958CB75E6A /* FPNestedModel.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEB8A2125DAF98E649019FA6B18AB5C /* FPNestedModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		583D316CE4960B306DE32A958CB75E6A /* FPNestedModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ABC244F1DD235F69F02397787556FD /* FPNestedModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5883787F8B2675DF204EEDE8B43C4C92 /* IGListDiff.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1ACAC2B80323813D1A41F2A34AF8893 /* IGListDiff.mm */; };
 		590B9281FFE6C534FFCC8396BDB57A64 /* SDImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F6EB83CAFD8B802D344F682E6E3977E /* SDImageTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B1B3F2CE2512D7110E83B920F1023E4 /* NSNumber+IGListDiffable.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9D432F41CE80FE6DCD7DE7C89B24DD /* NSNumber+IGListDiffable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -191,7 +191,7 @@
 		6E6120807679D1FEC6D0D73191D6D63D /* SDImageIOAnimatedCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBC5FE8AAE595E08B504B02482FD8E2 /* SDImageIOAnimatedCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EB8E9977A0A7C547EC8327A73C9E927 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F28A62FBF9CB03E82B3FF69925009F04 /* UIImageView+HighlightedWebCache.m */; };
 		6ED52DA63811EA27047B10B0122C738F /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52C47993BEE7B8608FBDD9A96E9EDC4 /* MJRefresh.framework */; };
-		6F9A8A221338E4B141FE4DE29CF00721 /* FPNestedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A285EFACFAC80B4C9F4AB5C113AB76 /* FPNestedCollectionViewCell.m */; };
+		6F9A8A221338E4B141FE4DE29CF00721 /* FPNestedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E584034553B95DBAE8540C8917237F /* FPNestedCollectionViewCell.m */; };
 		7059CBC24DB222578E766F69799041C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */; };
 		70E5E07F1E6F9153C385B79C4DB55FCB /* IGListAdapterUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C653B73D1FD37476BFC60E3D423B10 /* IGListAdapterUpdater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70FA2D6BB251BF00E39395F7048A1198 /* IGListIndexPathResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A4A2AD8715213C790B374387FD9F3D0 /* IGListIndexPathResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,13 +203,13 @@
 		778C9B827362378F1E361C4E1C45A484 /* SDWebImageDownloaderResponseModifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B3ABB17701F46864B55A134E0A21C680 /* SDWebImageDownloaderResponseModifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78B2727EE5D693F58D019DB098005101 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8715DCAFC9A8AF07B993C43E959323E3 /* MASConstraintMaker.m */; };
 		79310A4D2517B65160E624FFBC9E45A1 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D54E15D1CD0B6ED1134D1A8C4636A6 /* UIScrollView+MJRefresh.m */; };
-		796E8876C9125F84D3BEB206FB4987E5 /* FPNestedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A74140993491096D078961552FBEB817 /* FPNestedModel.m */; };
-		7A2736F1265B84544CE34E6CE97FD100 /* FPUserInfoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DDAA3AD940852AF047D2418D7275B /* FPUserInfoCollectionCell.xib */; };
+		796E8876C9125F84D3BEB206FB4987E5 /* FPNestedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C42DDF117C01ABBCB2B893E33DA321 /* FPNestedModel.m */; };
+		7A2736F1265B84544CE34E6CE97FD100 /* FPUserInfoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8941CC5E71F02F8F7B66AFFB98AE644C /* FPUserInfoCollectionCell.xib */; };
 		7A33E67B32944E9931C1B3EE6EA9425F /* FPImageCCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EF04C2C37A1F128D728A8509DC00960F /* FPImageCCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A5BA7D0DE72AFC9E50945DE17B5B8DE /* SDImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F6A457B60E1E49A0AF4E187E7174E /* SDImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BFF65958F014760B6AC4742824892EB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B09BDAC175E902398A54A2DF0CB7BA8F /* MASCompositeConstraint.m */; };
 		7D1BDF66E335091A6D38BBFFE7EEB8EA /* SDWebImageDownloaderRequestModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = FB68525089AFF77C5E221999FA0B96CC /* SDWebImageDownloaderRequestModifier.m */; };
-		7D935652B50A1D92D0A394010B1C4E8D /* FPCommentsModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5172BF763A36B4B42B4E0615CA775A /* FPCommentsModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D935652B50A1D92D0A394010B1C4E8D /* FPCommentsModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 735FA3DAFCB639FB64AA98A84CCAE790 /* FPCommentsModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DC6D2811F725FF66D2B121088297D49 /* IGListBindingSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85658481B47CF6C90C4C15F203F802A /* IGListBindingSectionController.m */; };
 		7DCAC7A614C2360DAE06FD94FCEE70BD /* icon_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BB9009C5B0B1EDBBE137669122FCA5 /* icon_photo@2x.png */; };
 		7DEDBCC19A4ED320E30D2A09550A034C /* IGListIndexPathResultInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B4026D2C223E8C87B6711DAA8F8D93 /* IGListIndexPathResultInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -217,7 +217,7 @@
 		7EC53ACF0C5A3BA1A16F85F053660984 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 808DFB6847615B53DAF2AD57D0C272BC /* SDWebImageDownloader.m */; };
 		7F0AF315AE4C8C321DB5AC2B85B84F92 /* SDDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BF53A3A194A6385038E8C78942103 /* SDDisplayLink.m */; };
 		7F2EFECDD75D395880A894A1F58766F2 /* IGListBatchUpdateData.h in Headers */ = {isa = PBXBuildFile; fileRef = DF6DAE3573058065E0B63CDA58CBBE73 /* IGListBatchUpdateData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F307929C4706AD0D2882FE931627151 /* FPCommentSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 067E57414CF403B584D02C9E82DD3D31 /* FPCommentSubModel.m */; };
+		7F307929C4706AD0D2882FE931627151 /* FPCommentSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ED79706195A41CF64298C9CD1DF9F9 /* FPCommentSubModel.m */; };
 		7FF12274CE3010547F19F80D3A436673 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */; };
 		8004209FD84B73C609677028356B2B04 /* FPCommentsModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 524457F1C6CA2ACA61FF75E7F0C0840F /* FPCommentsModule.bundle */; };
 		817BFC5187D8F55C00E9D42A2DAA7324 /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7203BEE53B5B555AC13F663B622DFF /* UIImage+Transform.m */; };
@@ -256,7 +256,7 @@
 		958A77D0C6489379641913BCCB8CBF08 /* IGListBatchUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDA84530C2AC25BF145EFE134062969 /* IGListBatchUpdates.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96AD446F92DDDA26B2715D9CB8F884F4 /* UIImage+Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = F1CEEC4B87FB3848E57C37BD876A6342 /* UIImage+Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96ED8FB77D33E28107E755938885A814 /* IGListSectionControllerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = D006AB266223C70E728714C669817660 /* IGListSectionControllerInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		97FE066B0B32199904DC2DCE26AC7C5C /* FPModuleProtocoal.h in Headers */ = {isa = PBXBuildFile; fileRef = AE758C5623FC961517B38462CA83CDD0 /* FPModuleProtocoal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97FE066B0B32199904DC2DCE26AC7C5C /* FPModuleProtocoal.h in Headers */ = {isa = PBXBuildFile; fileRef = C90EA9B316A34A2007722BBC5E4E2DC2 /* FPModuleProtocoal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9888D194A410F8E927A583AB8CEECA57 /* SDImageAPNGCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = D9561A08C3A5AFD1BC1C23911CF6C12A /* SDImageAPNGCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A00FD8A718B0C190D562593C556B1EB /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 26E9A3FA14B70C6B66509D7C961A1705 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9ABCB5BE75E4172302772616E5C9EB4A /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6C53A80BD4C605D489BC125CD6B46E /* MJRefreshBackFooter.m */; };
@@ -265,7 +265,7 @@
 		9D546E1168C04B0B2EAE005D9275D18B /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A13E9C50628A125A15CB3CDC6AC882CF /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DF9F2ABCB262724B0D3C711DEE4513A /* SDImageLoadersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1F107C428391C11F5956FEB87960CC /* SDImageLoadersManager.m */; };
 		9EFBD7AA2E920E4825FCE54DDCC19410 /* IGListSectionMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 070C41597E3A4B8D94E52D9E449DFABF /* IGListSectionMap.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F324D71175581DEC8B267E1E0C7E66A /* FPTextViewInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6E0A388E0EA51060849B0AED9A0991 /* FPTextViewInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F324D71175581DEC8B267E1E0C7E66A /* FPTextViewInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A43FCB5CDCAA979634DACAAAB65236B /* FPTextViewInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF89AD3AB7E4CED45E5063678353B28 /* NSNumber+IGListDiffable.m in Sources */ = {isa = PBXBuildFile; fileRef = F785370DC911BC3F9EAE578ADA0ADD0B /* NSNumber+IGListDiffable.m */; };
 		A27D34F20A1C4BB0D3F6C1409A54B933 /* NSImage+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = F9688AD0CE7035C59AF3DDEE42F89B75 /* NSImage+Compatibility.m */; };
 		A2DCF51236897E810CF23037099C57C6 /* IGListGenericSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421392B4D2DCBE50B40A48BB3D970314 /* IGListGenericSectionController.m */; };
@@ -276,7 +276,7 @@
 		A56A6728E719AECC463494DB73999ED1 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0810270CA3D748028B2618390A9C2B /* MJRefreshBackStateFooter.m */; };
 		A638C37E7B825330B45D45D26EE8A30B /* UICollectionView+DebugDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E8CD6DF61F3BF4C47FC1B84DEC1B66 /* UICollectionView+DebugDescription.m */; };
 		A63C231F91F8244C20ED3B86CD82157A /* IGListReloadIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 385A05A12D8408F2DD1F0E20363AFD63 /* IGListReloadIndexPath.m */; };
-		A650DE6106005B2AD02771BD9753DAB9 /* FPCommentSubSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = F52CF6A8E898F55F8062291B342D45AA /* FPCommentSubSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A650DE6106005B2AD02771BD9753DAB9 /* FPCommentSubSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = D656B3F9B36FAF97DF60F0751D1342AA /* FPCommentSubSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D982486CA8BF6C444AAB7B391147B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */; };
 		A731CCC97F1F2870201DE1694F123C5F /* IGListBatchUpdateData.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFD60CB0FFE34A6907B873601D1EBEE8 /* IGListBatchUpdateData.mm */; };
 		A84D6E9E3FBC2DE9AB7D5262F13F15B4 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB6FA132D5B1B2986EF32B8EE2A1A5F /* SDImageGraphics.m */; };
@@ -302,8 +302,8 @@
 		B24996F19279B748988BF78997CC2128 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6C191BA82BAFB905BD3DD22E785FF6 /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2F6B6C0D60E38968A86ECC68762E32B /* TTTAttributedLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78903E087832B6B534706A937950E58D /* TTTAttributedLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B31B230950482DFC202D3B90CE36F870 /* IGListCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = B66A2A03BCE84009C11CAB1C60202F43 /* IGListCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3D656C7BC7B18AF12E75ACA88A89606 /* FPVideoPictureSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7853A3BE850513F61E3D33F82D906384 /* FPVideoPictureSectionController.m */; };
-		B3F09591A7E8635947E247F45472AE1B /* FPCommentSubProtocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 847C754367C5919E61367FF4E28A0B72 /* FPCommentSubProtocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D656C7BC7B18AF12E75ACA88A89606 /* FPVideoPictureSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B256643CD1DE841EB8731CD66E5A760 /* FPVideoPictureSectionController.m */; };
+		B3F09591A7E8635947E247F45472AE1B /* FPCommentSubProtocal.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C91ECC9BF08BF943DE9496E6928D6F /* FPCommentSubProtocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B41701B32FA47A29F953C1D2AF305F21 /* IGListIndexSetResultInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E639114B9825D8987E345592AA62F /* IGListIndexSetResultInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B460A8EA54DE60AFCE2479407151D310 /* SDImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 539DF0F4411D02BCFA0B6F7A03D8B9C3 /* SDImageIOCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4F7A00EAD62E5E297C31E42943E27D6 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E16C5DF91C56EC5D267498BB597AF /* MJRefreshAutoNormalFooter.m */; };
@@ -314,7 +314,7 @@
 		B793A5F501428B54B7CD0CCF3B600EAC /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F309215C296667498597DE794998A21 /* UIColor+HexString.m */; };
 		B7D645EC004610E8A581E532D28771EC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD58E8EC8864CECE7175BBFB806CD07C /* MASViewConstraint.m */; };
 		B94723A642EF83BA127C0F0FBDAC175B /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78745B302E23BD19952F4A75D7AA2A /* MJRefreshFooter.m */; };
-		B98D7EDDA7C1F11AB400482465162DC2 /* FPModuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EA93C1BE4E436C82C618B6B96C35A0F6 /* FPModuleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B98D7EDDA7C1F11AB400482465162DC2 /* FPModuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A58727D5A89231BC116D7F6A7986DD36 /* FPModuleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA899E717C096B81EE2FF95EC67F50B1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDAF9567E50E76669EFFAC47E42127A /* CoreText.framework */; };
 		BB826B3362550CC7D47A971BC60E06E3 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15B29F8738493F2141EB270D44289BA2 /* MJRefresh.bundle */; };
 		BC1D505659020B0DF3E76180DEB3D0FF /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D20C0FF22D8B467D085CEDB6C59584 /* TTTAttributedLabel-dummy.m */; };
@@ -333,14 +333,14 @@
 		C74D82D5FB477D67308F122C2D7BD71F /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349DA8683B602F37031A68566DE1A62 /* MJRefreshGifHeader.m */; };
 		C7AD0515B99B1F4AB2795549FE89D505 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CB8904488300626E20712B38E3850356 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C826F8127B7AD02E7EB4AED6B8CFF1A4 /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A8D699C55D861278DC0E8800A159B7 /* SDImageAPNGCoder.m */; };
-		C8277303D3CB8FF69BA13A7E92FAE4F5 /* FPTextViewInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C30E00E604B4C2E4FAE549F2173DA56 /* FPTextViewInputView.m */; };
+		C8277303D3CB8FF69BA13A7E92FAE4F5 /* FPTextViewInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBA5FFF0625427438EB0CB05BCE2D6 /* FPTextViewInputView.m */; };
 		C9871784E8D2C3AF6FC32A6F55CDA686 /* SDFileAttributeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1918B2A9D921FAB2447CF0D3B412B1 /* SDFileAttributeHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CA5E9ED4340EC66A2F0877D91216E0F7 /* FPNestedCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6400C597EB6C561E17D031E993736BC9 /* FPNestedCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5E9ED4340EC66A2F0877D91216E0F7 /* FPNestedCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B7E4C241915371E80BD07DE02E8B09 /* FPNestedCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB63A680787B9299A21166A93B128110 /* IGListCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5A42DE4A9421988754F38D2EA23DEF /* IGListCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBA9A6C7280216D16A27C20531A4667F /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 379453FAE9C92710E9BBAF73B653C68D /* SDAnimatedImageRep.m */; };
 		CC42F51D29F2A6F50AE35C44A37AD511 /* SDImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD1CC296D708EBDC337A7A7BB14201A /* SDImageCoder.m */; };
 		CCC663583E8A0999FB4C411A247E0E03 /* SDImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F110DBDC2520B4C8F17E10B3CE0892 /* SDImageFrame.m */; };
-		CD7670B09E6B35BCE7E8B075740695EE /* FPCommentSubSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515575BB5F1AF44DE3F6ABB977702ED3 /* FPCommentSubSectionController.m */; };
+		CD7670B09E6B35BCE7E8B075740695EE /* FPCommentSubSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1240C644652C30515DEA73F2EA7FC51 /* FPCommentSubSectionController.m */; };
 		CE4421F77EBDF29C8BB53E593F1B862F /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07B5457F8F27C174D7BAD327374761 /* MJRefreshConfig.m */; };
 		CE93C54413259B4AC3683B6EB874D466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D51ADF5643EEDC3F5CBFC5F65DB661 /* UIKit.framework */; };
 		CEDB6450653C6203BF5428166C7E7E77 /* SDAnimatedImagePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 556813F04B5E3C5C32972ED195E84ED4 /* SDAnimatedImagePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -370,12 +370,12 @@
 		E1175304A5DF0D9F44B247963B2494C9 /* UIView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 748672DAB8593E208FC5FEC599EC708B /* UIView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1ACD865DE62485420148E8D7F7B5699 /* UIImage+ExtendedCacheData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2268BADAED1FD6C493389B4F278233 /* UIImage+ExtendedCacheData.m */; };
 		E2D858DBF45D8317E6D36735AE4BE444 /* IGListDisplayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 499EA7B4316B78186FD1A691AF8B3FAE /* IGListDisplayHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E329BA72B57390E57C4E8A4EDEE3B289 /* FPModuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5018ED3AB31BCD36C6DD283B50FC321 /* FPModuleHelper.m */; };
+		E329BA72B57390E57C4E8A4EDEE3B289 /* FPModuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F4D2D2E4CCBC5D5AD3B7D9D92C03A1 /* FPModuleHelper.m */; };
 		E39794B79DA53A22BC9E7A0E3ED805B8 /* IGListCollectionViewLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD341CD01A24ECED5D22E69BD66E2AD4 /* IGListCollectionViewLayout.mm */; };
 		E3DE9FC2F6A4D6F71D50F96590A2991D /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C0FB661F88B3A52C25DAE69C0FEDB /* SDWebImageIndicator.m */; };
 		E51F496BDC6ACADE04FDA059C6CB2342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */; };
 		E5610D1265A23DA5CF5D89EEC9E730C4 /* IGListCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = FC703673C39E0F2290B6DCCA7226B5A0 /* IGListCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BCF59E44CDFC5CF6413D5E408757EA /* FPCommentSubModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E716AF479B250626C16C328CE056AE /* FPCommentSubModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5BCF59E44CDFC5CF6413D5E408757EA /* FPCommentSubModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E7F52838A86234ABF11524DA96C968 /* FPCommentSubModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6574AEEF3BD26BB161570FC797AFC60 /* MJRefreshBackNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 08FA242EAA1448150944C8B456DBA497 /* MJRefreshBackNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7509A5213679C9F4A14C63FFF136CD1 /* UICollectionView+IGListBatchUpdateData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B82809D420224F6F3DEBBA4FE327EFE /* UICollectionView+IGListBatchUpdateData.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E77C8609A8CEC22993ED93C00889AAED /* IGListBatchUpdateData+DebugDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = D52DAE15671F9FF784B28FD92DCA0AAA /* IGListBatchUpdateData+DebugDescription.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -560,13 +560,12 @@
 		02C653B73D1FD37476BFC60E3D423B10 /* IGListAdapterUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdater.h; path = Source/IGListKit/IGListAdapterUpdater.h; sourceTree = "<group>"; };
 		02D0B40DB5A7B4E545F30ACB2B3A0BF9 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
 		05622BC7C0A1FADEEE75A1919E3F0791 /* IGListDiff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiff.h; path = Source/IGListDiffKit/IGListDiff.h; sourceTree = "<group>"; };
+		05ED79706195A41CF64298C9CD1DF9F9 /* FPCommentSubModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubModel.m; path = FPCommentsModule/Classes/Comment/FPCommentSubModel.m; sourceTree = "<group>"; };
 		06553BDD90A48ECC94F47735CC5BC94E /* TTTAttributedLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTTAttributedLabel.release.xcconfig; sourceTree = "<group>"; };
-		067E57414CF403B584D02C9E82DD3D31 /* FPCommentSubModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubModel.m; path = FPCommentsModule/Classes/Comment/FPCommentSubModel.m; sourceTree = "<group>"; };
 		06B8CC849D8AB70EB62FA850B83CADED /* IGListAdapter+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListAdapter+DebugDescription.m"; path = "Source/IGListKit/Internal/IGListAdapter+DebugDescription.m"; sourceTree = "<group>"; };
 		06C185D372F355FB02EB1853779B6457 /* SDAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImage.h; path = SDWebImage/Core/SDAnimatedImage.h; sourceTree = "<group>"; };
 		070C41597E3A4B8D94E52D9E449DFABF /* IGListSectionMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionMap.h; path = Source/IGListKit/Internal/IGListSectionMap.h; sourceTree = "<group>"; };
 		071C0FB661F88B3A52C25DAE69C0FEDB /* SDWebImageIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageIndicator.m; path = SDWebImage/Core/SDWebImageIndicator.m; sourceTree = "<group>"; };
-		072035E0F558C983282372F0BAF82513 /* FPNestedSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedSectionController.m; path = FPCommentsModule/Classes/Base/FPNestedSectionController.m; sourceTree = "<group>"; };
 		07A3628636515AC4155968FE08443473 /* IGListDebugger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListDebugger.m; path = Source/IGListKit/Internal/IGListDebugger.m; sourceTree = "<group>"; };
 		08FA242EAA1448150944C8B456DBA497 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		09D430AA530CE0A95909BD5DC240F506 /* IGListCollectionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionContext.h; path = Source/IGListKit/IGListCollectionContext.h; sourceTree = "<group>"; };
@@ -579,6 +578,7 @@
 		0D89F742E170BAC93FB6C181C6FBB4D9 /* FPImageVideoCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FPImageVideoCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F67BDA8B4E3B5553F726408FEA063 /* HPGrowingTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HPGrowingTextView.modulemap; sourceTree = "<group>"; };
 		1028858F901B0B0DAA1CE1AC0B96A448 /* SDWebImageCacheSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheSerializer.m; path = SDWebImage/Core/SDWebImageCacheSerializer.m; sourceTree = "<group>"; };
+		10B7E4C241915371E80BD07DE02E8B09 /* FPNestedCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedCollectionViewCell.h; path = FPCommentsModule/Classes/Base/FPNestedCollectionViewCell.h; sourceTree = "<group>"; };
 		1159769EF17ED320C68CBA718AEC40AB /* SDWebImageIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageIndicator.h; path = SDWebImage/Core/SDWebImageIndicator.h; sourceTree = "<group>"; };
 		121FF1CAC5A1FBA3B5773956EB789D19 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		12D01244F8853C98B1FD538E6BFB3FA9 /* IGListMoveIndexInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndexInternal.h; path = Source/IGListDiffKit/Internal/IGListMoveIndexInternal.h; sourceTree = "<group>"; };
@@ -589,8 +589,10 @@
 		15AA47AEC841817A4C86744EFAD29257 /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
 		15AAEE816C8B3FD49070CF3CD8D8100B /* IGListDiffKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGListDiffKit-prefix.pch"; sourceTree = "<group>"; };
 		15B29F8738493F2141EB270D44289BA2 /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
+		15C42DDF117C01ABBCB2B893E33DA321 /* FPNestedModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedModel.m; path = FPCommentsModule/Classes/Base/FPNestedModel.m; sourceTree = "<group>"; };
 		16A96CE36750285C85F37A6008710749 /* UICollectionView+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+DebugDescription.h"; path = "Source/IGListKit/Internal/UICollectionView+DebugDescription.h"; sourceTree = "<group>"; };
 		172126A7E7B9E8ED94EA96889233481E /* FPImageVideoCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPImageVideoCell-prefix.pch"; sourceTree = "<group>"; };
+		1721984A6236C1548B7C5AB467A01026 /* FPCommentsModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPCommentsModule.debug.xcconfig; sourceTree = "<group>"; };
 		173C6243E83A186029B18DB2C71A096F /* ic_play big@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_play big@3x.png"; path = "FPImageVideoCell/Assets/ic_play big@3x.png"; sourceTree = "<group>"; };
 		176A905ECEB96923EC67E5C3683BD860 /* IGListSingleSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSingleSectionController.h; path = Source/IGListKit/IGListSingleSectionController.h; sourceTree = "<group>"; };
 		17F8BAB8DA07C05AAB821F3992BB8BA1 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
@@ -598,13 +600,13 @@
 		18D61E4B25C2918A7868EF344CB8C8F7 /* IGListAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapter.m; path = Source/IGListKit/IGListAdapter.m; sourceTree = "<group>"; };
 		195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListDiffKit.framework; path = IGListDiffKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C8FE962FCC977CCF5C9DB8DE37BD82 /* Pods-FPCommentsModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPCommentsModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1A691FB06AF2E6F65D8D7B277E67811B /* FPNestedSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedSectionController.h; path = FPCommentsModule/Classes/Base/FPNestedSectionController.h; sourceTree = "<group>"; };
 		1A6F6A457B60E1E49A0AF4E187E7174E /* SDImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGIFCoder.h; path = SDWebImage/Core/SDImageGIFCoder.h; sourceTree = "<group>"; };
 		1AEBF296D160FBE26B6C13714C2A594E /* IGListBindingSectionControllerSelectionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindingSectionControllerSelectionDelegate.h; path = Source/IGListKit/IGListBindingSectionControllerSelectionDelegate.h; sourceTree = "<group>"; };
 		1AF8FC3E72A50F049162E522CBE3E5BA /* FPRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPRefresh.debug.xcconfig; sourceTree = "<group>"; };
 		1B411BB99878BFF1006F1C9564DACBAE /* IGListCollectionViewLayoutCompatible.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewLayoutCompatible.h; path = Source/IGListKit/IGListCollectionViewLayoutCompatible.h; sourceTree = "<group>"; };
 		1CE7FED558C590558F94926116717798 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		1D057DC6CACF773276DD9C0C3F67A5D6 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/Core/SDWebImageCompat.h; sourceTree = "<group>"; };
+		1DA74F9F280AB8C031C42B70304A048E /* FPCommentsModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPCommentsModule-prefix.pch"; sourceTree = "<group>"; };
 		1F309215C296667498597DE794998A21 /* UIColor+HexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "SDWebImage/Private/UIColor+HexString.m"; sourceTree = "<group>"; };
 		1FF55D7341F40FB027FB804CC02DF00F /* IGListIndexPathResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListIndexPathResult.m; path = Source/IGListDiffKit/IGListIndexPathResult.m; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -621,12 +623,15 @@
 		264E35A5E35611890F79D3C07CD9ED53 /* SDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWeakProxy.m; path = SDWebImage/Private/SDWeakProxy.m; sourceTree = "<group>"; };
 		26E9A3FA14B70C6B66509D7C961A1705 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		2754064D57BF7211F6B61D861F6231D2 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		27DBA5FFF0625427438EB0CB05BCE2D6 /* FPTextViewInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPTextViewInputView.m; path = FPCommentsModule/Classes/InputView/FPTextViewInputView.m; sourceTree = "<group>"; };
 		27E9DE4CDE6A842595B85F1BBF749F70 /* SDWebImageDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDefine.m; path = SDWebImage/Core/SDWebImageDefine.m; sourceTree = "<group>"; };
 		28BB9009C5B0B1EDBBE137669122FCA5 /* icon_photo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_photo@2x.png"; path = "FPImageVideoCell/Assets/icon_photo@2x.png"; sourceTree = "<group>"; };
+		2B72DB8677858EBA5863A20AAD7C1596 /* FPCommentsModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FPCommentsModule-dummy.m"; sourceTree = "<group>"; };
 		2BC4546361CBF03DC9FAE3EF906ED00D /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		2BDAF9567E50E76669EFFAC47E42127A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		2BF1A4C316D8C83DE1094E4D67A6710B /* Pods-FPCommentsModule_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FPCommentsModule_Tests.modulemap"; sourceTree = "<group>"; };
 		2C0C475A4AE3CD8AD02F3BB86043DEFF /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		2CFD8D1B2F0D1C1E6C2FC7CB28CD8A2C /* ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist"; sourceTree = "<group>"; };
 		2D2A105E1A99CE0646189535FCA52318 /* HPGrowingTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HPGrowingTextView.release.xcconfig; sourceTree = "<group>"; };
 		2D3A853A9A546922FADBB804C90B41C2 /* IGListAdapterMoveDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterMoveDelegate.h; path = Source/IGListKit/IGListAdapterMoveDelegate.h; sourceTree = "<group>"; };
 		2D53BD6C29B308AB766E87E19A661487 /* IGListCollectionViewDelegateLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewDelegateLayout.h; path = Source/IGListKit/IGListCollectionViewDelegateLayout.h; sourceTree = "<group>"; };
@@ -647,7 +652,10 @@
 		385A05A12D8408F2DD1F0E20363AFD63 /* IGListReloadIndexPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListReloadIndexPath.m; path = Source/IGListKit/Internal/IGListReloadIndexPath.m; sourceTree = "<group>"; };
 		39B0B8D878834C15EFD92175BDD7C67A /* IGListMoveIndexPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndexPath.h; path = Source/IGListDiffKit/IGListMoveIndexPath.h; sourceTree = "<group>"; };
 		39DA2A10218F97C94D5DAC751CC8064C /* IGListAdapterInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterInternal.h; path = Source/IGListKit/Internal/IGListAdapterInternal.h; sourceTree = "<group>"; };
+		3A43FCB5CDCAA979634DACAAAB65236B /* FPTextViewInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPTextViewInputView.h; path = FPCommentsModule/Classes/InputView/FPTextViewInputView.h; sourceTree = "<group>"; };
 		3B047E0638F9871C5CA799CE99A9DFCA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		3B0FB7D09E155018C0F18DC1D7229842 /* FPCommentsModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FPCommentsModule-Info.plist"; sourceTree = "<group>"; };
+		3B256643CD1DE841EB8731CD66E5A760 /* FPVideoPictureSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPVideoPictureSectionController.m; path = FPCommentsModule/Classes/VideoPicture/FPVideoPictureSectionController.m; sourceTree = "<group>"; };
 		3B504001B1926CBE5C9C400E2CB1EC78 /* FPImageResuableView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FPImageResuableView.xib; path = FPImageVideoCell/Assets/FPImageResuableView.xib; sourceTree = "<group>"; };
 		3B6AD8E664C9C91B0EDC7D53399A097D /* SDImageIOAnimatedCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoderInternal.h; path = SDWebImage/Private/SDImageIOAnimatedCoderInternal.h; sourceTree = "<group>"; };
 		3C529FAD8FD2295E49931DEFF9D15470 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
@@ -670,14 +678,10 @@
 		479CC70D15736FCB5C162A62548BB8A6 /* IGListBindable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindable.h; path = Source/IGListKit/IGListBindable.h; sourceTree = "<group>"; };
 		4862D593D557D6D099AB5D8A8F67A58C /* FPImageVideoCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FPImageVideoCell-dummy.m"; sourceTree = "<group>"; };
 		499EA7B4316B78186FD1A691AF8B3FAE /* IGListDisplayHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDisplayHandler.h; path = Source/IGListKit/Internal/IGListDisplayHandler.h; sourceTree = "<group>"; };
-		49D28E98562A0AB26BFC5671178379EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		4A1CF571A4519948A146B290E7B741BF /* icon_delete@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_delete@3x.png"; path = "FPImageVideoCell/Assets/icon_delete@3x.png"; sourceTree = "<group>"; };
 		4A1E16C5DF91C56EC5D267498BB597AF /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		4A5B12A9BF6D9EA85DFA655996EA5E52 /* IGListCollectionViewLayoutInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewLayoutInternal.h; path = Source/IGListKit/Internal/IGListCollectionViewLayoutInternal.h; sourceTree = "<group>"; };
-		4A69A6EB4B48BDA0EC63D4E6A53C234F /* FPCommentsModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FPCommentsModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4B3D88DD557C046022FF5BFFE097CD69 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		4C1F3ED89D096DDE65BDC756ED6758B6 /* ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist"; sourceTree = "<group>"; };
-		4C80E0CB21A6829BD6D47B0896EB2A0D /* FPCommentsModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FPCommentsModule-dummy.m"; sourceTree = "<group>"; };
 		4D0560415D31CF895BBCD7EEEDED7D49 /* FPImageVideoCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FPImageVideoCell.modulemap; sourceTree = "<group>"; };
 		4D0C7E60D2363FBDAEFCA8A6FD034706 /* IGListMoveIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndex.h; path = Source/IGListDiffKit/IGListMoveIndex.h; sourceTree = "<group>"; };
 		4DB8E279ED2A78B6F16AA492D8ECDB35 /* IGListKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGListKit.release.xcconfig; sourceTree = "<group>"; };
@@ -687,8 +691,8 @@
 		4F2D1BEA4DA2069766CFA90DC81D4F17 /* FPRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPRefresh.release.xcconfig; sourceTree = "<group>"; };
 		4F57A68C15ABCE983EF7EFBB53118D7C /* IGListSectionMap+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListSectionMap+DebugDescription.h"; path = "Source/IGListKit/Internal/IGListSectionMap+DebugDescription.h"; sourceTree = "<group>"; };
 		4FE29AF843C750434377AD1C3F19F4D1 /* Pods_FPCommentsModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FPCommentsModule_Tests.framework; path = "Pods-FPCommentsModule_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		515575BB5F1AF44DE3F6ABB977702ED3 /* FPCommentSubSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubSectionController.m; path = FPCommentsModule/Classes/Comment/FPCommentSubSectionController.m; sourceTree = "<group>"; };
 		516AF57F21823CA2E03AE0434F953F70 /* TTTAttributedLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTTAttributedLabel.modulemap; sourceTree = "<group>"; };
+		51E7F52838A86234ABF11524DA96C968 /* FPCommentSubModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubModel.h; path = FPCommentsModule/Classes/Comment/FPCommentSubModel.h; sourceTree = "<group>"; };
 		524457F1C6CA2ACA61FF75E7F0C0840F /* FPCommentsModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FPCommentsModule.bundle; path = "FPCommentsModule-FPCommentsModule.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FF508CB00916A95F79FEEDF38B495D /* NSString+IGListDiffable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IGListDiffable.h"; path = "Source/IGListDiffKit/NSString+IGListDiffable.h"; sourceTree = "<group>"; };
 		5349DA8683B602F37031A68566DE1A62 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
@@ -707,7 +711,6 @@
 		5900633FF9C888450A5F841F7DD4C530 /* SDImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCodersManager.m; path = SDWebImage/Core/SDImageCodersManager.m; sourceTree = "<group>"; };
 		5A1CA26363BCCB127B74D061BB1DA825 /* SDDeviceHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDeviceHelper.h; path = SDWebImage/Private/SDDeviceHelper.h; sourceTree = "<group>"; };
 		5A608560B074B1E7BD4152B1609BCF28 /* FPCommentsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FPCommentsModule.framework; path = FPCommentsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C4DDAA3AD940852AF047D2418D7275B /* FPUserInfoCollectionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FPUserInfoCollectionCell.xib; path = FPCommentsModule/Assets/FPUserInfoCollectionCell.xib; sourceTree = "<group>"; };
 		5C52BB44695DA91A97F083BCDE1BF10C /* IGListBatchUpdateData+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListBatchUpdateData+DebugDescription.m"; path = "Source/IGListKit/Internal/IGListBatchUpdateData+DebugDescription.m"; sourceTree = "<group>"; };
 		5C795F19A7097E00944CF895EF445E65 /* IGListCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListCollectionView.m; path = Source/IGListKit/IGListCollectionView.m; sourceTree = "<group>"; };
 		5CD250E3200AC0E8B95556725DBAE69E /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
@@ -720,27 +723,27 @@
 		61F8717C834275263C0C9178CEE2BBD8 /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/Core/SDAnimatedImageView.h; sourceTree = "<group>"; };
 		625B2DFEAE9D3EB158AF1AA597C196B8 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		63AF56CEBF4E0CDC7BCAD8A8F4A376B4 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
-		6400C597EB6C561E17D031E993736BC9 /* FPNestedCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedCollectionViewCell.h; path = FPCommentsModule/Classes/Base/FPNestedCollectionViewCell.h; sourceTree = "<group>"; };
 		6423E55C7FA35555B60AB0C346D0E8AA /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/Core/SDWebImageTransition.h; sourceTree = "<group>"; };
 		64BD17CC903BA64BDA393016527C2215 /* HPGrowingTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HPGrowingTextView-umbrella.h"; sourceTree = "<group>"; };
-		64F00AE25C0DE09BA88AA9D4332F247A /* FPCommentsModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FPCommentsModule-Info.plist"; sourceTree = "<group>"; };
 		66789354627F0D69583CE747FA53AA26 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		6728A73BC4C87262C55DBDD50BBBCA6A /* IGListDiffKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGListDiffKit-umbrella.h"; sourceTree = "<group>"; };
 		67CA2310B16D686A5D6E11DA8CC10306 /* FPImageVideoCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPImageVideoCell.m; path = FPImageVideoCell/Classes/FPImageVideoCell.m; sourceTree = "<group>"; };
 		68E393D87479655E6A1932D68F481ACD /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListKit/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
 		68F042B3E4CB98B9D3E99DE995C8D835 /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/Core/SDImageGraphics.h; sourceTree = "<group>"; };
 		69931907EF6487354C1617E37EE98DBC /* icon_photo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_photo@3x.png"; path = "FPImageVideoCell/Assets/icon_photo@3x.png"; sourceTree = "<group>"; };
-		69982894646B03D6DDB91137D591B7E4 /* FPCommentsModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPCommentsModule-prefix.pch"; sourceTree = "<group>"; };
 		6A4A2AD8715213C790B374387FD9F3D0 /* IGListIndexPathResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexPathResult.h; path = Source/IGListDiffKit/IGListIndexPathResult.h; sourceTree = "<group>"; };
+		6BD1ABAF175B00AEFF639DDC3DF50735 /* FPCommentsModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FPCommentsModule.modulemap; sourceTree = "<group>"; };
 		6BEBF1DCCF8C0168E526847F74F5F841 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/Core/UIView+WebCache.m"; sourceTree = "<group>"; };
 		6C314B56C18FCCBF2547DE134628C642 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/Core/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		6DF6CC78C867C01C323290673658CFD1 /* IGListWorkingRangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListWorkingRangeDelegate.h; path = Source/IGListKit/IGListWorkingRangeDelegate.h; sourceTree = "<group>"; };
 		6EC94F5AFC8900E2AF5B034D75094BD7 /* NSString+IGListDiffable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IGListDiffable.m"; path = "Source/IGListDiffKit/NSString+IGListDiffable.m"; sourceTree = "<group>"; };
 		70212E997366B71A988CFC8016A5EC02 /* SDDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDisplayLink.h; path = SDWebImage/Private/SDDisplayLink.h; sourceTree = "<group>"; };
+		70E584034553B95DBAE8540C8917237F /* FPNestedCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedCollectionViewCell.m; path = FPCommentsModule/Classes/Base/FPNestedCollectionViewCell.m; sourceTree = "<group>"; };
 		71214FB1A1A77E0362A8ED010790B1BF /* IGListGenericSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListGenericSectionController.h; path = Source/IGListKit/IGListGenericSectionController.h; sourceTree = "<group>"; };
 		7222CC1284CBE78ED4903567CBFEF16D /* IGListKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListKit.h; path = Source/IGListKit/IGListKit.h; sourceTree = "<group>"; };
 		725996E497CA0B872E8366DB399CC3E5 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		72C2874B1A03ADBB204A93115EE12C3D /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/Core/SDImageFrame.h; sourceTree = "<group>"; };
+		735FA3DAFCB639FB64AA98A84CCAE790 /* FPCommentsModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPCommentsModule-umbrella.h"; sourceTree = "<group>"; };
 		7369511E6FD0E32E7B8C244A5F1560DE /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+Refresh.m"; path = "FPRefresh/Classes/UIScrollView+Refresh.m"; sourceTree = "<group>"; };
 		7376A91BFB993E84A823A5D249311146 /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
 		738697FCDA5D03522573730E8C59332D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
@@ -748,20 +751,19 @@
 		74DB2498C20FE0EE3EA60B1E8BD3B13D /* IGListMoveIndexPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListMoveIndexPath.m; path = Source/IGListDiffKit/IGListMoveIndexPath.m; sourceTree = "<group>"; };
 		75225CCEE42B1C3E722129EA92ED3B05 /* SDWebImageDownloaderConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderConfig.m; path = SDWebImage/Core/SDWebImageDownloaderConfig.m; sourceTree = "<group>"; };
 		758C1C91872C3E9E73E2CF9C57D85A6E /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
+		75F4D2D2E4CCBC5D5AD3B7D9D92C03A1 /* FPModuleHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPModuleHelper.m; path = FPCommentsModule/Classes/Base/FPModuleHelper.m; sourceTree = "<group>"; };
 		76370DB4544F724C48C98793FEF3900A /* IGListAdapterUpdateListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdateListener.h; path = Source/IGListKit/IGListAdapterUpdateListener.h; sourceTree = "<group>"; };
 		77014A8A117CFF62A0B5693AA2286C59 /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListWorkingRangeHandler.mm; path = Source/IGListKit/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
 		77729418D3B39DF3519F048E893EAB5B /* TTTAttributedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
-		7853A3BE850513F61E3D33F82D906384 /* FPVideoPictureSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPVideoPictureSectionController.m; path = FPCommentsModule/Classes/VideoPicture/FPVideoPictureSectionController.m; sourceTree = "<group>"; };
+		77AB1004C83F2E7B5A8E929EAE00AE13 /* FPNestedSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedSectionController.h; path = FPCommentsModule/Classes/Base/FPNestedSectionController.h; sourceTree = "<group>"; };
 		78903E087832B6B534706A937950E58D /* TTTAttributedLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-umbrella.h"; sourceTree = "<group>"; };
 		78978B293C4A2B12B96236270519627D /* IGListSectionMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListSectionMap.m; path = Source/IGListKit/Internal/IGListSectionMap.m; sourceTree = "<group>"; };
 		7A20E445958CCE78369214E13F3742FA /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
 		7ABE87EF409626F5CE939B94010EB46B /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		7B431B994535165FF627813B7A6FF845 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/Core/NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		7C30E00E604B4C2E4FAE549F2173DA56 /* FPTextViewInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPTextViewInputView.m; path = FPCommentsModule/Classes/InputView/FPTextViewInputView.m; sourceTree = "<group>"; };
 		7C434D1EF62971DB66B0AD85A55F2EF3 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
 		7C64F2D487AF942CD73629A410DC0993 /* IGListDisplayHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListDisplayHandler.m; path = Source/IGListKit/Internal/IGListDisplayHandler.m; sourceTree = "<group>"; };
 		7D2268BADAED1FD6C493389B4F278233 /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
-		7E7EA43BD3BAF105E343BEC8BD4EAC62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7F6EB83CAFD8B802D344F682E6E3977E /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/Core/SDImageTransformer.h; sourceTree = "<group>"; };
 		7FB0093A6DDCE7EA436A00E6ACB1C623 /* UIScrollView+IGListKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+IGListKit.m"; path = "Source/IGListKit/Internal/UIScrollView+IGListKit.m"; sourceTree = "<group>"; };
 		808DFB6847615B53DAF2AD57D0C272BC /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/Core/SDWebImageDownloader.m; sourceTree = "<group>"; };
@@ -771,14 +773,15 @@
 		829F2DF3154FB309F39E23EFAE7A8C52 /* ic_play big@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_play big@2x.png"; path = "FPImageVideoCell/Assets/ic_play big@2x.png"; sourceTree = "<group>"; };
 		82D54E15D1CD0B6ED1134D1A8C4636A6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		8441871E234E437EE42C991B04FA868B /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/Core/SDWebImageCompat.m; sourceTree = "<group>"; };
-		847C754367C5919E61367FF4E28A0B72 /* FPCommentSubProtocal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubProtocal.h; path = FPCommentsModule/Classes/Comment/FPCommentSubProtocal.h; sourceTree = "<group>"; };
 		8484456928F0F3B5E253ED703932CC4A /* Pods-FPCommentsModule_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPCommentsModule_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		84F73BEBE6B0383DFCA97BBFCF2B6407 /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
 		861A7C4F5F2183D3CF5D9220F195DA19 /* Pods-FPCommentsModule_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FPCommentsModule_Tests-umbrella.h"; sourceTree = "<group>"; };
 		868515550A2D294D69FDF4346E83A372 /* UICollectionView+IGListBatchUpdateData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+IGListBatchUpdateData.m"; path = "Source/IGListKit/Internal/UICollectionView+IGListBatchUpdateData.m"; sourceTree = "<group>"; };
+		86E522D5016A873E45659C94280F79C8 /* FPCommentsModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FPCommentsModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		870D2EB4D456D5748106D53C7797C79F /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/Core/SDWebImageTransition.m; sourceTree = "<group>"; };
 		8715DCAFC9A8AF07B993C43E959323E3 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		8917832232F4E7CD71A7E91D92590B82 /* IGListWorkingRangeHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListWorkingRangeHandler.h; path = Source/IGListKit/Internal/IGListWorkingRangeHandler.h; sourceTree = "<group>"; };
+		8941CC5E71F02F8F7B66AFFB98AE644C /* FPUserInfoCollectionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FPUserInfoCollectionCell.xib; path = FPCommentsModule/Assets/FPUserInfoCollectionCell.xib; sourceTree = "<group>"; };
 		8A0A5DF0774004F8F411FCDF7E75FC3A /* Pods-FPCommentsModule_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FPCommentsModule_Example-umbrella.h"; sourceTree = "<group>"; };
 		8A0E5C934229DA41C8C45AC2FB950853 /* Pods-FPCommentsModule_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPCommentsModule_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8AA3A5D8232A33DBABD43E3AD936DB9C /* IGListDebuggingUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListDebuggingUtilities.m; path = Source/IGListKit/Internal/IGListDebuggingUtilities.m; sourceTree = "<group>"; };
@@ -824,14 +827,12 @@
 		A13E9C50628A125A15CB3CDC6AC882CF /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		A1EA96CA7C24B68C6D2F704CE49182C5 /* IGListKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IGListKit-dummy.m"; sourceTree = "<group>"; };
 		A2792C07B454163F5913401E19B90484 /* IGListKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGListKit-umbrella.h"; sourceTree = "<group>"; };
-		A2BCB3F47D1215D7F844CCB81EC1343B /* FPCommentsModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPCommentsModule.debug.xcconfig; sourceTree = "<group>"; };
 		A2D54D7BB84218A6D5D09E6133CC774A /* IGListMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMacros.h; path = Source/IGListDiffKit/IGListMacros.h; sourceTree = "<group>"; };
 		A4D99E75CB222A9447345E6275313647 /* SDWebImageError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageError.h; path = SDWebImage/Core/SDWebImageError.h; sourceTree = "<group>"; };
+		A58727D5A89231BC116D7F6A7986DD36 /* FPModuleHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPModuleHelper.h; path = FPCommentsModule/Classes/Base/FPModuleHelper.h; sourceTree = "<group>"; };
 		A6363BFF0012152ED6370640E8FF9A54 /* IGListAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterDelegate.h; path = Source/IGListKit/IGListAdapterDelegate.h; sourceTree = "<group>"; };
-		A68383ABF9AF9F6EE7B148A2C176BA31 /* FPCommentsModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FPCommentsModule.modulemap; sourceTree = "<group>"; };
 		A6C1FEA0AB12658952737B45850CE1AC /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
 		A6F3F2D7A322A6F243A93FFF4ABA6A0B /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
-		A74140993491096D078961552FBEB817 /* FPNestedModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedModel.m; path = FPCommentsModule/Classes/Base/FPNestedModel.m; sourceTree = "<group>"; };
 		A77D08C103E32DE49F7A372DDB7012F3 /* Pods-FPCommentsModule_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FPCommentsModule_Example-dummy.m"; sourceTree = "<group>"; };
 		A8579C8E2B6A9F026150A8C6B0EE4256 /* UIImage+ExtendedCacheData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ExtendedCacheData.h"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.h"; sourceTree = "<group>"; };
 		A8726B26517FB304970FEC2907BE64F8 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/Core/SDImageCacheDefine.m; sourceTree = "<group>"; };
@@ -840,7 +841,7 @@
 		A8D51ADF5643EEDC3F5CBFC5F65DB661 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A8E3452E1C9478A883C7A212DB424DD5 /* IGListDiffKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IGListDiffKit.modulemap; sourceTree = "<group>"; };
 		A9909FEFE405961E64ED3DF4DD2D6377 /* SDAssociatedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAssociatedObject.h; path = SDWebImage/Private/SDAssociatedObject.h; sourceTree = "<group>"; };
-		AA08BAC29B6F30A9EEDF21E7A6925BCF /* FPCommentSubCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubCell.m; path = FPCommentsModule/Classes/Comment/FPCommentSubCell.m; sourceTree = "<group>"; };
+		A9C91ECC9BF08BF943DE9496E6928D6F /* FPCommentSubProtocal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubProtocal.h; path = FPCommentsModule/Classes/Comment/FPCommentSubProtocal.h; sourceTree = "<group>"; };
 		AB6D4FF78819AFA7FF278E4DF7CA0CC6 /* MJRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJRefresh.modulemap; sourceTree = "<group>"; };
 		AC91DCF986038C047A0CD1E7A941A62A /* FPImageVideoCell.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FPImageVideoCell.bundle; path = "FPImageVideoCell-FPImageVideoCell.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC958DCC4FF989933CFB13146E76915F /* IGListScrollDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListScrollDelegate.h; path = Source/IGListKit/IGListScrollDelegate.h; sourceTree = "<group>"; };
@@ -848,9 +849,7 @@
 		ACFBACD41C208E7C209B4526153B06A0 /* FPImageVideoCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FPImageVideoCell.framework; path = FPImageVideoCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1F107C428391C11F5956FEB87960CC /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/Core/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		ADB91E9582DDA1F507DFD01D16F5635F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/Core/UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		ADEB8A2125DAF98E649019FA6B18AB5C /* FPNestedModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedModel.h; path = FPCommentsModule/Classes/Base/FPNestedModel.h; sourceTree = "<group>"; };
 		ADEEB321E56C46957FEB099B925759E6 /* HPGrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPGrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE758C5623FC961517B38462CA83CDD0 /* FPModuleProtocoal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPModuleProtocoal.h; path = FPCommentsModule/Classes/Base/FPModuleProtocoal.h; sourceTree = "<group>"; };
 		AF80EB988AD3034A1344981F3DA86EC6 /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
 		AF92F052866AF0ED0F35BA92A4DE124F /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/Core/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		B09BDAC175E902398A54A2DF0CB7BA8F /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -858,6 +857,7 @@
 		B0FDBEF2D1BE2D070BB2C3507CA112EC /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
 		B17AB5B0B005D81EC4A8DF493BE1B36F /* SDImageAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAssetManager.h; path = SDWebImage/Private/SDImageAssetManager.h; sourceTree = "<group>"; };
 		B23601A21CF178A8F56727813CF198A8 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		B290F4BE12435A125CE98FDB45A0D6D2 /* FPCommentsModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPCommentsModule.release.xcconfig; sourceTree = "<group>"; };
 		B36ED670988F380AE531D069DDEE8797 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		B3ABB17701F46864B55A134E0A21C680 /* SDWebImageDownloaderResponseModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderResponseModifier.h; path = SDWebImage/Core/SDWebImageDownloaderResponseModifier.h; sourceTree = "<group>"; };
 		B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListKit.framework; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -867,7 +867,6 @@
 		B41F08AA17D24790FFF0365C17F58697 /* Pods-FPCommentsModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPCommentsModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B42DE3C6178D60D79535B29D18718529 /* IGListDebuggingUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebuggingUtilities.h; path = Source/IGListKit/Internal/IGListDebuggingUtilities.h; sourceTree = "<group>"; };
 		B4A6B28E38C3E02AB53E831D3DE98586 /* UICollectionViewLayout+InteractiveReordering.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionViewLayout+InteractiveReordering.m"; path = "Source/IGListKit/Internal/UICollectionViewLayout+InteractiveReordering.m"; sourceTree = "<group>"; };
-		B5018ED3AB31BCD36C6DD283B50FC321 /* FPModuleHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPModuleHelper.m; path = FPCommentsModule/Classes/Base/FPModuleHelper.m; sourceTree = "<group>"; };
 		B51BF775A7DF974799FC3D8AEE5CEAAE /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		B53F8B8E14E030563FF0CED610C5B613 /* IGListMoveIndexInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndexInternal.h; path = Source/IGListDiffKit/Internal/IGListMoveIndexInternal.h; sourceTree = "<group>"; };
 		B554F0D9058CDB3DF501702F00EB8337 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/Core/SDImageCacheConfig.m; sourceTree = "<group>"; };
@@ -893,7 +892,6 @@
 		BD884CA4C070096D99BE1666F5346199 /* SDImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGIFCoder.m; path = SDWebImage/Core/SDImageGIFCoder.m; sourceTree = "<group>"; };
 		BE670B5940962C1DDB398C45D1BCA973 /* IGListAdapterUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdaterDelegate.h; path = Source/IGListKit/IGListAdapterUpdaterDelegate.h; sourceTree = "<group>"; };
 		BEDEF3DD9F372C9C41088F3902D3F7CC /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
-		BF7EB710919540BF1540FC5A1FE49218 /* FPCommentsModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPCommentsModule.release.xcconfig; sourceTree = "<group>"; };
 		BFB6FA132D5B1B2986EF32B8EE2A1A5F /* SDImageGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGraphics.m; path = SDWebImage/Core/SDImageGraphics.m; sourceTree = "<group>"; };
 		C0F7C00B97160D9CC968D7162A31A44F /* IGListIndexPathResultInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexPathResultInternal.h; path = Source/IGListDiffKit/Internal/IGListIndexPathResultInternal.h; sourceTree = "<group>"; };
 		C217BC66FE4D315B27656EC69DD1B5C5 /* SDImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoder.h; path = SDWebImage/Core/SDImageCoder.h; sourceTree = "<group>"; };
@@ -911,10 +909,11 @@
 		C59F97244E5EA0EE949E5ADEDA88E647 /* ResourceBundle-FPImageVideoCell-FPImageVideoCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FPImageVideoCell-FPImageVideoCell-Info.plist"; sourceTree = "<group>"; };
 		C5A8D699C55D861278DC0E8800A159B7 /* SDImageAPNGCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAPNGCoder.m; path = SDWebImage/Core/SDImageAPNGCoder.m; sourceTree = "<group>"; };
 		C6D20C0FF22D8B467D085CEDB6C59584 /* TTTAttributedLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTTAttributedLabel-dummy.m"; sourceTree = "<group>"; };
+		C830746E5F5BD995EA22F2701A49B820 /* FPVideoPictureSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPVideoPictureSectionController.h; path = FPCommentsModule/Classes/VideoPicture/FPVideoPictureSectionController.h; sourceTree = "<group>"; };
+		C90EA9B316A34A2007722BBC5E4E2DC2 /* FPModuleProtocoal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPModuleProtocoal.h; path = FPCommentsModule/Classes/Base/FPModuleProtocoal.h; sourceTree = "<group>"; };
 		CA0D65AA20EAD55E5B6577BD8112A42F /* FPImageCCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FPImageCCell.xib; path = FPImageVideoCell/Assets/FPImageCCell.xib; sourceTree = "<group>"; };
 		CA39E4F581109DAA4439922AB3EC3301 /* SDAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDAnimatedImageView+WebCache.h"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
 		CABD212C025C1C65DDF0A812C11CA1B5 /* IGListReloadIndexPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadIndexPath.h; path = Source/IGListKit/Internal/IGListReloadIndexPath.h; sourceTree = "<group>"; };
-		CB6E0A388E0EA51060849B0AED9A0991 /* FPTextViewInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPTextViewInputView.h; path = FPCommentsModule/Classes/InputView/FPTextViewInputView.h; sourceTree = "<group>"; };
 		CB73FBD43719DBC08D7A7563FE887B39 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/Core/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		CB8904488300626E20712B38E3850356 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		CCD1CC296D708EBDC337A7A7BB14201A /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/Core/SDImageCoder.m; sourceTree = "<group>"; };
@@ -924,6 +923,7 @@
 		CFD60CB0FFE34A6907B873601D1EBEE8 /* IGListBatchUpdateData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListBatchUpdateData.mm; path = Source/IGListDiffKit/IGListBatchUpdateData.mm; sourceTree = "<group>"; };
 		D006AB266223C70E728714C669817660 /* IGListSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionControllerInternal.h; path = Source/IGListKit/Internal/IGListSectionControllerInternal.h; sourceTree = "<group>"; };
 		D1135207322688B738487A04964F1BA5 /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
+		D1860C3ECED2CCB4A8A552F71294E4FE /* FPCommentSubCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubCell.m; path = FPCommentsModule/Classes/Comment/FPCommentSubCell.m; sourceTree = "<group>"; };
 		D1ACAC2B80323813D1A41F2A34AF8893 /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListDiff.mm; path = Source/IGListDiffKit/IGListDiff.mm; sourceTree = "<group>"; };
 		D1B973A45AFB8CA38FF00C1E4F6ECDA0 /* UIScrollView+IGListKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+IGListKit.h"; path = "Source/IGListKit/Internal/UIScrollView+IGListKit.h"; sourceTree = "<group>"; };
 		D2A91FAC943891F664982614F01685EF /* IGListBatchUpdateState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdateState.h; path = Source/IGListKit/Internal/IGListBatchUpdateState.h; sourceTree = "<group>"; };
@@ -934,6 +934,7 @@
 		D59548BCA341D3591254B7EC8500084B /* FPImageVideoCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPImageVideoCell.h; path = FPImageVideoCell/Classes/FPImageVideoCell.h; sourceTree = "<group>"; };
 		D5972E167CBB1FE411CF306FD95141AB /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		D60088140FFA87F31772681A2C30AF85 /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoStateFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		D656B3F9B36FAF97DF60F0751D1342AA /* FPCommentSubSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubSectionController.h; path = FPCommentsModule/Classes/Comment/FPCommentSubSectionController.h; sourceTree = "<group>"; };
 		D6E8C9DF1FB6892666333753BC9ABAB7 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		D7426FAF0459210C0FC58D3D6344D2AC /* MJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.release.xcconfig; sourceTree = "<group>"; };
 		D9561A08C3A5AFD1BC1C23911CF6C12A /* SDImageAPNGCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoder.h; path = SDWebImage/Core/SDImageAPNGCoder.h; sourceTree = "<group>"; };
@@ -943,7 +944,6 @@
 		DB614FA870A4401D60D76960B48A4718 /* NSBezierPath+RoundedCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+RoundedCorners.m"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.m"; sourceTree = "<group>"; };
 		DCAB091E68C73B953AD8C0EDAB860304 /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
 		DD58E8EC8864CECE7175BBFB806CD07C /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		DD86C2FCB00F4C675860B980A8BF11D9 /* FPVideoPictureSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPVideoPictureSectionController.h; path = FPCommentsModule/Classes/VideoPicture/FPVideoPictureSectionController.h; sourceTree = "<group>"; };
 		DDBEAA079E038F946A53594E3E562EB0 /* HPGrowingTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPGrowingTextView.m; path = class/HPGrowingTextView.m; sourceTree = "<group>"; };
 		DECC86F9F49F77C5D87989ED64934C4A /* IGListUpdatingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListUpdatingDelegate.h; path = Source/IGListKit/IGListUpdatingDelegate.h; sourceTree = "<group>"; };
 		DF4A0CBE6A60BB896AD4EC9453E30FD7 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/Core/NSButton+WebCache.m"; sourceTree = "<group>"; };
@@ -955,7 +955,6 @@
 		E0DFAFA0B9DA2A4F79D802423196D496 /* MJRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJRefresh-Info.plist"; sourceTree = "<group>"; };
 		E10E428FF04D242CFA689EC19D974C91 /* FPRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FPRefresh-Info.plist"; sourceTree = "<group>"; };
 		E12467F14B11D3536144E89D9EEA3D4B /* IGListIndexSetResultInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexSetResultInternal.h; path = Source/IGListDiffKit/Internal/IGListIndexSetResultInternal.h; sourceTree = "<group>"; };
-		E14139017212D6776368DFBDC9ABB809 /* FPCommentSubCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubCell.h; path = FPCommentsModule/Classes/Comment/FPCommentSubCell.h; sourceTree = "<group>"; };
 		E186C3AD0756200F3BEA5606F5407663 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
 		E21D75A21944C3ECB690F04760B74251 /* TTTAttributedLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTTAttributedLabel-Info.plist"; sourceTree = "<group>"; };
 		E2BD49A343D342CA5A2EED0A9F82E7C2 /* IGListDiffKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffKit.h; path = Source/IGListDiffKit/IGListDiffKit.h; sourceTree = "<group>"; };
@@ -974,32 +973,33 @@
 		E9220421ED679D37F81B891119CDFA68 /* IGListAdapterProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapterProxy.m; path = Source/IGListKit/Internal/IGListAdapterProxy.m; sourceTree = "<group>"; };
 		E9896D3B2FE68B265FA9F4345BCD4B08 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		E9A0E50DB51B04C545F64DFC53A31244 /* IGListArrayUtilsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListArrayUtilsInternal.h; path = Source/IGListKit/Internal/IGListArrayUtilsInternal.h; sourceTree = "<group>"; };
-		E9A285EFACFAC80B4C9F4AB5C113AB76 /* FPNestedCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedCollectionViewCell.m; path = FPCommentsModule/Classes/Base/FPNestedCollectionViewCell.m; sourceTree = "<group>"; };
-		EA93C1BE4E436C82C618B6B96C35A0F6 /* FPModuleHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPModuleHelper.h; path = FPCommentsModule/Classes/Base/FPModuleHelper.h; sourceTree = "<group>"; };
 		EB22DA1FA4AFB05041977FD1397E068F /* IGListAdapterPerformanceDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterPerformanceDelegate.h; path = Source/IGListKit/IGListAdapterPerformanceDelegate.h; sourceTree = "<group>"; };
 		EB40E9F122B80D5274312262DD97EE13 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
+		EB48CDD8E05BA21F6120E2DB9D01959D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		EB522917D50F49418BA215882990D78B /* TTTAttributedLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTTAttributedLabel.debug.xcconfig; sourceTree = "<group>"; };
 		EB7203BEE53B5B555AC13F663B622DFF /* UIImage+Transform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Transform.m"; path = "SDWebImage/Core/UIImage+Transform.m"; sourceTree = "<group>"; };
 		EB73AAC37B18DF2D70BB8DE5A604B759 /* IGListDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebugger.h; path = Source/IGListKit/Internal/IGListDebugger.h; sourceTree = "<group>"; };
 		EC2B14272E4880AE393ADAC294A6296E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		ECD378EB11D5DEDF30454ED5D88FEB9A /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
+		EDAC8A670D54BC1D7AE57E0DDEB2D423 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		EDC06D35D2B8873C28921B84D7A8C891 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
 		EDC0B9DBA5DE1C9CF2863EE8D8C1F70D /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		EE635B328EF67A720461692DD114A073 /* HPGrowingTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPGrowingTextView.h; path = class/HPGrowingTextView.h; sourceTree = "<group>"; };
+		EE795EDCD788753BF2FE3A6ED596EB31 /* FPNestedSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPNestedSectionController.m; path = FPCommentsModule/Classes/Base/FPNestedSectionController.m; sourceTree = "<group>"; };
 		EF04C2C37A1F128D728A8509DC00960F /* FPImageCCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPImageCCell.h; path = FPImageVideoCell/Classes/FPImageCCell.h; sourceTree = "<group>"; };
 		EF322FAD2C72BF99DCAEB009A58802AB /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/Core/SDImageCachesManager.m; sourceTree = "<group>"; };
-		EF5172BF763A36B4B42B4E0615CA775A /* FPCommentsModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPCommentsModule-umbrella.h"; sourceTree = "<group>"; };
 		EF6A6DEE9D6C46ABB8610EDEB60FE065 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		EF6AA3E6CD80031741E6D8D67AC8A477 /* TTTAttributedLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-prefix.pch"; sourceTree = "<group>"; };
 		F0854CF650D24567BBD6DAA9F8B11EA3 /* HPGrowingTextView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HPGrowingTextView-Info.plist"; sourceTree = "<group>"; };
 		F1047B1AB6DE84280BBD8D4E888CC43F /* IGListDiffable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffable.h; path = Source/IGListDiffKit/IGListDiffable.h; sourceTree = "<group>"; };
+		F10CC9ADA384E17A386CB26D44FAB83E /* FPCommentSubCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubCell.h; path = FPCommentsModule/Classes/Comment/FPCommentSubCell.h; sourceTree = "<group>"; };
+		F1240C644652C30515DEA73F2EA7FC51 /* FPCommentSubSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPCommentSubSectionController.m; path = FPCommentsModule/Classes/Comment/FPCommentSubSectionController.m; sourceTree = "<group>"; };
 		F1CEEC4B87FB3848E57C37BD876A6342 /* UIImage+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Transform.h"; path = "SDWebImage/Core/UIImage+Transform.h"; sourceTree = "<group>"; };
 		F28A62FBF9CB03E82B3FF69925009F04 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		F352FDD656DE9F964CD0E5CD5C051A49 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		F3755C0B3C2A92049079D959D308CC27 /* IGListAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapter.h; path = Source/IGListKit/IGListAdapter.h; sourceTree = "<group>"; };
 		F46BF53A3A194A6385038E8C78942103 /* SDDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDisplayLink.m; path = SDWebImage/Private/SDDisplayLink.m; sourceTree = "<group>"; };
 		F4CB78108D21A421DF1643631E56C298 /* IGListBindingSectionControllerDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindingSectionControllerDataSource.h; path = Source/IGListKit/IGListBindingSectionControllerDataSource.h; sourceTree = "<group>"; };
-		F52CF6A8E898F55F8062291B342D45AA /* FPCommentSubSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubSectionController.h; path = FPCommentsModule/Classes/Comment/FPCommentSubSectionController.h; sourceTree = "<group>"; };
 		F6EE36ED7BA8712264245B58AD0CE143 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F731DA9BA3C2E52B3F07C70EEFB18BB9 /* Pods-FPCommentsModule_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPCommentsModule_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F7466C0BEA12C5FAE44E7772DFD510E9 /* icon_delete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_delete@2x.png"; path = "FPImageVideoCell/Assets/icon_delete@2x.png"; sourceTree = "<group>"; };
@@ -1007,10 +1007,10 @@
 		F7DA488AB40CC9DC4F40E91454A7CA25 /* SDAnimatedImagePlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImagePlayer.m; path = SDWebImage/Core/SDAnimatedImagePlayer.m; sourceTree = "<group>"; };
 		F7DF1530A55104004CDA56485BC251E7 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
 		F7F73A101C925EEEF33C6815D32F35FB /* HPTextViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPTextViewInternal.h; path = class/HPTextViewInternal.h; sourceTree = "<group>"; };
+		F8ABC244F1DD235F69F02397787556FD /* FPNestedModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPNestedModel.h; path = FPCommentsModule/Classes/Base/FPNestedModel.h; sourceTree = "<group>"; };
 		F8EBF3B4258E399CD3432B8E5A4C2C64 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/Core/SDWebImageOperation.h; sourceTree = "<group>"; };
 		F9688AD0CE7035C59AF3DDEE42F89B75 /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/Core/NSImage+Compatibility.m"; sourceTree = "<group>"; };
 		F96ADACC215DA29B2AA786B25AC8A454 /* IGListTransitionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListTransitionDelegate.h; path = Source/IGListKit/IGListTransitionDelegate.h; sourceTree = "<group>"; };
-		F9E716AF479B250626C16C328CE056AE /* FPCommentSubModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPCommentSubModel.h; path = FPCommentsModule/Classes/Comment/FPCommentSubModel.h; sourceTree = "<group>"; };
 		FA0DC5D915FABC5ADF4F39A9C999B781 /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		FB3C088FFE0B50EC77A5832271CCAD88 /* TTTAttributedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTTAttributedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB68525089AFF77C5E221999FA0B96CC /* SDWebImageDownloaderRequestModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderRequestModifier.m; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.m; sourceTree = "<group>"; };
@@ -1182,30 +1182,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		14C8239054669C0E03AC8DEF8B3096FD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5C4DDAA3AD940852AF047D2418D7275B /* FPUserInfoCollectionCell.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		165212B8CE3CDF6031C51A70D022D907 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A68383ABF9AF9F6EE7B148A2C176BA31 /* FPCommentsModule.modulemap */,
-				4C80E0CB21A6829BD6D47B0896EB2A0D /* FPCommentsModule-dummy.m */,
-				64F00AE25C0DE09BA88AA9D4332F247A /* FPCommentsModule-Info.plist */,
-				69982894646B03D6DDB91137D591B7E4 /* FPCommentsModule-prefix.pch */,
-				EF5172BF763A36B4B42B4E0615CA775A /* FPCommentsModule-umbrella.h */,
-				A2BCB3F47D1215D7F844CCB81EC1343B /* FPCommentsModule.debug.xcconfig */,
-				BF7EB710919540BF1540FC5A1FE49218 /* FPCommentsModule.release.xcconfig */,
-				4C1F3ED89D096DDE65BDC756ED6758B6 /* ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FPCommentsModule";
-			sourceTree = "<group>";
-		};
 		1FAA890A8A10998E2BFD0DB695F0C3A7 /* IGListKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1300,6 +1276,30 @@
 			path = IGListKit;
 			sourceTree = "<group>";
 		};
+		21DD500BB677BCBE6132556DDEF91EA9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BD1ABAF175B00AEFF639DDC3DF50735 /* FPCommentsModule.modulemap */,
+				2B72DB8677858EBA5863A20AAD7C1596 /* FPCommentsModule-dummy.m */,
+				3B0FB7D09E155018C0F18DC1D7229842 /* FPCommentsModule-Info.plist */,
+				1DA74F9F280AB8C031C42B70304A048E /* FPCommentsModule-prefix.pch */,
+				735FA3DAFCB639FB64AA98A84CCAE790 /* FPCommentsModule-umbrella.h */,
+				1721984A6236C1548B7C5AB467A01026 /* FPCommentsModule.debug.xcconfig */,
+				B290F4BE12435A125CE98FDB45A0D6D2 /* FPCommentsModule.release.xcconfig */,
+				2CFD8D1B2F0D1C1E6C2FC7CB28CD8A2C /* ResourceBundle-FPCommentsModule-FPCommentsModule-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FPCommentsModule";
+			sourceTree = "<group>";
+		};
+		29132706A01E8475769ACE7042DDE099 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8941CC5E71F02F8F7B66AFFB98AE644C /* FPUserInfoCollectionCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2BB47ABD75BA63956D647EF8F45EE2AB /* IGListDiffKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,13 +1335,13 @@
 			path = IGListDiffKit;
 			sourceTree = "<group>";
 		};
-		3B555ADBCE799994B084036AEA59793C /* InputView */ = {
+		401CC799B7EA172C16A96EF43A52FF8D /* VideoPicture */ = {
 			isa = PBXGroup;
 			children = (
-				CB6E0A388E0EA51060849B0AED9A0991 /* FPTextViewInputView.h */,
-				7C30E00E604B4C2E4FAE549F2173DA56 /* FPTextViewInputView.m */,
+				C830746E5F5BD995EA22F2701A49B820 /* FPVideoPictureSectionController.h */,
+				3B256643CD1DE841EB8731CD66E5A760 /* FPVideoPictureSectionController.m */,
 			);
-			name = InputView;
+			name = VideoPicture;
 			sourceTree = "<group>";
 		};
 		4249EABADBC48D4FBA774E1F2B713EC7 /* Support Files */ = {
@@ -1411,16 +1411,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4CF20C938667A8C47FE13BBDB9D9D1F4 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4A69A6EB4B48BDA0EC63D4E6A53C234F /* FPCommentsModule.podspec */,
-				7E7EA43BD3BAF105E343BEC8BD4EAC62 /* LICENSE */,
-				49D28E98562A0AB26BFC5671178379EB /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		4DA5E3852F9C2F7E200AC02F8FA13B3C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1467,16 +1457,6 @@
 			path = "Target Support Files/Pods-FPCommentsModule_Tests";
 			sourceTree = "<group>";
 		};
-		579574E288455E849EFF96F727AFD8E4 /* VideoPicture */ = {
-			isa = PBXGroup;
-			children = (
-				DD86C2FCB00F4C675860B980A8BF11D9 /* FPVideoPictureSectionController.h */,
-				7853A3BE850513F61E3D33F82D906384 /* FPVideoPictureSectionController.m */,
-				14C8239054669C0E03AC8DEF8B3096FD /* Resources */,
-			);
-			name = VideoPicture;
-			sourceTree = "<group>";
-		};
 		5A2144CE5CD71440428CE7056947B090 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1493,18 +1473,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6FE4ECFBFC60BA4DA8E829877598E991 /* FPCommentsModule */ = {
+		5C98DB5FD406C680859471BE643DA1B3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				87292D0481D6B23FDB9EF5B39AE92BAD /* Base */,
-				F1EE1CD54387835427542C7DEF90B3E3 /* Comment */,
-				3B555ADBCE799994B084036AEA59793C /* InputView */,
-				4CF20C938667A8C47FE13BBDB9D9D1F4 /* Pod */,
-				165212B8CE3CDF6031C51A70D022D907 /* Support Files */,
-				579574E288455E849EFF96F727AFD8E4 /* VideoPicture */,
+				A58727D5A89231BC116D7F6A7986DD36 /* FPModuleHelper.h */,
+				75F4D2D2E4CCBC5D5AD3B7D9D92C03A1 /* FPModuleHelper.m */,
+				C90EA9B316A34A2007722BBC5E4E2DC2 /* FPModuleProtocoal.h */,
+				10B7E4C241915371E80BD07DE02E8B09 /* FPNestedCollectionViewCell.h */,
+				70E584034553B95DBAE8540C8917237F /* FPNestedCollectionViewCell.m */,
+				F8ABC244F1DD235F69F02397787556FD /* FPNestedModel.h */,
+				15C42DDF117C01ABBCB2B893E33DA321 /* FPNestedModel.m */,
+				77AB1004C83F2E7B5A8E929EAE00AE13 /* FPNestedSectionController.h */,
+				EE795EDCD788753BF2FE3A6ED596EB31 /* FPNestedSectionController.m */,
+				29132706A01E8475769ACE7042DDE099 /* Resources */,
 			);
-			name = FPCommentsModule;
-			path = ../..;
+			name = Base;
 			sourceTree = "<group>";
 		};
 		7020B3B61B894BF7AAC5EDDF2CEDF502 /* Core */ = {
@@ -1724,22 +1707,6 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
-		87292D0481D6B23FDB9EF5B39AE92BAD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				EA93C1BE4E436C82C618B6B96C35A0F6 /* FPModuleHelper.h */,
-				B5018ED3AB31BCD36C6DD283B50FC321 /* FPModuleHelper.m */,
-				AE758C5623FC961517B38462CA83CDD0 /* FPModuleProtocoal.h */,
-				6400C597EB6C561E17D031E993736BC9 /* FPNestedCollectionViewCell.h */,
-				E9A285EFACFAC80B4C9F4AB5C113AB76 /* FPNestedCollectionViewCell.m */,
-				ADEB8A2125DAF98E649019FA6B18AB5C /* FPNestedModel.h */,
-				A74140993491096D078961552FBEB817 /* FPNestedModel.m */,
-				1A691FB06AF2E6F65D8D7B277E67811B /* FPNestedSectionController.h */,
-				072035E0F558C983282372F0BAF82513 /* FPNestedSectionController.m */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 		89EA06A6651590EF54310CB902A37421 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1772,6 +1739,16 @@
 			);
 			name = Masonry;
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		945BCCAA78995C2CD53AF996D938F9ED /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				86E522D5016A873E45659C94280F79C8 /* FPCommentsModule.podspec */,
+				EDAC8A670D54BC1D7AE57E0DDEB2D423 /* LICENSE */,
+				EB48CDD8E05BA21F6120E2DB9D01959D /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		9DA5DD5E82BC500FE746CD7A567BAD33 /* Support Files */ = {
@@ -1842,6 +1819,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		B348448107B03FE603EA5B0A6A6E8064 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				F10CC9ADA384E17A386CB26D44FAB83E /* FPCommentSubCell.h */,
+				D1860C3ECED2CCB4A8A552F71294E4FE /* FPCommentSubCell.m */,
+				51E7F52838A86234ABF11524DA96C968 /* FPCommentSubModel.h */,
+				05ED79706195A41CF64298C9CD1DF9F9 /* FPCommentSubModel.m */,
+				A9C91ECC9BF08BF943DE9496E6928D6F /* FPCommentSubProtocal.h */,
+				D656B3F9B36FAF97DF60F0751D1342AA /* FPCommentSubSectionController.h */,
+				F1240C644652C30515DEA73F2EA7FC51 /* FPCommentSubSectionController.m */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
 		BCEC15068ECEC9C4F56A89373913B94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1907,12 +1898,35 @@
 			path = HPGrowingTextView;
 			sourceTree = "<group>";
 		};
+		DACB16C9C66434CED6D406799F6C76BE /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				3A43FCB5CDCAA979634DACAAAB65236B /* FPTextViewInputView.h */,
+				27DBA5FFF0625427438EB0CB05BCE2D6 /* FPTextViewInputView.m */,
+			);
+			name = InputView;
+			sourceTree = "<group>";
+		};
 		E0995A290EF82BB56FF40B8620A9A6F7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6FE4ECFBFC60BA4DA8E829877598E991 /* FPCommentsModule */,
+				E965F0D276660BCC07B2CAF2837220CF /* FPCommentsModule */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E965F0D276660BCC07B2CAF2837220CF /* FPCommentsModule */ = {
+			isa = PBXGroup;
+			children = (
+				5C98DB5FD406C680859471BE643DA1B3 /* Base */,
+				B348448107B03FE603EA5B0A6A6E8064 /* Comment */,
+				DACB16C9C66434CED6D406799F6C76BE /* InputView */,
+				945BCCAA78995C2CD53AF996D938F9ED /* Pod */,
+				21DD500BB677BCBE6132556DDEF91EA9 /* Support Files */,
+				401CC799B7EA172C16A96EF43A52FF8D /* VideoPicture */,
+			);
+			name = FPCommentsModule;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		EABF1EBD990DB933EF5ABF07D958EE03 /* Support Files */ = {
@@ -1928,20 +1942,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FPRefresh";
-			sourceTree = "<group>";
-		};
-		F1EE1CD54387835427542C7DEF90B3E3 /* Comment */ = {
-			isa = PBXGroup;
-			children = (
-				E14139017212D6776368DFBDC9ABB809 /* FPCommentSubCell.h */,
-				AA08BAC29B6F30A9EEDF21E7A6925BCF /* FPCommentSubCell.m */,
-				F9E716AF479B250626C16C328CE056AE /* FPCommentSubModel.h */,
-				067E57414CF403B584D02C9E82DD3D31 /* FPCommentSubModel.m */,
-				847C754367C5919E61367FF4E28A0B72 /* FPCommentSubProtocal.h */,
-				F52CF6A8E898F55F8062291B342D45AA /* FPCommentSubSectionController.h */,
-				515575BB5F1AF44DE3F6ABB977702ED3 /* FPCommentSubSectionController.m */,
-			);
-			name = Comment;
 			sourceTree = "<group>";
 		};
 		FE59033E4F150F0BC1973289473351B4 /* FPImageVideoCell */ = {
@@ -3110,7 +3110,7 @@
 		};
 		0FDA51EF5AED98DABB63790C4C2239FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF7EB710919540BF1540FC5A1FE49218 /* FPCommentsModule.release.xcconfig */;
+			baseConfigurationReference = B290F4BE12435A125CE98FDB45A0D6D2 /* FPCommentsModule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FPCommentsModule";
@@ -3191,7 +3191,7 @@
 		};
 		297692B947F94368835F90026B92CA7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2BCB3F47D1215D7F844CCB81EC1343B /* FPCommentsModule.debug.xcconfig */;
+			baseConfigurationReference = 1721984A6236C1548B7C5AB467A01026 /* FPCommentsModule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FPCommentsModule";
@@ -3811,7 +3811,7 @@
 		};
 		C861D5A9F6D120CDA860B3D1F0354CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF7EB710919540BF1540FC5A1FE49218 /* FPCommentsModule.release.xcconfig */;
+			baseConfigurationReference = B290F4BE12435A125CE98FDB45A0D6D2 /* FPCommentsModule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3843,7 +3843,7 @@
 		};
 		C9C175EDC25478BEE96B95EDCDE2734E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2BCB3F47D1215D7F844CCB81EC1343B /* FPCommentsModule.debug.xcconfig */;
+			baseConfigurationReference = 1721984A6236C1548B7C5AB467A01026 /* FPCommentsModule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

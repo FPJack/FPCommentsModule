@@ -1,6 +1,6 @@
 {
   "name": "FPCommentsModule",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of FPCommentsModule.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/FPJack/FPCommentsModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/FPJack/FPCommentsModule.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0"
@@ -29,7 +29,12 @@
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/Base/**/*.{h,m}"
+      "source_files": "FPCommentsModule/Classes/Base/**/*.{h,m}",
+      "resource_bundles": {
+        "FPCommentsModule": [
+          "FPCommentsModule/Assets/*.xib"
+        ]
+      }
     },
     {
       "name": "Comment",
@@ -58,11 +63,6 @@
         ],
         "FPCommentsModule/Base": [
 
-        ]
-      },
-      "resource_bundles": {
-        "FPCommentsModule": [
-          "FPCommentsModule/Assets/*.xib"
         ]
       }
     },
