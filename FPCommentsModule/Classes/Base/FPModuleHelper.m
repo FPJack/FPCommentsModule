@@ -49,18 +49,16 @@
         }
     }];
 }
++ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
+    [self removeSectionModelWithDiffId:sectionModel.diffId fromNestedModel:nestedModel];
+}
 + (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
     if (nestedModel.subSectionModels.count > index) {
         nestedModel.height = 0;
         [nestedModel.subSectionModels removeObjectAtIndex:index];
     }
 }
-+ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
-    if ([nestedModel.subSectionModels containsObject:sectionModel]) {
-        nestedModel.height = 0;
-        [nestedModel.subSectionModels removeObject:sectionModel];
-    }
-}
+
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
     id<FPSectionModelProtocal,FPSectionControllerProtocal> afterSectionModel = [self sectionModelWithDiffId:diffId fromNestedModel:nestedModel];
     [self addSectionModel:sectionModel afterSectionModel:afterSectionModel fromNestedModel:nestedModel];
