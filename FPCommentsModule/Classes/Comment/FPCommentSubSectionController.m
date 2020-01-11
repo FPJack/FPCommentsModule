@@ -24,12 +24,15 @@
     cell.model = self.model;
     __weak typeof(self) weakSelf = self;
     cell.tapLinkBlock = ^(id<FPHyperlinkProtocal>  _Nonnull link) {
-        if (weakSelf.tapLinkBlock) weakSelf.tapLinkBlock(weakSelf, link);
+        if (weakSelf.tapLinkBlock) weakSelf.tapLinkBlock(weakSelf, weakSelf.model,link);
     };
     return cell;
 }
 - (void)didUpdateToObject:(id<FPCommentSubProtocal>)object{
     self.inset = object.inset;
     self.model = object;
+}
+- (void)didSelectItemAtIndex:(NSInteger)index{
+    if (self.didSelectItemBlock) self.didSelectItemBlock(self, self.model);
 }
 @end

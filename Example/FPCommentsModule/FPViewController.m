@@ -44,7 +44,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
     for (int i = 0 ; i < 10; i ++) {
@@ -59,7 +58,11 @@
     CGFloat width = kSWidth - 68 - 12 * 2 - 20;
     FPCommentSubSectionController *sectionController = [FPCommentSubSectionController new];
     __weak typeof(self) weakSelf = self;
-    sectionController.tapLinkBlock = ^(FPCommentSubSectionController * _Nonnull sectionController, id<FPHyperlinkProtocal>  _Nonnull link) {
+    sectionController.tapLinkBlock = ^(FPCommentSubSectionController * _Nonnull sectionController,id<FPCommentSubProtocal> commentModel ,id<FPHyperlinkProtocal>  _Nonnull link) {
+        //点击用户名
+    };
+    sectionController.didSelectItemBlock = ^(FPCommentSubSectionController * _Nonnull sectionController, id<FPCommentSubProtocal>  _Nonnull commentModel) {
+        //点击回复内容
         [FPTextViewInputView.share showText:nil placholder:@"输入" block:^(NSString * _Nonnull text) {
             if (!text) return ;
             FPCommentSubModel *subModel = [weakSelf createSubComment:text nestedModel:nestedModel];
@@ -162,7 +165,6 @@
         
         {
             FPNestedModel *commentModel = [FPNestedModel new];
-            commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
             NSMutableArray *arr = [NSMutableArray array];
             for (int i = 0; i < 5; i ++) {
                 NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
@@ -177,10 +179,17 @@
             }
             {
                 FPTextModel *model = [FPTextModel new];
-                model.sectionController = [FPListSectionController new];
-                model.bundle = [NSBundle mainBundle];
-                model.nibName = @"FPPreviewMoreCommentsCell";
-                model.diffId = @"FPPreviewMoreCommentsCell";
+                FPListSectionController *sectionController = [FPListSectionController new];
+                sectionController.configureCellBlock = ^(id  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
+                    [cell.button setTitle:@"查看更多评论" forState:UIControlStateNormal];
+                    cell.tapBlock = ^(UIButton * _Nonnull button) {
+                        //点击查看更多评论
+                        
+                    };
+                    [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+                };
+                model.sectionController = sectionController;
+                model.class_name = FPBtnCollectionCell.class;
                 model.height = 30;
                 model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
                 [arr addObject:model];
@@ -190,6 +199,7 @@
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
             };
+            commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
             commentModel.sectionController = sc;
             commentModel.diffId = @"comment";
             [subArr addObject:commentModel];
