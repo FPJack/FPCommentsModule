@@ -41,17 +41,14 @@ TODO: Add long description of the pod here.
    s.dependency 'IGListKit'
 
 
-
-
-   ##########--模型---#########
+   ##########--基础组件---#########
    s.subspec 'Base' do |b|
    b.ios.deployment_target = '9.0'
    b.source_files = 'FPCommentsModule/Classes/Base/*'
    end
 
    
-   
-   ##########--Comment---#########
+   ##########--评论---#########
    s.subspec 'Comment' do |c|
    c.ios.deployment_target = '9.0'
    c.source_files = 'FPCommentsModule/Classes/Comment/*'
@@ -60,7 +57,7 @@ TODO: Add long description of the pod here.
 
    end
    
-   
+   ##########--图片视频---#########
    s.subspec 'VideoPicture' do |vp|
    vp.ios.deployment_target = '9.0'
    vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
@@ -70,16 +67,11 @@ TODO: Add long description of the pod here.
      'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
    }
    end
-   
+   ##########--输入框---#########
    s.subspec 'InputView' do |input|
    input.ios.deployment_target = '9.0'
    input.source_files = 'FPCommentsModule/Classes/InputView/*'
    input.dependency 'HPGrowingTextView'
    end
-
-
-
-
-
 
 end

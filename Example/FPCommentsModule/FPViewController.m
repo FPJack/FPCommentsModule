@@ -126,10 +126,8 @@
                 cell.imgView.layer.cornerRadius = 22.5;
                 cell.imgView.layer.masksToBounds = YES;
                 cell.rightButtonTapBlock = ^(UIButton * _Nonnull button) {
-                    [FPModuleHelper removeSectionModelWithDiffId:item.diffId fromNestedModel:mainModel];
-                    [mainModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
-                        [batchContext reloadSectionController:mainModel.sectionController];
-                    } completion:nil];
+                    [self.datas removeObject:mainModel];
+                    [self.adapter performUpdatesAnimated:YES completion:nil];
                 };
             };
             userModel.sectionController = sectonController;
