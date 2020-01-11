@@ -5,7 +5,7 @@
 //  Created by fanpeng on 2020/1/4.
 //
 
-#import "FPIgListBaseModel.h"
+#import "FPNestedModel.h"
 #import "FPModuleHelper.h"
 @implementation FPTextModel
 @synthesize height = _height;

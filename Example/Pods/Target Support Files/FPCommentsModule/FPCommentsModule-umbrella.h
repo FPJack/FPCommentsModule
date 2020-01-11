@@ -10,10 +10,10 @@
 #endif
 #endif
 
-#import "FPIgListBaseModel.h"
 #import "FPModuleHelper.h"
 #import "FPModuleProtocoal.h"
 #import "FPNestedCollectionViewCell.h"
+#import "FPNestedModel.h"
 #import "FPNestedSectionController.h"
 #import "FPCommentSubCell.h"
 #import "FPCommentSubModel.h"

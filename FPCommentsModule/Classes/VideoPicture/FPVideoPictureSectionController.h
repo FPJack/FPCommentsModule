@@ -8,7 +8,7 @@
 #import <IGListKit/IGListKit.h>
 #import "FPModuleProtocoal.h"
 #import <FPImageVideoCell/FPImageVideoCell.h>
-#import <FPCommentsModule/FPIgListBaseModel.h>
+#import <FPCommentsModule/FPNestedModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPVideoPictureProtocal <FPSectionModelProtocal,FPSectionControllerProtocal>

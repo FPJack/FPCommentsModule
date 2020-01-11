@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FPCommentsModule/FPIgListBaseModel.h>
+#import <FPCommentsModule/FPNestedModel.h>
 #import <FPCommentSubProtocal.h>
 NS_ASSUME_NONNULL_BEGIN
 @interface FPHyperlinkModel : NSObject<FPHyperlinkProtocal>
