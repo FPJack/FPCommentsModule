@@ -70,6 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FPSubSectionModelsProtocal <NSObject>
 @required
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
+@property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @end
 NS_ASSUME_NONNULL_END
 

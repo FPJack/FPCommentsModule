@@ -68,8 +68,11 @@
         if (sectionController.section == 0) {
             //删除操作
             [FPModuleHelper removeSectionModelWithDiffId:commentModel.diffId fromNestedModel:comment];
-            comment.height += 20;
+            if (comment.subSectionModels.count == 0) {
+                [FPModuleHelper removeSectionModelWithDiffId:comment.diffId fromNestedModel:nestedModel];
+            }
             nestedModel.height = 0;
+
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
             } completion:nil];
@@ -83,7 +86,6 @@
             }else{
                 [FPModuleHelper addSectionModel:subModel fromNestedModel:comment];
             }
-            comment.height += 20;
             nestedModel.height = 0;
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
@@ -99,7 +101,6 @@
     model.commentByUserId = @"444";
     model.commentUserId = @"333";
     model.commentId = @"9333993";
-    model.sectionController.inset = model.inset;
     return model;
 }
 - (id)createModel:(int)index{
@@ -211,12 +212,13 @@
         
         {
             FPNestedModel *commentModel = [FPNestedModel new];
+            commentModel.collectionViewContentInset = UIEdgeInsetsMake(10, 12, 10, 12);
             NSMutableArray *arr = [NSMutableArray array];
             NSInteger rand = arc4random() % 10 + 1;
             for (int i = 0; i < rand; i ++) {
                 NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 FPCommentSubModel *model = [self createSubComment:text nestedModel:mainModel];
-                model.sectionController.inset = model.inset;
+//                model.sectionController.inset = model.inset;
                 [arr addObject:model];
             }
             if (rand > 5) {
@@ -235,16 +237,16 @@
                     model.sectionController = sectionController;
                     model.class_name = FPBtnCollectionCell.class;
                     model.height = 15;
-                    model.inset = UIEdgeInsetsMake(5, 12, 0, 0);
+                    model.inset = UIEdgeInsetsMake(5, 0, 0, 0);
                     [arr addObject:model];
                 }
             }
             commentModel.subSectionModels = arr;
-            commentModel.height += 20;
             FPNestedSectionController *sc = [FPNestedSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof FPNestedCollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-                cell.collectionView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
+                cell.contentView.layer.cornerRadius = 5;
+                cell.contentView.layer.masksToBounds = YES;
             };
             commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
             commentModel.sectionController = sc;

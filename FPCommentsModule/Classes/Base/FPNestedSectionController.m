@@ -28,6 +28,9 @@
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     FPNestedCollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
+    if ([self.model respondsToSelector:@selector(collectionViewContentInset)]) {
+        cell.collectionView.contentInset = self.model.collectionViewContentInset;
+    }
     self.adapter.collectionView = cell.collectionView;
     [self.adapter reloadDataWithCompletion:nil];
     if ([self respondsToSelector:@selector(configureCellBlock)] && self.configureCellBlock) {
@@ -69,7 +72,7 @@
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
     if (width <= 0) {
-        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right- self.collectionContext.containerInset.left - self.collectionContext.containerInset.right;
     }
     return CGSizeMake(width, self.model.height);
 }

@@ -35,6 +35,7 @@
             height += (obj.height + obj.inset.top + obj.inset.bottom);
         }];
         height += (self.inset.top + self.inset.bottom);
+        height += (self.collectionViewContentInset.top + self.collectionViewContentInset.bottom);
         _height = height;
     }
     return _height;

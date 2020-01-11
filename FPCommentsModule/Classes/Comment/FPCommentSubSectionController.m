@@ -15,7 +15,7 @@
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
     if (width <= 0) {
-        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right - self.collectionContext.containerInset.left - self.collectionContext.containerInset.right;
     }
     return CGSizeMake(width, self.model.height);
 }
