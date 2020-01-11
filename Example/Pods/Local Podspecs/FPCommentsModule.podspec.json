@@ -29,14 +29,14 @@
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/Base/*"
+      "source_files": "FPCommentsModule/Classes/Base/**/*.{h,m}"
     },
     {
       "name": "Comment",
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/Comment/*",
+      "source_files": "FPCommentsModule/Classes/Comment/**/*.{h,m}",
       "dependencies": {
         "TTTAttributedLabel": [
 
@@ -51,7 +51,7 @@
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/VideoPicture/*",
+      "source_files": "FPCommentsModule/Classes/VideoPicture/**/*.{h,m}",
       "dependencies": {
         "FPImageVideoCell": [
 
@@ -71,7 +71,7 @@
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "FPCommentsModule/Classes/InputView/*",
+      "source_files": "FPCommentsModule/Classes/InputView/**/*.{h,m}",
       "dependencies": {
         "HPGrowingTextView": [
 

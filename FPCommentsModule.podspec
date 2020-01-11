@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPCommentsModule'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of FPCommentsModule.'
 
 # This description is used to generate tags and improve search results.
@@ -44,14 +44,14 @@ TODO: Add long description of the pod here.
    ##########--基础组件---#########
    s.subspec 'Base' do |b|
    b.ios.deployment_target = '9.0'
-   b.source_files = 'FPCommentsModule/Classes/Base/*'
+   b.source_files = 'FPCommentsModule/Classes/Base/**/*.{h,m}'
    end
 
    
    ##########--评论---#########
    s.subspec 'Comment' do |c|
    c.ios.deployment_target = '9.0'
-   c.source_files = 'FPCommentsModule/Classes/Comment/*'
+   c.source_files = 'FPCommentsModule/Classes/Comment/**/*.{h,m}'
    c.dependency 'TTTAttributedLabel'
    c.dependency 'FPCommentsModule/Base'
 
@@ -60,7 +60,7 @@ TODO: Add long description of the pod here.
    ##########--图片视频---#########
    s.subspec 'VideoPicture' do |vp|
    vp.ios.deployment_target = '9.0'
-   vp.source_files = 'FPCommentsModule/Classes/VideoPicture/*'
+   vp.source_files = 'FPCommentsModule/Classes/VideoPicture/**/*.{h,m}'
    vp.dependency 'FPImageVideoCell'
    vp.dependency 'FPCommentsModule/Base'
    vp.resource_bundles = {
@@ -70,7 +70,7 @@ TODO: Add long description of the pod here.
    ##########--输入框---#########
    s.subspec 'InputView' do |input|
    input.ios.deployment_target = '9.0'
-   input.source_files = 'FPCommentsModule/Classes/InputView/*'
+   input.source_files = 'FPCommentsModule/Classes/InputView/**/*.{h,m}'
    input.dependency 'HPGrowingTextView'
    end
 
