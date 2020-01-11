@@ -26,6 +26,8 @@
 #import <SDWebImage/SDWebImage.h>
 #import <FPModuleHelper.h>
 #import <FPTextViewInputView.h>
+
+#define kMoreCommentDiffId @"kMoreCommentDiffId"
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -62,17 +64,30 @@
         //点击用户名
     };
     sectionController.didSelectItemBlock = ^(FPCommentSubSectionController * _Nonnull sectionController, id<FPCommentSubProtocal>  _Nonnull commentModel) {
+        id<FPNestedSectionControllerProtocal> comment = (id<FPNestedSectionControllerProtocal>)[FPModuleHelper sectionModelWithDiffId:@"comment" fromNestedModel:nestedModel];
+        
         //点击回复内容
-        [FPTextViewInputView.share showText:nil placholder:@"输入" block:^(NSString * _Nonnull text) {
-            if (!text) return ;
-            FPCommentSubModel *subModel = [weakSelf createSubComment:text nestedModel:nestedModel];
-            id<FPNestedSectionControllerProtocal> comment = (id<FPNestedSectionControllerProtocal>)[FPModuleHelper sectionModelWithDiffId:@"comment" fromNestedModel:nestedModel];
-            [FPModuleHelper addSectionModel:subModel beforSectionModelDiffId:@"FPPreviewMoreCommentsCell" fromNestedModel:comment];
+        if (sectionController.section == 0) {
+            //删除操作
+            [FPModuleHelper removeSectionModelWithDiffId:commentModel.diffId fromNestedModel:comment];
             nestedModel.height = 0;
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
             } completion:nil];
-            
+            return ;
+        }
+        [FPTextViewInputView.share showText:nil placholder:@"输入" block:^(NSString * _Nonnull text) {
+            if (!text) return ;
+            FPCommentSubModel *subModel = [weakSelf createSubComment:text nestedModel:nestedModel];
+            if ([FPModuleHelper indexWithDiffid:kMoreCommentDiffId fromNestedModel:comment] != NSNotFound) {
+                [FPModuleHelper addSectionModel:subModel beforSectionModelDiffId:kMoreCommentDiffId fromNestedModel:comment];
+            }else{
+                [FPModuleHelper addSectionModel:subModel fromNestedModel:comment];
+            }
+            nestedModel.height = 0;
+            [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                [batchContext reloadSectionController:nestedModel.sectionController];
+            } completion:nil];
         }];
     };
     model.textFont = [UIFont systemFontOfSize:13];
@@ -94,6 +109,7 @@
         FPNestedModel *mainModel = [FPNestedModel new];
         {
             FPUserModel *userModel = [FPUserModel new];
+            userModel.diffId = @"FPUserModel";
             userModel.userName = [NSString stringWithFormat:@"%d--Jack",index];
             userModel.time = @"2019-09-02";
             FPListSectionController *sectonController = [FPListSectionController new];
@@ -103,6 +119,12 @@
                 cell.label2.text = item.time;
                 cell.imgView.layer.cornerRadius = 22.5;
                 cell.imgView.layer.masksToBounds = YES;
+                cell.rightButtonTapBlock = ^(UIButton * _Nonnull button) {
+                    [FPModuleHelper removeSectionModelWithDiffId:item.diffId fromNestedModel:mainModel];
+                    [mainModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                        [batchContext reloadSectionController:mainModel.sectionController];
+                    } completion:nil];
+                };
             };
             userModel.sectionController = sectonController;
             userModel.height = 60;
@@ -166,33 +188,32 @@
         {
             FPNestedModel *commentModel = [FPNestedModel new];
             NSMutableArray *arr = [NSMutableArray array];
-            for (int i = 0; i < 5; i ++) {
+            NSInteger rand = arc4random() % 10 + 1;
+            for (int i = 0; i < rand; i ++) {
                 NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 FPCommentSubModel *model = [self createSubComment:text nestedModel:mainModel];
-                if (i == 0) {
-                    model.inset = UIEdgeInsetsMake(10, 12, 0, 12);
-                }else if (i == 5){
-                    model.inset = UIEdgeInsetsMake(0, 12, 10, 12);
-                }
                 model.sectionController.inset = model.inset;
                 [arr addObject:model];
             }
-            {
-                FPTextModel *model = [FPTextModel new];
-                FPListSectionController *sectionController = [FPListSectionController new];
-                sectionController.configureCellBlock = ^(id  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
-                    [cell.button setTitle:@"查看更多评论" forState:UIControlStateNormal];
-                    cell.tapBlock = ^(UIButton * _Nonnull button) {
-                        //点击查看更多评论
-                        
+            if (rand > 5) {
+                {
+                    FPTextModel *model = [FPTextModel new];
+                    FPListSectionController *sectionController = [FPListSectionController new];
+                    sectionController.configureCellBlock = ^(id  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
+                        [cell.button setTitle:@"查看更多评论" forState:UIControlStateNormal];
+                        cell.tapBlock = ^(UIButton * _Nonnull button) {
+                            //点击查看更多评论
+                            
+                        };
+                        [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
                     };
-                    [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-                };
-                model.sectionController = sectionController;
-                model.class_name = FPBtnCollectionCell.class;
-                model.height = 30;
-                model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
-                [arr addObject:model];
+                    model.diffId = kMoreCommentDiffId;
+                    model.sectionController = sectionController;
+                    model.class_name = FPBtnCollectionCell.class;
+                    model.height = 30;
+                    model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
+                    [arr addObject:model];
+                }
             }
             commentModel.subSectionModels = arr;
             FPNestedSectionController *sc = [FPNestedSectionController new];

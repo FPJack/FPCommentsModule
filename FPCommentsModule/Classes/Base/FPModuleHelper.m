@@ -17,6 +17,15 @@
     }];
     return index;
 }
++ (NSInteger)indexWithDiffid:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
+    __block NSInteger index = NSNotFound;
+    [nestedModel.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([diffId isEqualToString:obj.diffId]) {
+            index = idx;
+        }
+    }];
+    return index;
+}
 
 
 +(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
@@ -62,6 +71,7 @@
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
     if (sectionModel && nestedModel && nestedModel.subSectionModels) {
         [nestedModel.subSectionModels addObject:sectionModel];
+        nestedModel.height = 0;
     }
 }
 
