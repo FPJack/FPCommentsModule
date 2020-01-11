@@ -177,6 +177,13 @@
                 }
                 model.sources = arr;
                 model.type = FPImageTypeShowImage;
+                if (rand == 4) {
+                    model.inset = UIEdgeInsetsMake(5, 68, 0, 100);
+                    model.column = 2;
+
+                }else{
+                    model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
+                }
             }else{
                 //视频
                 FPVideoItem *item = [FPVideoItem new];
@@ -188,10 +195,10 @@
                 model.type = FPImageTypeShowVideo;
                 model.oneItemSize = item.itemSize;
                 model.sources = [@[item] mutableCopy];
+                model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
+
             }
-            model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
-            CGFloat width = kSWidth - 68 - 20;
-            model.width = width;
+            model.width = kSWidth - model.inset.left - model.inset.right;
             if (model.sources.count > 0) {[subArr addObject:model];}
         }
         
