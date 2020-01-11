@@ -24,6 +24,7 @@
 #import "FPTestVC.h"
 #import <FPNestedCollectionViewCell.h>
 #import <SDWebImage/SDWebImage.h>
+#import <FPModuleHelper.h>
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -52,11 +53,30 @@
     self.adapter.collectionView = self.collectionView;
     
 }
+
+- (id)userModel{
+    FPUserModel *userModel = [FPUserModel new];
+    userModel.userName = [NSString stringWithFormat:@"%d--Jack",0];
+    userModel.time = @"2019-09-02";
+    FPListSectionController *sectonController = [FPListSectionController new];
+    sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
+        cell.imgView.backgroundColor = [UIColor orangeColor];
+        cell.label1.text = item.userName;
+        cell.label2.text = item.time;
+        cell.imgView.layer.cornerRadius = 22.5;
+        cell.imgView.layer.masksToBounds = YES;
+    };
+    userModel.sectionController = sectonController;
+    userModel.height = 60;
+    userModel.nibName = @"FPUserInfoCollectionCell";
+    userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
+    return userModel;
+}
 - (id)createModel:(int)index{
     {
         NSMutableArray *subArr = [NSMutableArray array];
         FPNestedSectionController *nestedSC = [FPNestedSectionController new];
-         FPNestedModel *mainModel = [FPNestedModel new];
+        FPNestedModel *mainModel = [FPNestedModel new];
         {
             FPUserModel *userModel = [FPUserModel new];
             userModel.userName = [NSString stringWithFormat:@"%d--Jack",index];
@@ -95,6 +115,7 @@
         }
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
+            model.diffId = @"FPVideoPictureModel";
             FPVideoPictureSectionController *sectionController = [FPVideoPictureSectionController new];
             sectionController.configureCellBlock = ^(FPVideoPictureModel*  _Nonnull item, __kindof FPVideoPictureCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imageVideoCell.cornerRadius = 5;
@@ -104,20 +125,38 @@
                 cell.imageVideoCell.configureCell = ^(FPImageCCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSArray * _Nonnull source) {
                     cell.deleteBtn.hidden = NO;
                 };
-                cell.imageVideoCell.deleteSourceBlock = ^(id  _Nonnull deleteObject, NSIndexPath * _Nonnull indexPath, FPImageVideoCell * _Nonnull cell) {
-                    item.height = 0;
-                    mainModel.height = 0;
-                    [nestedSC.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                cell.imageVideoCell.tapImageBlock = ^(id  _Nonnull obj, UICollectionViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSMutableArray * _Nonnull source) {
+                    if (indexPath.item % 2) {
+                        [FPModuleHelper addSectionModel:[self userModel] beforSectionModelDiffId:item.diffId fromNestedModel:mainModel];
+                    }else{
+                        [FPModuleHelper addSectionModel:[self userModel] afterSectionModelDiffId:item.diffId fromNestedModel:mainModel];
+                    }
+                    [nestedSC.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                         [batchContext reloadSectionController:nestedSC];
-                    } completion:^(BOOL finished) {
-                        
-                    }];
-//                    [sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
-//                        model.height = model.height - 20;
-//                        [batchContext reloadSectionController:sectionController];
-//                    } completion:^(BOOL finished) {
-//
-//                    }];
+                    } completion:nil];
+                };
+                cell.imageVideoCell.deleteSourceBlock = ^(id  _Nonnull deleteObject, NSIndexPath * _Nonnull indexPath, FPImageVideoCell * _Nonnull cell) {
+                    
+                    if (item.sources.count == 0) {
+                        [FPModuleHelper removeSectionModelWithDiffId:model.diffId fromNestedModel:mainModel];
+                        [nestedSC.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                            [batchContext reloadSectionController:nestedSC];
+                        } completion:nil];
+                        return ;
+                    }
+                    
+                    CGFloat oldHeight = item.height;
+                    item.height = 0;
+                    if (oldHeight != item.height) {
+                        mainModel.height = 0;
+                        [nestedSC.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                            [batchContext reloadSectionController:nestedSC];
+                        } completion:nil];
+                    }else{
+                        [sectionController.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                            [batchContext reloadSectionController:sectionController];
+                        } completion:nil];
+                    }
                 };
             };
             model.sectionController = sectionController;
@@ -145,10 +184,10 @@
                 cell.imageVideoCell.configureCell = ^(FPImageCCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath, NSArray * _Nonnull source) {
                     cell.deleteBtn.hidden = YES;
                 };
-
+                
             };
             model.sectionController = sectionController;
-
+            
             model.type = FPImageTypeShowImage;
             model.maxImageCount = 1;
             model.oneItemSize = CGSizeMake(200, 220);
@@ -186,7 +225,7 @@
             model.sources = [@[item] mutableCopy];
             [subArr addObject:model];
         }
-
+        
         {
             FPTextModel *model = [FPTextModel new];
             FPListSectionController *sectionController = [FPListSectionController new];
@@ -201,7 +240,7 @@
             model.inset = UIEdgeInsetsMake(10, 68, 10, 0);
             [subArr addObject:model];
         }
-
+        
         {
             FPCommentBigModel *commentModel = [FPCommentBigModel new];
             
@@ -253,13 +292,13 @@
         }
         
         
-       
+        
         mainModel.subSectionModels = subArr;
         mainModel.inset = UIEdgeInsetsMake(5, 0, 5, 0);
         mainModel.sectionController = nestedSC;
         return mainModel;
     }
-
+    
     
 }
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
