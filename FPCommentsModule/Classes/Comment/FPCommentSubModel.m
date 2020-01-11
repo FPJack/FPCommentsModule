@@ -111,5 +111,19 @@ static TTTAttributedLabel *label;
     }
     return _attrText;
 }
++ (CGFloat)configureTTTAttributedLabelTextHeightText:(NSString*)text configure:(NSDictionary*)config width:(CGFloat)width numberOfLines:(int)numberOfLines{
+    static TTTAttributedLabel *label;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        label = [[TTTAttributedLabel alloc]initWithFrame:CGRectZero];
+        label.numberOfLines = 0;
+    });
+    [label setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+        [mutableAttributedString setAttributes:config range:NSMakeRange(0, mutableAttributedString.length)];
+        return mutableAttributedString;
+    }];
+    label.numberOfLines = numberOfLines;
+    return ceil([label sizeThatFits:CGSizeMake(width, MAXFLOAT)].height);
+}
 @end
 
