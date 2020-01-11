@@ -8,53 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		041812CB23C5A17400311887 /* example.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041812CA23C5A17400311887 /* example.mp4 */; };
-		041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */; };
-		041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */; };
 		0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495BE6423C708D500EECE76 /* FPTestVC.m */; };
 		0495BE6723C708D500EECE76 /* FPTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495BE6523C708D500EECE76 /* FPTestVC.xib */; };
-		04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */; };
-		04BBF09623C062E5001DCAB7 /* ImageLabelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04A23C062E5001DCAB7 /* ImageLabelCollectionCell.m */; };
-		04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04B23C062E5001DCAB7 /* CollectionLabelCell.m */; };
-		04BBF09823C062E5001DCAB7 /* CollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04D23C062E5001DCAB7 /* CollectionImageCell.m */; };
-		04BBF09923C062E5001DCAB7 /* CollectionImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF04E23C062E5001DCAB7 /* CollectionImageCell.xib */; };
-		04BBF09A23C062E5001DCAB7 /* CollectionEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF04F23C062E5001DCAB7 /* CollectionEmptyCell.m */; };
-		04BBF09B23C062E5001DCAB7 /* ImageTextCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF05223C062E5001DCAB7 /* ImageTextCollectionCell.m */; };
-		04BBF09C23C062E5001DCAB7 /* CollectionLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF05323C062E5001DCAB7 /* CollectionLabelCell.xib */; };
-		04BBF09D23C062E5001DCAB7 /* LeftBtnCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF05423C062E5001DCAB7 /* LeftBtnCollectionCell.xib */; };
-		04BBF09E23C062E5001DCAB7 /* CollectionEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF05523C062E5001DCAB7 /* CollectionEmptyCell.xib */; };
-		04BBF09F23C062E5001DCAB7 /* ImageTextCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF05723C062E5001DCAB7 /* ImageTextCollectionCell.xib */; };
-		04BBF0A023C062E5001DCAB7 /* ImageLabelWHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF05923C062E5001DCAB7 /* ImageLabelWHCell.m */; };
-		04BBF0A123C062E5001DCAB7 /* ImageLabelCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF05A23C062E5001DCAB7 /* ImageLabelCollectionCell.xib */; };
-		04BBF0A223C062E5001DCAB7 /* LeftBtnCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF05B23C062E5001DCAB7 /* LeftBtnCollectionCell.m */; };
-		04BBF0A323C062E5001DCAB7 /* FPCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF05E23C062E5001DCAB7 /* FPCommentVC.m */; };
-		04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06123C062E5001DCAB7 /* IGListBaseModel.m */; };
-		04BBF0A523C062E5001DCAB7 /* FPCommentToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */; };
-		04BBF0A623C062E5001DCAB7 /* FPCommentToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */; };
-		04BBF0A823C062E5001DCAB7 /* FPLinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06C23C062E5001DCAB7 /* FPLinkModel.m */; };
-		04BBF0A923C062E5001DCAB7 /* FPCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06D23C062E5001DCAB7 /* FPCommentModel.m */; };
-		04BBF0AA23C062E5001DCAB7 /* FPBottomCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF06F23C062E5001DCAB7 /* FPBottomCommentView.xib */; };
-		04BBF0AB23C062E5001DCAB7 /* FPCommentUserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF07123C062E5001DCAB7 /* FPCommentUserInfoCell.xib */; };
-		04BBF0AC23C062E5001DCAB7 /* FPCommentContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07223C062E5001DCAB7 /* FPCommentContentCell.m */; };
-		04BBF0AD23C062E5001DCAB7 /* FPBottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07323C062E5001DCAB7 /* FPBottomCommentView.m */; };
-		04BBF0AE23C062E5001DCAB7 /* FPReplyContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF07423C062E5001DCAB7 /* FPReplyContainerCell.xib */; };
-		04BBF0AF23C062E5001DCAB7 /* FPCommentReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07623C062E5001DCAB7 /* FPCommentReplyCell.m */; };
-		04BBF0B023C062E5001DCAB7 /* FPReplyContainerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07723C062E5001DCAB7 /* FPReplyContainerCell.m */; };
-		04BBF0B123C062E5001DCAB7 /* FPCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07823C062E5001DCAB7 /* FPCommentCell.m */; };
-		04BBF0B223C062E5001DCAB7 /* FPCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF07923C062E5001DCAB7 /* FPCommentCell.xib */; };
-		04BBF0B323C062E5001DCAB7 /* CommentsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF07E23C062E5001DCAB7 /* CommentsTableCell.xib */; };
-		04BBF0B423C062E5001DCAB7 /* CommentsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF07F23C062E5001DCAB7 /* CommentsTableCell.m */; };
-		04BBF0B523C062E5001DCAB7 /* FPCommentReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF08023C062E5001DCAB7 /* FPCommentReplyCell.xib */; };
-		04BBF0B623C062E5001DCAB7 /* FPCommentContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF08123C062E5001DCAB7 /* FPCommentContentCell.xib */; };
-		04BBF0B723C062E5001DCAB7 /* FPCommentUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08423C062E5001DCAB7 /* FPCommentUserInfoCell.m */; };
-		04BBF0B823C062E5001DCAB7 /* FPCommentImgSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08623C062E5001DCAB7 /* FPCommentImgSectionController.m */; };
-		04BBF0B923C062E5001DCAB7 /* FPCommentReplySectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08823C062E5001DCAB7 /* FPCommentReplySectionController.m */; };
-		04BBF0BA23C062E5001DCAB7 /* FPCommentContentSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08A23C062E5001DCAB7 /* FPCommentContentSectionController.m */; };
-		04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08C23C062E5001DCAB7 /* FPCommentSectionController.m */; };
-		04BBF0BC23C062E5001DCAB7 /* FPCommentReplayContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08E23C062E5001DCAB7 /* FPCommentReplayContainerController.m */; };
-		04BBF0BD23C062E5001DCAB7 /* FPCommentExpandSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08F23C062E5001DCAB7 /* FPCommentExpandSectionController.m */; };
-		04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF09123C062E5001DCAB7 /* FPCommentUserInfSectionController.m */; };
-		04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0C023C06307001DCAB7 /* SeparatorView.m */; };
-		04BBF0D023C06488001DCAB7 /* FPCommentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */; };
 		5E1303E22CC09F1455E3E818 /* Pods_FPCommentsModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -87,84 +42,9 @@
 /* Begin PBXFileReference section */
 		025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCommentsModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041812CA23C5A17400311887 /* example.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.mp4; sourceTree = "<group>"; };
-		041812CC23C5A4BF00311887 /* FPPreviewMoreCommentsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPreviewMoreCommentsCell.h; sourceTree = "<group>"; };
-		041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPreviewMoreCommentsCell.m; sourceTree = "<group>"; };
-		041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPreviewMoreCommentsCell.xib; sourceTree = "<group>"; };
 		0495BE6323C708D500EECE76 /* FPTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTestVC.h; sourceTree = "<group>"; };
 		0495BE6423C708D500EECE76 /* FPTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTestVC.m; sourceTree = "<group>"; };
 		0495BE6523C708D500EECE76 /* FPTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPTestVC.xib; sourceTree = "<group>"; };
-		04BBF04523C062E5001DCAB7 /* FPCommentProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentProtocal.h; sourceTree = "<group>"; };
-		04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLabelWHCell.xib; sourceTree = "<group>"; };
-		04BBF04923C062E5001DCAB7 /* ImageTextCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCollectionCell.h; sourceTree = "<group>"; };
-		04BBF04A23C062E5001DCAB7 /* ImageLabelCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelCollectionCell.m; sourceTree = "<group>"; };
-		04BBF04B23C062E5001DCAB7 /* CollectionLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionLabelCell.m; sourceTree = "<group>"; };
-		04BBF04C23C062E5001DCAB7 /* ImageLabelWHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelWHCell.h; sourceTree = "<group>"; };
-		04BBF04D23C062E5001DCAB7 /* CollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageCell.m; sourceTree = "<group>"; };
-		04BBF04E23C062E5001DCAB7 /* CollectionImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionImageCell.xib; sourceTree = "<group>"; };
-		04BBF04F23C062E5001DCAB7 /* CollectionEmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionEmptyCell.m; sourceTree = "<group>"; };
-		04BBF05023C062E5001DCAB7 /* LeftBtnCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftBtnCollectionCell.h; sourceTree = "<group>"; };
-		04BBF05123C062E5001DCAB7 /* ImageLabelCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelCollectionCell.h; sourceTree = "<group>"; };
-		04BBF05223C062E5001DCAB7 /* ImageTextCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextCollectionCell.m; sourceTree = "<group>"; };
-		04BBF05323C062E5001DCAB7 /* CollectionLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionLabelCell.xib; sourceTree = "<group>"; };
-		04BBF05423C062E5001DCAB7 /* LeftBtnCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftBtnCollectionCell.xib; sourceTree = "<group>"; };
-		04BBF05523C062E5001DCAB7 /* CollectionEmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionEmptyCell.xib; sourceTree = "<group>"; };
-		04BBF05623C062E5001DCAB7 /* CollectionLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionLabelCell.h; sourceTree = "<group>"; };
-		04BBF05723C062E5001DCAB7 /* ImageTextCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextCollectionCell.xib; sourceTree = "<group>"; };
-		04BBF05823C062E5001DCAB7 /* CollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageCell.h; sourceTree = "<group>"; };
-		04BBF05923C062E5001DCAB7 /* ImageLabelWHCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelWHCell.m; sourceTree = "<group>"; };
-		04BBF05A23C062E5001DCAB7 /* ImageLabelCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLabelCollectionCell.xib; sourceTree = "<group>"; };
-		04BBF05B23C062E5001DCAB7 /* LeftBtnCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftBtnCollectionCell.m; sourceTree = "<group>"; };
-		04BBF05C23C062E5001DCAB7 /* CollectionEmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionEmptyCell.h; sourceTree = "<group>"; };
-		04BBF05E23C062E5001DCAB7 /* FPCommentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentVC.m; sourceTree = "<group>"; };
-		04BBF05F23C062E5001DCAB7 /* FPCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentVC.h; sourceTree = "<group>"; };
-		04BBF06123C062E5001DCAB7 /* IGListBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGListBaseModel.m; sourceTree = "<group>"; };
-		04BBF06223C062E5001DCAB7 /* IGListBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListBaseModel.h; sourceTree = "<group>"; };
-		04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentToolView.xib; sourceTree = "<group>"; };
-		04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentToolView.m; sourceTree = "<group>"; };
-		04BBF06823C062E5001DCAB7 /* FPCommentToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentToolView.h; sourceTree = "<group>"; };
-		04BBF06A23C062E5001DCAB7 /* FPCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentModel.h; sourceTree = "<group>"; };
-		04BBF06B23C062E5001DCAB7 /* FPLinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPLinkModel.h; sourceTree = "<group>"; };
-		04BBF06C23C062E5001DCAB7 /* FPLinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPLinkModel.m; sourceTree = "<group>"; };
-		04BBF06D23C062E5001DCAB7 /* FPCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentModel.m; sourceTree = "<group>"; };
-		04BBF06F23C062E5001DCAB7 /* FPBottomCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPBottomCommentView.xib; sourceTree = "<group>"; };
-		04BBF07023C062E5001DCAB7 /* FPCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentCell.h; sourceTree = "<group>"; };
-		04BBF07123C062E5001DCAB7 /* FPCommentUserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentUserInfoCell.xib; sourceTree = "<group>"; };
-		04BBF07223C062E5001DCAB7 /* FPCommentContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentContentCell.m; sourceTree = "<group>"; };
-		04BBF07323C062E5001DCAB7 /* FPBottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPBottomCommentView.m; sourceTree = "<group>"; };
-		04BBF07423C062E5001DCAB7 /* FPReplyContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPReplyContainerCell.xib; sourceTree = "<group>"; };
-		04BBF07523C062E5001DCAB7 /* FPCommentUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentUserInfoCell.h; sourceTree = "<group>"; };
-		04BBF07623C062E5001DCAB7 /* FPCommentReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentReplyCell.m; sourceTree = "<group>"; };
-		04BBF07723C062E5001DCAB7 /* FPReplyContainerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPReplyContainerCell.m; sourceTree = "<group>"; };
-		04BBF07823C062E5001DCAB7 /* FPCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentCell.m; sourceTree = "<group>"; };
-		04BBF07923C062E5001DCAB7 /* FPCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentCell.xib; sourceTree = "<group>"; };
-		04BBF07A23C062E5001DCAB7 /* FPCommentContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentContentCell.h; sourceTree = "<group>"; };
-		04BBF07B23C062E5001DCAB7 /* FPBottomCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPBottomCommentView.h; sourceTree = "<group>"; };
-		04BBF07D23C062E5001DCAB7 /* CommentsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableCell.h; sourceTree = "<group>"; };
-		04BBF07E23C062E5001DCAB7 /* CommentsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsTableCell.xib; sourceTree = "<group>"; };
-		04BBF07F23C062E5001DCAB7 /* CommentsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableCell.m; sourceTree = "<group>"; };
-		04BBF08023C062E5001DCAB7 /* FPCommentReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentReplyCell.xib; sourceTree = "<group>"; };
-		04BBF08123C062E5001DCAB7 /* FPCommentContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentContentCell.xib; sourceTree = "<group>"; };
-		04BBF08223C062E5001DCAB7 /* FPReplyContainerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPReplyContainerCell.h; sourceTree = "<group>"; };
-		04BBF08323C062E5001DCAB7 /* FPCommentReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentReplyCell.h; sourceTree = "<group>"; };
-		04BBF08423C062E5001DCAB7 /* FPCommentUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentUserInfoCell.m; sourceTree = "<group>"; };
-		04BBF08623C062E5001DCAB7 /* FPCommentImgSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentImgSectionController.m; sourceTree = "<group>"; };
-		04BBF08723C062E5001DCAB7 /* FPCommentReplayContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentReplayContainerController.h; sourceTree = "<group>"; };
-		04BBF08823C062E5001DCAB7 /* FPCommentReplySectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentReplySectionController.m; sourceTree = "<group>"; };
-		04BBF08923C062E5001DCAB7 /* FPCommentUserInfSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentUserInfSectionController.h; sourceTree = "<group>"; };
-		04BBF08A23C062E5001DCAB7 /* FPCommentContentSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentContentSectionController.m; sourceTree = "<group>"; };
-		04BBF08B23C062E5001DCAB7 /* FPCommentExpandSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentExpandSectionController.h; sourceTree = "<group>"; };
-		04BBF08C23C062E5001DCAB7 /* FPCommentSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentSectionController.m; sourceTree = "<group>"; };
-		04BBF08D23C062E5001DCAB7 /* FPCommentImgSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentImgSectionController.h; sourceTree = "<group>"; };
-		04BBF08E23C062E5001DCAB7 /* FPCommentReplayContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentReplayContainerController.m; sourceTree = "<group>"; };
-		04BBF08F23C062E5001DCAB7 /* FPCommentExpandSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentExpandSectionController.m; sourceTree = "<group>"; };
-		04BBF09023C062E5001DCAB7 /* FPCommentContentSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentContentSectionController.h; sourceTree = "<group>"; };
-		04BBF09123C062E5001DCAB7 /* FPCommentUserInfSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentUserInfSectionController.m; sourceTree = "<group>"; };
-		04BBF09223C062E5001DCAB7 /* FPCommentReplySectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentReplySectionController.h; sourceTree = "<group>"; };
-		04BBF09323C062E5001DCAB7 /* FPCommentSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentSectionController.h; sourceTree = "<group>"; };
-		04BBF0BF23C06307001DCAB7 /* SeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorView.h; sourceTree = "<group>"; };
-		04BBF0C023C06307001DCAB7 /* SeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorView.m; sourceTree = "<group>"; };
-		04BBF0CE23C06488001DCAB7 /* FPCommentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentHelper.h; sourceTree = "<group>"; };
-		04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentHelper.m; sourceTree = "<group>"; };
 		0A785B1AF93FC82DE9D7F6CE /* Pods-FPCommentsModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCommentsModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2787FEE5C00616CCB645CC74 /* Pods-FPCommentsModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCommentsModule_Example.release.xcconfig"; path = "Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49E8A0E4E275ADBFFCD9056D /* FPCommentsModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FPCommentsModule.podspec; path = ../FPCommentsModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -225,195 +105,8 @@
 		04BBF02723C05CA8001DCAB7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				04BBF04223C062E5001DCAB7 /* CommentsLib */,
-				04BBF02A23C05CBE001DCAB7 /* SectionController */,
-				04BBF02923C05CB6001DCAB7 /* View */,
-				04BBF02823C05CB1001DCAB7 /* Model */,
 			);
 			name = Example;
-			sourceTree = "<group>";
-		};
-		04BBF02823C05CB1001DCAB7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		04BBF02923C05CB6001DCAB7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				041812CC23C5A4BF00311887 /* FPPreviewMoreCommentsCell.h */,
-				041812CD23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m */,
-				041812CE23C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		04BBF02A23C05CBE001DCAB7 /* SectionController */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF03323C05EDB001DCAB7 /* New Group */,
-			);
-			name = SectionController;
-			sourceTree = "<group>";
-		};
-		04BBF03323C05EDB001DCAB7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
-		04BBF04223C062E5001DCAB7 /* CommentsLib */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF04323C062E5001DCAB7 /* Protocal */,
-				04BBF04723C062E5001DCAB7 /* CommonCell */,
-				04BBF05D23C062E5001DCAB7 /* VC */,
-				04BBF06023C062E5001DCAB7 /* BaseModel */,
-				04BBF06323C062E5001DCAB7 /* CommentTextView */,
-				04BBF06923C062E5001DCAB7 /* Model */,
-				04BBF06E23C062E5001DCAB7 /* View */,
-				04BBF08523C062E5001DCAB7 /* SectionController */,
-			);
-			path = CommentsLib;
-			sourceTree = "<group>";
-		};
-		04BBF04323C062E5001DCAB7 /* Protocal */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF0CE23C06488001DCAB7 /* FPCommentHelper.h */,
-				04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */,
-				04BBF04523C062E5001DCAB7 /* FPCommentProtocal.h */,
-			);
-			path = Protocal;
-			sourceTree = "<group>";
-		};
-		04BBF04723C062E5001DCAB7 /* CommonCell */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF04823C062E5001DCAB7 /* ImageLabelWHCell.xib */,
-				04BBF04923C062E5001DCAB7 /* ImageTextCollectionCell.h */,
-				04BBF04A23C062E5001DCAB7 /* ImageLabelCollectionCell.m */,
-				04BBF04B23C062E5001DCAB7 /* CollectionLabelCell.m */,
-				04BBF04C23C062E5001DCAB7 /* ImageLabelWHCell.h */,
-				04BBF04D23C062E5001DCAB7 /* CollectionImageCell.m */,
-				04BBF04E23C062E5001DCAB7 /* CollectionImageCell.xib */,
-				04BBF04F23C062E5001DCAB7 /* CollectionEmptyCell.m */,
-				04BBF05023C062E5001DCAB7 /* LeftBtnCollectionCell.h */,
-				04BBF05123C062E5001DCAB7 /* ImageLabelCollectionCell.h */,
-				04BBF05223C062E5001DCAB7 /* ImageTextCollectionCell.m */,
-				04BBF05323C062E5001DCAB7 /* CollectionLabelCell.xib */,
-				04BBF05423C062E5001DCAB7 /* LeftBtnCollectionCell.xib */,
-				04BBF05523C062E5001DCAB7 /* CollectionEmptyCell.xib */,
-				04BBF05623C062E5001DCAB7 /* CollectionLabelCell.h */,
-				04BBF05723C062E5001DCAB7 /* ImageTextCollectionCell.xib */,
-				04BBF05823C062E5001DCAB7 /* CollectionImageCell.h */,
-				04BBF05923C062E5001DCAB7 /* ImageLabelWHCell.m */,
-				04BBF05A23C062E5001DCAB7 /* ImageLabelCollectionCell.xib */,
-				04BBF05B23C062E5001DCAB7 /* LeftBtnCollectionCell.m */,
-				04BBF05C23C062E5001DCAB7 /* CollectionEmptyCell.h */,
-			);
-			path = CommonCell;
-			sourceTree = "<group>";
-		};
-		04BBF05D23C062E5001DCAB7 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF05E23C062E5001DCAB7 /* FPCommentVC.m */,
-				04BBF05F23C062E5001DCAB7 /* FPCommentVC.h */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		04BBF06023C062E5001DCAB7 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF06123C062E5001DCAB7 /* IGListBaseModel.m */,
-				04BBF06223C062E5001DCAB7 /* IGListBaseModel.h */,
-			);
-			path = BaseModel;
-			sourceTree = "<group>";
-		};
-		04BBF06323C062E5001DCAB7 /* CommentTextView */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */,
-				04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */,
-				04BBF06823C062E5001DCAB7 /* FPCommentToolView.h */,
-			);
-			path = CommentTextView;
-			sourceTree = "<group>";
-		};
-		04BBF06923C062E5001DCAB7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF06A23C062E5001DCAB7 /* FPCommentModel.h */,
-				04BBF06B23C062E5001DCAB7 /* FPLinkModel.h */,
-				04BBF06C23C062E5001DCAB7 /* FPLinkModel.m */,
-				04BBF06D23C062E5001DCAB7 /* FPCommentModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04BBF06E23C062E5001DCAB7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF06F23C062E5001DCAB7 /* FPBottomCommentView.xib */,
-				04BBF07023C062E5001DCAB7 /* FPCommentCell.h */,
-				04BBF07123C062E5001DCAB7 /* FPCommentUserInfoCell.xib */,
-				04BBF07223C062E5001DCAB7 /* FPCommentContentCell.m */,
-				04BBF07323C062E5001DCAB7 /* FPBottomCommentView.m */,
-				04BBF07423C062E5001DCAB7 /* FPReplyContainerCell.xib */,
-				04BBF07523C062E5001DCAB7 /* FPCommentUserInfoCell.h */,
-				04BBF07623C062E5001DCAB7 /* FPCommentReplyCell.m */,
-				04BBF07723C062E5001DCAB7 /* FPReplyContainerCell.m */,
-				04BBF07823C062E5001DCAB7 /* FPCommentCell.m */,
-				04BBF07923C062E5001DCAB7 /* FPCommentCell.xib */,
-				04BBF07A23C062E5001DCAB7 /* FPCommentContentCell.h */,
-				04BBF07B23C062E5001DCAB7 /* FPBottomCommentView.h */,
-				04BBF07C23C062E5001DCAB7 /* CommentTableCell */,
-				04BBF08023C062E5001DCAB7 /* FPCommentReplyCell.xib */,
-				04BBF08123C062E5001DCAB7 /* FPCommentContentCell.xib */,
-				04BBF08223C062E5001DCAB7 /* FPReplyContainerCell.h */,
-				04BBF08323C062E5001DCAB7 /* FPCommentReplyCell.h */,
-				04BBF08423C062E5001DCAB7 /* FPCommentUserInfoCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		04BBF07C23C062E5001DCAB7 /* CommentTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF0BF23C06307001DCAB7 /* SeparatorView.h */,
-				04BBF0C023C06307001DCAB7 /* SeparatorView.m */,
-				04BBF07D23C062E5001DCAB7 /* CommentsTableCell.h */,
-				04BBF07E23C062E5001DCAB7 /* CommentsTableCell.xib */,
-				04BBF07F23C062E5001DCAB7 /* CommentsTableCell.m */,
-			);
-			path = CommentTableCell;
-			sourceTree = "<group>";
-		};
-		04BBF08523C062E5001DCAB7 /* SectionController */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF08623C062E5001DCAB7 /* FPCommentImgSectionController.m */,
-				04BBF08723C062E5001DCAB7 /* FPCommentReplayContainerController.h */,
-				04BBF08823C062E5001DCAB7 /* FPCommentReplySectionController.m */,
-				04BBF08923C062E5001DCAB7 /* FPCommentUserInfSectionController.h */,
-				04BBF08A23C062E5001DCAB7 /* FPCommentContentSectionController.m */,
-				04BBF08B23C062E5001DCAB7 /* FPCommentExpandSectionController.h */,
-				04BBF08C23C062E5001DCAB7 /* FPCommentSectionController.m */,
-				04BBF08D23C062E5001DCAB7 /* FPCommentImgSectionController.h */,
-				04BBF08E23C062E5001DCAB7 /* FPCommentReplayContainerController.m */,
-				04BBF08F23C062E5001DCAB7 /* FPCommentExpandSectionController.m */,
-				04BBF09023C062E5001DCAB7 /* FPCommentContentSectionController.h */,
-				04BBF09123C062E5001DCAB7 /* FPCommentUserInfSectionController.m */,
-				04BBF09223C062E5001DCAB7 /* FPCommentReplySectionController.h */,
-				04BBF09323C062E5001DCAB7 /* FPCommentSectionController.h */,
-			);
-			path = SectionController;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -606,28 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BBF0B523C062E5001DCAB7 /* FPCommentReplyCell.xib in Resources */,
-				04BBF0AE23C062E5001DCAB7 /* FPReplyContainerCell.xib in Resources */,
-				04BBF0A523C062E5001DCAB7 /* FPCommentToolView.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				04BBF09C23C062E5001DCAB7 /* CollectionLabelCell.xib in Resources */,
-				04BBF09E23C062E5001DCAB7 /* CollectionEmptyCell.xib in Resources */,
-				04BBF0AB23C062E5001DCAB7 /* FPCommentUserInfoCell.xib in Resources */,
-				04BBF0B623C062E5001DCAB7 /* FPCommentContentCell.xib in Resources */,
-				041812D023C5A4BF00311887 /* FPPreviewMoreCommentsCell.xib in Resources */,
-				04BBF0B323C062E5001DCAB7 /* CommentsTableCell.xib in Resources */,
 				0495BE6723C708D500EECE76 /* FPTestVC.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				04BBF0A123C062E5001DCAB7 /* ImageLabelCollectionCell.xib in Resources */,
-				04BBF09F23C062E5001DCAB7 /* ImageTextCollectionCell.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				04BBF0AA23C062E5001DCAB7 /* FPBottomCommentView.xib in Resources */,
-				04BBF0B223C062E5001DCAB7 /* FPCommentCell.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				04BBF09D23C062E5001DCAB7 /* LeftBtnCollectionCell.xib in Resources */,
-				04BBF09523C062E5001DCAB7 /* ImageLabelWHCell.xib in Resources */,
 				041812CB23C5A17400311887 /* example.mp4 in Resources */,
-				04BBF09923C062E5001DCAB7 /* CollectionImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,38 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BBF0A623C062E5001DCAB7 /* FPCommentToolView.m in Sources */,
-				04BBF0A823C062E5001DCAB7 /* FPLinkModel.m in Sources */,
-				04BBF0A923C062E5001DCAB7 /* FPCommentModel.m in Sources */,
-				041812CF23C5A4BF00311887 /* FPPreviewMoreCommentsCell.m in Sources */,
-				04BBF0BC23C062E5001DCAB7 /* FPCommentReplayContainerController.m in Sources */,
-				04BBF0B123C062E5001DCAB7 /* FPCommentCell.m in Sources */,
 				6003F59E195388D20070C39A /* FPAppDelegate.m in Sources */,
-				04BBF09A23C062E5001DCAB7 /* CollectionEmptyCell.m in Sources */,
 				0495BE6623C708D500EECE76 /* FPTestVC.m in Sources */,
-				04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */,
-				04BBF0A023C062E5001DCAB7 /* ImageLabelWHCell.m in Sources */,
-				04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */,
-				04BBF0AD23C062E5001DCAB7 /* FPBottomCommentView.m in Sources */,
-				04BBF0BA23C062E5001DCAB7 /* FPCommentContentSectionController.m in Sources */,
-				04BBF0A323C062E5001DCAB7 /* FPCommentVC.m in Sources */,
-				04BBF0AC23C062E5001DCAB7 /* FPCommentContentCell.m in Sources */,
-				04BBF0B723C062E5001DCAB7 /* FPCommentUserInfoCell.m in Sources */,
-				04BBF0B423C062E5001DCAB7 /* CommentsTableCell.m in Sources */,
-				04BBF0B023C062E5001DCAB7 /* FPReplyContainerCell.m in Sources */,
 				6003F5A7195388D20070C39A /* FPViewController.m in Sources */,
-				04BBF0D023C06488001DCAB7 /* FPCommentHelper.m in Sources */,
-				04BBF0A223C062E5001DCAB7 /* LeftBtnCollectionCell.m in Sources */,
-				04BBF09B23C062E5001DCAB7 /* ImageTextCollectionCell.m in Sources */,
-				04BBF0AF23C062E5001DCAB7 /* FPCommentReplyCell.m in Sources */,
-				04BBF09823C062E5001DCAB7 /* CollectionImageCell.m in Sources */,
-				04BBF0B823C062E5001DCAB7 /* FPCommentImgSectionController.m in Sources */,
-				04BBF0B923C062E5001DCAB7 /* FPCommentReplySectionController.m in Sources */,
-				04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */,
-				04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */,
-				04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */,
-				04BBF0BD23C062E5001DCAB7 /* FPCommentExpandSectionController.m in Sources */,
-				04BBF09623C062E5001DCAB7 /* ImageLabelCollectionCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
