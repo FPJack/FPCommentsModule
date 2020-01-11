@@ -52,7 +52,12 @@
     }
     self.datas = datas;
     self.adapter.collectionView = self.collectionView;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:self action:@selector(addNewComment)];
     
+}
+- (void)addNewComment{
+    [self.datas insertObject:[self createModel:self.datas.count] atIndex:0];
+    [self.adapter performUpdatesAnimated:YES completion:nil];
 }
 - (id)createSubComment:(NSString*)text nestedModel:(id<FPNestedSectionControllerProtocal>)nestedModel{
     FPCommentSubModel *model = [FPCommentSubModel new];
@@ -254,8 +259,6 @@
             commentModel.diffId = @"comment";
             [subArr addObject:commentModel];
         }
-        
-        
         
         mainModel.subSectionModels = subArr;
         mainModel.inset = UIEdgeInsetsMake(5, 0, 5, 0);
