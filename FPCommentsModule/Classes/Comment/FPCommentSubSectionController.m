@@ -33,6 +33,8 @@
     self.model = object;
 }
 - (void)didSelectItemAtIndex:(NSInteger)index{
-    if (self.didSelectItemBlock) self.didSelectItemBlock(self, self.model);
+    if ([self respondsToSelector:@selector(didSelectItemBlock)] && self.didSelectItemBlock) {
+        self.didSelectItemBlock(self, self.model, index);
+    }
 }
 @end

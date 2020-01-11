@@ -62,7 +62,7 @@
     sectionController.tapLinkBlock = ^(FPCommentSubSectionController * _Nonnull sectionController,id<FPCommentSubProtocal> commentModel ,id<FPHyperlinkProtocal>  _Nonnull link) {
         //点击用户名
     };
-    sectionController.didSelectItemBlock = ^(FPCommentSubSectionController * _Nonnull sectionController, id<FPCommentSubProtocal>  _Nonnull commentModel) {
+    sectionController.didSelectItemBlock = ^(IGListSectionController *sectionController,id<FPCommentSubProtocal> commentModel,NSInteger index) {
         id<FPNestedSectionControllerProtocal> comment = (id<FPNestedSectionControllerProtocal>)[FPModuleHelper sectionModelWithDiffId:@"comment" fromNestedModel:nestedModel];
         
         //点击回复内容
@@ -195,9 +195,8 @@
             CGFloat width = kSWidth - 68 - 20;
             model.width = width;
             if (model.sources.count > 0) {[subArr addObject:model];}
-            
-            
         }
+        
         {
             FPTextModel *model = [FPTextModel new];
             FPListSectionController *sectionController = [FPListSectionController new];

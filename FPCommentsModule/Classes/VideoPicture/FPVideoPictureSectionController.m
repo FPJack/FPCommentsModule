@@ -81,5 +81,11 @@
     self.inset = object.inset;
     self.model = object;
 }
+- (void)didSelectItemAtIndex:(NSInteger)index{
+    if ([self respondsToSelector:@selector(didSelectItemBlock)] && self.didSelectItemBlock) {
+        self.didSelectItemBlock(self, self.model, index);
+    }
+}
+
 @end
 
