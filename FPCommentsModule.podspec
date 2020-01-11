@@ -69,7 +69,12 @@ TODO: Add long description of the pod here.
    vp.resource_bundles = {
      'FPCommentsModule' => ['FPCommentsModule/Assets/*.xib']
    }
-
+   end
+   
+   s.subspec 'InputView' do |input|
+   input.ios.deployment_target = '9.0'
+   input.source_files = 'FPCommentsModule/Classes/InputView/*'
+   input.dependency 'HPGrowingTextView'
    end
 
 

@@ -2,6 +2,7 @@ PODS:
   - FPCommentsModule (0.1.0):
     - FPCommentsModule/Base (= 0.1.0)
     - FPCommentsModule/Comment (= 0.1.0)
+    - FPCommentsModule/InputView (= 0.1.0)
     - FPCommentsModule/VideoPicture (= 0.1.0)
     - IGListKit
   - FPCommentsModule/Base (0.1.0):
@@ -10,6 +11,9 @@ PODS:
     - FPCommentsModule/Base
     - IGListKit
     - TTTAttributedLabel
+  - FPCommentsModule/InputView (0.1.0):
+    - HPGrowingTextView
+    - IGListKit
   - FPCommentsModule/VideoPicture (0.1.0):
     - FPCommentsModule/Base
     - FPImageVideoCell
@@ -17,6 +21,7 @@ PODS:
   - FPImageVideoCell (0.2.2)
   - FPRefresh (0.1.3):
     - MJRefresh
+  - HPGrowingTextView (1.1)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -36,6 +41,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - FPImageVideoCell
+    - HPGrowingTextView
     - SDWebImage
   trunk:
     - FPRefresh
@@ -50,9 +56,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FPCommentsModule: 779fbb6d4d8ad0cce0e4d905c55c78640b55930d
+  FPCommentsModule: 0132167af4341491f7966d17242dd2a81024ba8c
   FPImageVideoCell: e0c1a0df04dabda2cb97acf8f10cf2fa01796292
   FPRefresh: 446483b154c6b363d4f56f6b69a59f8f87c6cd1f
+  HPGrowingTextView: 88a716d97fb853bcb08a4a08e4727da17efc9b19
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

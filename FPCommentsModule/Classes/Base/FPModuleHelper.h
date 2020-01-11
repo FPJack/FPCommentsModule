@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel;
 + (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel;
 
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel;
 
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel;
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)afterSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel;

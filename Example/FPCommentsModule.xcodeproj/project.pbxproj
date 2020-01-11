@@ -30,7 +30,6 @@
 		04BBF0A423C062E5001DCAB7 /* IGListBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06123C062E5001DCAB7 /* IGListBaseModel.m */; };
 		04BBF0A523C062E5001DCAB7 /* FPCommentToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */; };
 		04BBF0A623C062E5001DCAB7 /* FPCommentToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */; };
-		04BBF0A723C062E5001DCAB7 /* FPCommentAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06723C062E5001DCAB7 /* FPCommentAccessoryView.m */; };
 		04BBF0A823C062E5001DCAB7 /* FPLinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06C23C062E5001DCAB7 /* FPLinkModel.m */; };
 		04BBF0A923C062E5001DCAB7 /* FPCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF06D23C062E5001DCAB7 /* FPCommentModel.m */; };
 		04BBF0AA23C062E5001DCAB7 /* FPBottomCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF06F23C062E5001DCAB7 /* FPBottomCommentView.xib */; };
@@ -55,10 +54,6 @@
 		04BBF0BD23C062E5001DCAB7 /* FPCommentExpandSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF08F23C062E5001DCAB7 /* FPCommentExpandSectionController.m */; };
 		04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF09123C062E5001DCAB7 /* FPCommentUserInfSectionController.m */; };
 		04BBF0C123C06307001DCAB7 /* SeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0C023C06307001DCAB7 /* SeparatorView.m */; };
-		04BBF0CA23C0639A001DCAB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF0C323C0639A001DCAB7 /* README.md */; };
-		04BBF0CB23C0639A001DCAB7 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0C623C0639A001DCAB7 /* HPGrowingTextView.m */; };
-		04BBF0CC23C0639A001DCAB7 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0C723C0639A001DCAB7 /* HPTextViewInternal.m */; };
-		04BBF0CD23C0639A001DCAB7 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04BBF0C923C0639A001DCAB7 /* LICENSE.txt */; };
 		04BBF0D023C06488001DCAB7 /* FPCommentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */; };
 		5E1303E22CC09F1455E3E818 /* Pods_FPCommentsModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -124,10 +119,8 @@
 		04BBF05F23C062E5001DCAB7 /* FPCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentVC.h; sourceTree = "<group>"; };
 		04BBF06123C062E5001DCAB7 /* IGListBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGListBaseModel.m; sourceTree = "<group>"; };
 		04BBF06223C062E5001DCAB7 /* IGListBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListBaseModel.h; sourceTree = "<group>"; };
-		04BBF06423C062E5001DCAB7 /* FPCommentAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentAccessoryView.h; sourceTree = "<group>"; };
 		04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPCommentToolView.xib; sourceTree = "<group>"; };
 		04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentToolView.m; sourceTree = "<group>"; };
-		04BBF06723C062E5001DCAB7 /* FPCommentAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentAccessoryView.m; sourceTree = "<group>"; };
 		04BBF06823C062E5001DCAB7 /* FPCommentToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentToolView.h; sourceTree = "<group>"; };
 		04BBF06A23C062E5001DCAB7 /* FPCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentModel.h; sourceTree = "<group>"; };
 		04BBF06B23C062E5001DCAB7 /* FPLinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPLinkModel.h; sourceTree = "<group>"; };
@@ -170,12 +163,6 @@
 		04BBF09323C062E5001DCAB7 /* FPCommentSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentSectionController.h; sourceTree = "<group>"; };
 		04BBF0BF23C06307001DCAB7 /* SeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorView.h; sourceTree = "<group>"; };
 		04BBF0C023C06307001DCAB7 /* SeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorView.m; sourceTree = "<group>"; };
-		04BBF0C323C0639A001DCAB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		04BBF0C523C0639A001DCAB7 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
-		04BBF0C623C0639A001DCAB7 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
-		04BBF0C723C0639A001DCAB7 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
-		04BBF0C823C0639A001DCAB7 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
-		04BBF0C923C0639A001DCAB7 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		04BBF0CE23C06488001DCAB7 /* FPCommentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCommentHelper.h; sourceTree = "<group>"; };
 		04BBF0CF23C06488001DCAB7 /* FPCommentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCommentHelper.m; sourceTree = "<group>"; };
 		0A785B1AF93FC82DE9D7F6CE /* Pods-FPCommentsModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCommentsModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-FPCommentsModule_Example/Pods-FPCommentsModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,7 +268,6 @@
 		04BBF04223C062E5001DCAB7 /* CommentsLib */ = {
 			isa = PBXGroup;
 			children = (
-				04BBF0C223C0639A001DCAB7 /* HPGrowingTextView */,
 				04BBF04323C062E5001DCAB7 /* Protocal */,
 				04BBF04723C062E5001DCAB7 /* CommonCell */,
 				04BBF05D23C062E5001DCAB7 /* VC */,
@@ -353,10 +339,8 @@
 		04BBF06323C062E5001DCAB7 /* CommentTextView */ = {
 			isa = PBXGroup;
 			children = (
-				04BBF06423C062E5001DCAB7 /* FPCommentAccessoryView.h */,
 				04BBF06523C062E5001DCAB7 /* FPCommentToolView.xib */,
 				04BBF06623C062E5001DCAB7 /* FPCommentToolView.m */,
-				04BBF06723C062E5001DCAB7 /* FPCommentAccessoryView.m */,
 				04BBF06823C062E5001DCAB7 /* FPCommentToolView.h */,
 			);
 			path = CommentTextView;
@@ -430,27 +414,6 @@
 				04BBF09323C062E5001DCAB7 /* FPCommentSectionController.h */,
 			);
 			path = SectionController;
-			sourceTree = "<group>";
-		};
-		04BBF0C223C0639A001DCAB7 /* HPGrowingTextView */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF0C323C0639A001DCAB7 /* README.md */,
-				04BBF0C423C0639A001DCAB7 /* class */,
-				04BBF0C923C0639A001DCAB7 /* LICENSE.txt */,
-			);
-			path = HPGrowingTextView;
-			sourceTree = "<group>";
-		};
-		04BBF0C423C0639A001DCAB7 /* class */ = {
-			isa = PBXGroup;
-			children = (
-				04BBF0C523C0639A001DCAB7 /* HPTextViewInternal.h */,
-				04BBF0C623C0639A001DCAB7 /* HPGrowingTextView.m */,
-				04BBF0C723C0639A001DCAB7 /* HPTextViewInternal.m */,
-				04BBF0C823C0639A001DCAB7 /* HPGrowingTextView.h */,
-			);
-			path = class;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -645,11 +608,9 @@
 			files = (
 				04BBF0B523C062E5001DCAB7 /* FPCommentReplyCell.xib in Resources */,
 				04BBF0AE23C062E5001DCAB7 /* FPReplyContainerCell.xib in Resources */,
-				04BBF0CA23C0639A001DCAB7 /* README.md in Resources */,
 				04BBF0A523C062E5001DCAB7 /* FPCommentToolView.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				04BBF09C23C062E5001DCAB7 /* CollectionLabelCell.xib in Resources */,
-				04BBF0CD23C0639A001DCAB7 /* LICENSE.txt in Resources */,
 				04BBF09E23C062E5001DCAB7 /* CollectionEmptyCell.xib in Resources */,
 				04BBF0AB23C062E5001DCAB7 /* FPCommentUserInfoCell.xib in Resources */,
 				04BBF0B623C062E5001DCAB7 /* FPCommentContentCell.xib in Resources */,
@@ -735,6 +696,7 @@
 				"${BUILT_PRODUCTS_DIR}/FPCommentsModule/FPCommentsModule.framework",
 				"${BUILT_PRODUCTS_DIR}/FPImageVideoCell/FPImageVideoCell.framework",
 				"${BUILT_PRODUCTS_DIR}/FPRefresh/FPRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGrowingTextView/HPGrowingTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListDiffKit/IGListDiffKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -747,6 +709,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPCommentsModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPImageVideoCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGrowingTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListDiffKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -779,12 +742,10 @@
 				04BBF0A023C062E5001DCAB7 /* ImageLabelWHCell.m in Sources */,
 				04BBF0BE23C062E5001DCAB7 /* FPCommentUserInfSectionController.m in Sources */,
 				04BBF0AD23C062E5001DCAB7 /* FPBottomCommentView.m in Sources */,
-				04BBF0CC23C0639A001DCAB7 /* HPTextViewInternal.m in Sources */,
 				04BBF0BA23C062E5001DCAB7 /* FPCommentContentSectionController.m in Sources */,
 				04BBF0A323C062E5001DCAB7 /* FPCommentVC.m in Sources */,
 				04BBF0AC23C062E5001DCAB7 /* FPCommentContentCell.m in Sources */,
 				04BBF0B723C062E5001DCAB7 /* FPCommentUserInfoCell.m in Sources */,
-				04BBF0CB23C0639A001DCAB7 /* HPGrowingTextView.m in Sources */,
 				04BBF0B423C062E5001DCAB7 /* CommentsTableCell.m in Sources */,
 				04BBF0B023C062E5001DCAB7 /* FPReplyContainerCell.m in Sources */,
 				6003F5A7195388D20070C39A /* FPViewController.m in Sources */,
@@ -799,7 +760,6 @@
 				04BBF09723C062E5001DCAB7 /* CollectionLabelCell.m in Sources */,
 				04BBF0BB23C062E5001DCAB7 /* FPCommentSectionController.m in Sources */,
 				04BBF0BD23C062E5001DCAB7 /* FPCommentExpandSectionController.m in Sources */,
-				04BBF0A723C062E5001DCAB7 /* FPCommentAccessoryView.m in Sources */,
 				04BBF09623C062E5001DCAB7 /* ImageLabelCollectionCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

@@ -23,7 +23,7 @@
         _bottomCommentView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 54, [UIScreen mainScreen].bounds.size.width, 54);
 //        __weak typeof(self) weakSelf = self;
 //        _bottomCommentView.tapCommentBlock = ^{
-//            [FPCommentAccessoryView.share showText:nil placholder:@"输入评论" block:^(NSString * _Nonnull text) {
+//            [FPTextViewInputView.share showText:nil placholder:@"输入评论" block:^(NSString * _Nonnull text) {
 //                if (!text || text.length == 0) return ;
 //                FPCommentModel *model = [weakSelf commentModel:text index:101 replay:NO];
 //                [weakSelf.datas insertObject:model atIndex:0];
@@ -124,7 +124,7 @@
         [self.adapter reloadObjects:@[model]];
 
     }else{
-        [FPCommentAccessoryView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",replayModel.commentUserName] block:^(NSString * _Nonnull text) {
+        [FPTextViewInputView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",replayModel.commentUserName] block:^(NSString * _Nonnull text) {
             if (!text || text.length == 0) return ;
             NSMutableArray *arr = [NSMutableArray array];
             [arr addObjectsFromArray:model.comments];
@@ -139,7 +139,7 @@
     NSMutableArray *arr = [NSMutableArray array];
     [arr addObjectsFromArray:model.comments];
     __weak typeof(self) weakSelf = self;
-    [FPCommentAccessoryView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",model.userName] block:^(NSString * _Nonnull text) {
+    [FPTextViewInputView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",model.userName] block:^(NSString * _Nonnull text) {
         if (!text || text.length == 0) return ;
         [arr addObject:[weakSelf infoModelmodel:text]];
         model.comments = arr;

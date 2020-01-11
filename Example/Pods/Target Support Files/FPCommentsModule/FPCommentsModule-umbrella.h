@@ -19,6 +19,7 @@
 #import "FPCommentSubModel.h"
 #import "FPCommentSubProtocal.h"
 #import "FPCommentSubSectionController.h"
+#import "FPTextViewInputView.h"
 #import "FPVideoPictureSectionController.h"
 
 FOUNDATION_EXPORT double FPCommentsModuleVersionNumber;

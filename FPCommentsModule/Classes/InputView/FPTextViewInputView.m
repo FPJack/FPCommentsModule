@@ -1,22 +1,23 @@
 //
-//  FPCommentAccessoryView.m
-//  test
+//  FPTextViewInputView.m
+//  FPCommentsModule
 //
-//  Created by fanpeng on 2019/11/13.
-//  Copyright © 2019 Mac. All rights reserved.
+//  Created by fanpeng on 2020/1/11.
 //
 
-#import "FPCommentAccessoryView.h"
-static FPCommentAccessoryView *instance;
+#import "FPTextViewInputView.h"
+static FPTextViewInputView *instance;
 static UIView *maskView;
-@interface FPCommentAccessoryView()
+@interface FPTextViewInputView()
 @property (nonatomic,strong)UIView *bottomView;
 @property (nonatomic,strong)HPGrowingTextView *textView;
 @property (nonatomic,strong)UIButton *sendBtn;
 @property(nonatomic,strong)UIView *lineView;
 
 @end
-@implementation FPCommentAccessoryView
+
+@implementation FPTextViewInputView
+
 - (UIView *)bottomView{
     if (!_bottomView) {
         _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 42)];
@@ -59,7 +60,7 @@ static UIView *maskView;
     dispatch_once(&onceToken, ^{
         maskView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
         maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.1];
-        instance = [[FPCommentAccessoryView alloc]init];
+        instance = [[FPTextViewInputView alloc]init];
         instance.frame = [UIScreen mainScreen].bounds;
         UIButton *dismissBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         dismissBtn.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
@@ -121,4 +122,5 @@ static UIView *maskView;
         self.textView.text = nil;
     }
 }
+
 @end

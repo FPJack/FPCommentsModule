@@ -65,6 +65,18 @@
           "FPCommentsModule/Assets/*.xib"
         ]
       }
+    },
+    {
+      "name": "InputView",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "FPCommentsModule/Classes/InputView/*",
+      "dependencies": {
+        "HPGrowingTextView": [
+
+        ]
+      }
     }
   ]
 }

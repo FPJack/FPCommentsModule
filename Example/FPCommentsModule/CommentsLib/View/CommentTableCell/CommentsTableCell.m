@@ -10,6 +10,7 @@
 #import "FPCommentProtocal.h"
 #import "FPCommentModel.h"
 #import "FPCommentSectionController.h"
+#import <FPTextViewInputView.h>
 //#import "UIViewController+present.h"
 @interface CommentsTableCell()<IGListAdapterDataSource,CommentEventDelegate>
 @property (nonatomic,strong)IGListAdapter *adapter;
@@ -58,7 +59,7 @@
 - (void)replayCommentEvent:(id<FPCommentReplayProtocal>)replayModel model:(id<FPCommentProtocal>)model sectionController:(IGListSectionController *)sectionController{
 
     __weak typeof(self) weakSelf = self;
-    [FPCommentAccessoryView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",replayModel.commentUserName] block:^(NSString * _Nonnull text) {
+    [FPTextViewInputView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",replayModel.commentUserName] block:^(NSString * _Nonnull text) {
         if (!text || text.length == 0) return ;
         NSString *userId = @"userId";
         NSDictionary *dic = @{@"businessId":weakSelf.businessId,
@@ -87,7 +88,7 @@
 - (void)writeCommentEvent:(FPCommentModel*)model sectionController:(IGListSectionController*)sectionController{
 
     __weak typeof(self) weakSelf = self;
-    [FPCommentAccessoryView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",model.userName] block:^(NSString * _Nonnull text) {
+    [FPTextViewInputView.share showText:nil placholder:[NSString stringWithFormat:@"回复：%@",model.userName] block:^(NSString * _Nonnull text) {
         if (!text || text.length == 0) return ;
         NSString *userId = @"userid";
         NSDictionary *dic = @{@"businessId":weakSelf.businessId,

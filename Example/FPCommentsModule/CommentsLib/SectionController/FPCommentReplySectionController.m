@@ -8,7 +8,7 @@
 
 #import "FPCommentReplySectionController.h"
 #import "FPCommentReplyCell.h"
-#import "FPCommentAccessoryView.h"
+#import "FPTextViewInputView.h"
 
 #define kSWidth [UIScreen mainScreen].bounds.size.width
 @interface FPCommentReplySectionController()

@@ -59,6 +59,13 @@
     }
 }
 
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
+    if (sectionModel && nestedModel && nestedModel.subSectionModels) {
+        [nestedModel.subSectionModels addObject:sectionModel];
+    }
+}
+
+
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
     id<FPSectionModelProtocal,FPSectionControllerProtocal> afterSectionModel = [self sectionModelWithDiffId:diffId fromNestedModel:nestedModel];
     [self addSectionModel:sectionModel afterSectionModel:afterSectionModel fromNestedModel:nestedModel];

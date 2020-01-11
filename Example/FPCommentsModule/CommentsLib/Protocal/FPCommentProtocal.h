@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <IGListKit.h>
-#import "FPCommentAccessoryView.h"
+
 #import <TTTAttributedLabel.h>
 
 #define kContentFont [UIFont systemFontOfSize:14]
