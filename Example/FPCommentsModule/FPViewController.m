@@ -42,13 +42,12 @@
     }
     return _adapter;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
-    for (int i = 0 ; i < 10; i ++) {
+    for (int i = 0 ; i < 20; i ++) {
         [datas addObject:[self createModel:i]];
     }
     self.datas = datas;
@@ -70,6 +69,7 @@
         if (sectionController.section == 0) {
             //删除操作
             [FPModuleHelper removeSectionModelWithDiffId:commentModel.diffId fromNestedModel:comment];
+            comment.height += 20;
             nestedModel.height = 0;
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
@@ -84,6 +84,7 @@
             }else{
                 [FPModuleHelper addSectionModel:subModel fromNestedModel:comment];
             }
+            comment.height += 20;
             nestedModel.height = 0;
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
@@ -145,7 +146,7 @@
             textModel.sectionController = sectonController;
             textModel.numberOfLines = 0;
             textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
-            textModel.inset = UIEdgeInsetsMake(0, 68, 10, 50);
+            textModel.inset = UIEdgeInsetsMake(0, 68, 0, 50);
             textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
             [subArr addObject:textModel];
         }
@@ -163,12 +164,39 @@
             model.column = 3;
             model.minimumLineSpacing = 10;
             model.minimumInteritemSpacing = 10;
-            model.sources = [@[@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg",@"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg"] mutableCopy];
-            model.type = FPImageTypeShowImage;
+            NSString *imageUrl = @"https://img.52z.com/upload/news/image/20180621/20180621055651_47663.jpg";
+            int rand = arc4random() % 10;
+            if (rand < 7) {
+                //图片
+                int rand = arc4random() % 10 ;
+                NSMutableArray *arr = [NSMutableArray array];
+                for (int i = 0 ; i < rand; i ++) {
+                    [arr addObject:[imageUrl mutableCopy]];
+                }
+                if (arr.count == 1) {
+                    model.oneItemSize = CGSizeMake(arc4random()%100 + 100, arc4random()%100 + 100);
+                    model.maxImageCount = 1;
+                }
+                model.sources = arr;
+                model.type = FPImageTypeShowImage;
+            }else{
+                //视频
+                FPVideoItem *item = [FPVideoItem new];
+                item.coverUrl = imageUrl;
+                item.itemSize = CGSizeMake(arc4random()%100 + 100, arc4random()%100 + 100);
+                NSURL*url=  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"example" ofType:@"mp4"]];
+                item.videoUrl = url;
+                model.maxVideoCount = 1;
+                model.type = FPImageTypeShowVideo;
+                model.oneItemSize = item.itemSize;
+                model.sources = [@[item] mutableCopy];
+            }
             model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
             CGFloat width = kSWidth - 68 - 20;
             model.width = width;
-            [subArr addObject:model];
+            if (model.sources.count > 0) {[subArr addObject:model];}
+            
+            
         }
         {
             FPTextModel *model = [FPTextModel new];
@@ -181,7 +209,7 @@
             model.sectionController = sectionController;
             model.class_name = FPTextCollectionCell.class;
             model.height = 30;
-            model.inset = UIEdgeInsetsMake(10, 68, 10, 0);
+            model.inset = UIEdgeInsetsMake(0, 68, 0, 0);
             [subArr addObject:model];
         }
         
@@ -210,15 +238,17 @@
                     model.diffId = kMoreCommentDiffId;
                     model.sectionController = sectionController;
                     model.class_name = FPBtnCollectionCell.class;
-                    model.height = 30;
-                    model.inset = UIEdgeInsetsMake(0, 12, 5, 0);
+                    model.height = 15;
+                    model.inset = UIEdgeInsetsMake(5, 12, 0, 0);
                     [arr addObject:model];
                 }
             }
             commentModel.subSectionModels = arr;
+            commentModel.height += 20;
             FPNestedSectionController *sc = [FPNestedSectionController new];
-            sc.configureCellBlock = ^(id  _Nonnull item, __kindof UICollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
+            sc.configureCellBlock = ^(id  _Nonnull item, __kindof FPNestedCollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+                cell.collectionView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
             };
             commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
             commentModel.sectionController = sc;
