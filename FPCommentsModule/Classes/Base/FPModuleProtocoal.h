@@ -51,8 +51,12 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerProtocal <NSObject>
 @optional
-//必须实现一个
+#warning 必须实现一个
+
+//建议初始化的时候直接赋值 后续通过模型可以直接拿该对象
 @property (nonatomic,strong)IGListSectionController *sectionController;
+
+//懒加载初始化没有做属性保存 没掉用一次生成一个新的sectionController对象 后续通过模型拿不到同一个对象
 @property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
 @end
 NS_ASSUME_NONNULL_END

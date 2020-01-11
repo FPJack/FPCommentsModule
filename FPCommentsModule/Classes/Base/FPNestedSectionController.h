@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedSectionController : IGListSectionController
 <FPSectionControllerConfigureProtocal>
 @property (nonatomic,strong)FPListSingleSectionCellConfigureBlock configureCellBlock;
-
+@property (nonatomic,readonly)IGListAdapter *adapter;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -78,7 +78,7 @@
 + (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)beforSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
     NSInteger beforIndex = [self indexWithSectionModel:beforSectionModel fromNestedModel:nestedModel];
     if (beforIndex != NSNotFound) {
-          [nestedModel.subSectionModels insertObject:sectionModel atIndex:beforIndex];
+        [nestedModel.subSectionModels insertObject:sectionModel atIndex:beforIndex];
         nestedModel.height = 0;
     }
 }

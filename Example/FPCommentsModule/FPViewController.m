@@ -131,7 +131,7 @@
                     }else{
                         [FPModuleHelper addSectionModel:[self userModel] afterSectionModelDiffId:item.diffId fromNestedModel:mainModel];
                     }
-                    [nestedSC.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                    [mainModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                         [batchContext reloadSectionController:nestedSC];
                     } completion:nil];
                 };

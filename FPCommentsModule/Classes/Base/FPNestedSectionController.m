@@ -8,7 +8,7 @@
 #import "FPNestedSectionController.h"
 #import "FPNestedCollectionViewCell.h"
 @interface FPNestedSectionController()<IGListAdapterDataSource>
-@property (nonatomic,strong)IGListAdapter *adapter;
+@property (nonatomic,readwrite)IGListAdapter *adapter;
 @property (nonatomic,strong)id<FPNestedSectionControllerProtocal> model;
 @end
 @implementation FPNestedSectionController

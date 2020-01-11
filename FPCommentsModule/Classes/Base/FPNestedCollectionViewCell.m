@@ -6,6 +6,9 @@
 //
 
 #import "FPNestedCollectionViewCell.h"
+@interface FPNestedCollectionViewCell()
+@property (nonatomic, readwrite)UICollectionView *collectionView;
+@end
 @implementation FPNestedCollectionViewCell
 - (UICollectionView *)collectionView{
     if (!_collectionView) {

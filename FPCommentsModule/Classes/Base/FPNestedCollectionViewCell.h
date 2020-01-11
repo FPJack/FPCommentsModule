@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic)UICollectionView *collectionView;
+@property (nonatomic, readonly)UICollectionView *collectionView;
 @end
 NS_ASSUME_NONNULL_END
 
