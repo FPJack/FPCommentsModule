@@ -123,4 +123,10 @@
     label.numberOfLines = numberOfLines;
     return ceil([label sizeThatFits:CGSizeMake(width, MAXFLOAT)].height);
 }
++ (BOOL)compareTextHeightWithNumberOfLines:(int)numberOfLines font:(UIFont*)font widht:(CGFloat)width text:(NSString*)text{
+    CGFloat realHeight = [self configureTextHeight:text font:font widht:width];
+    CGFloat numberOfLinesHeight = [self configureTextHeightText:text font:font widht:width numberOfLines:numberOfLines];
+    return realHeight > numberOfLinesHeight;
+}
+
 @end

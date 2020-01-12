@@ -41,5 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (CGFloat)configureTextHeight:(NSString*)text font:(UIFont*)font widht:(CGFloat)width;
 + (CGFloat)configureTextHeightText:(NSString*)text font:(UIFont*)font widht:(CGFloat)width numberOfLines:(int)numberOfLines;
++ (BOOL)compareTextHeightWithNumberOfLines:(int)numberOfLines font:(UIFont*)font widht:(CGFloat)width text:(NSString*)text;
+
 @end
 NS_ASSUME_NONNULL_END

@@ -20,7 +20,7 @@
 #import <SDWebImage/SDWebImage.h>
 #import <FPModuleHelper.h>
 #import <FPTextViewInputView.h>
-
+#define kDefaultNumberOfLines 5
 #define kMoreCommentDiffId @"kMoreCommentDiffId"
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -72,7 +72,7 @@
                 [FPModuleHelper removeSectionModelWithDiffId:comment.diffId fromNestedModel:nestedModel];
             }
             nestedModel.height = 0;
-
+            
             [nestedModel.sectionController.collectionContext performBatchAnimated:YES updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
                 [batchContext reloadSectionController:nestedModel.sectionController];
             } completion:nil];
@@ -102,6 +102,34 @@
     model.commentUserId = @"333";
     model.commentId = @"9333993";
     return model;
+}
+- (id)createExpandSection:(FPNestedModel*)nestedModel{
+    
+    FPTextModel *model = [FPTextModel new];
+    FPListSectionController *sectionController = [FPListSectionController new];
+    sectionController.configureCellBlock = ^(FPTextModel*  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
+        [cell.button setTitle:item.strongObject ? @"收起" : @"全文" forState:UIControlStateNormal];
+        cell.tapBlock = ^(UIButton * _Nonnull button) {
+            //点击查看更多评论
+            item.strongObject = item.strongObject ? nil : @"";
+            [button setTitle:item.strongObject ? @"收起" : @"全文" forState:UIControlStateNormal];
+            FPTextModel *contentModel = (FPTextModel*)[FPModuleHelper sectionModelWithDiffId:@"FPTextModel" fromNestedModel:nestedModel];
+            contentModel.numberOfLines = item.strongObject ? 0 : kDefaultNumberOfLines;
+            contentModel.height = 0;
+            nestedModel.height = 0;
+            [nestedModel.sectionController.collectionContext performBatchAnimated:NO updates:^(id<IGListBatchContext>  _Nonnull batchContext) {
+                [batchContext reloadSectionController:nestedModel.sectionController];
+            } completion:nil];
+        };
+        [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    };
+    model.diffId = kMoreCommentDiffId;
+    model.sectionController = sectionController;
+    model.class_name = FPBtnCollectionCell.class;
+    model.height = 15;
+    model.inset = UIEdgeInsetsMake(5, 68, 0, 0);
+    return model;
+    
 }
 - (id)createModel:(int)index{
     {
@@ -133,6 +161,7 @@
         }
         {
             FPTextModel *textModel = [FPTextModel new];
+            textModel.diffId = @"FPTextModel";
             textModel.class_name = FPTextCollectionCell.class;
             FPListSectionController *sectonController = [FPListSectionController new];
             textModel.font = [UIFont systemFontOfSize:13];
@@ -140,14 +169,29 @@
                 cell.label.text = item.content;
                 cell.label.numberOfLines = item.numberOfLines;
                 cell.label.font = item.font;
+                cell.label.textColor = [UIColor blackColor];
             };
             textModel.sectionController = sectonController;
             textModel.numberOfLines = 0;
-            textModel.content = @"sectionControllersectionControllersectionControllersectionControllersectionControllersectionControllersectionController";
+            NSString *imageUrl = @"https://img.52z.com/upload/news/随着项目的不断迭代，各个模块会越来越复杂image/20180621/20180621055651_47663.jpg";
+            int rand = arc4random() % 5 + 1;
+            NSMutableArray *stringArr = [NSMutableArray array];
+            for (int i = 0 ; i < rand; i ++) {
+                [stringArr addObject:imageUrl];
+            }
+            textModel.numberOfLines = kDefaultNumberOfLines;
+            NSString *content = [stringArr componentsJoinedByString:@"-"];
+            textModel.content = content;
             textModel.inset = UIEdgeInsetsMake(0, 68, 0, 50);
             textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
             [subArr addObject:textModel];
+            
+            if ([FPModuleHelper compareTextHeightWithNumberOfLines:textModel.numberOfLines font:textModel.font widht:textModel.width text:textModel.content]) {
+                [subArr addObject:[self createExpandSection:mainModel]];
+            }
         }
+        
+        
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
             model.diffId = @"FPVideoPictureModel";
@@ -180,7 +224,7 @@
                 if (rand == 4) {
                     model.inset = UIEdgeInsetsMake(5, 68, 0, 100);
                     model.column = 2;
-
+                    
                 }else{
                     model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
                 }
@@ -196,7 +240,7 @@
                 model.oneItemSize = item.itemSize;
                 model.sources = [@[item] mutableCopy];
                 model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
-
+                
             }
             model.width = kSWidth - model.inset.left - model.inset.right;
             if (model.sources.count > 0) {[subArr addObject:model];}
@@ -225,7 +269,7 @@
             for (int i = 0; i < rand; i ++) {
                 NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
                 FPCommentSubModel *model = [self createSubComment:text nestedModel:mainModel];
-//                model.sectionController.inset = model.inset;
+                //                model.sectionController.inset = model.inset;
                 [arr addObject:model];
             }
             if (rand > 5) {
