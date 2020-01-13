@@ -21,10 +21,14 @@
 }
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
+    CGFloat height = self.model.height;
     if (width <= 0) {
         width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
     }
-    return CGSizeMake(width, self.model.height);
+    if (height <= 0) {
+        height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
+    }
+    return CGSizeMake(width, height);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     FPNestedCollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
@@ -71,10 +75,16 @@
 @implementation FPListSectionController
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
+    CGFloat height = self.model.height;
+
     if (width <= 0) {
         width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right- self.collectionContext.containerInset.left - self.collectionContext.containerInset.right;
     }
-    return CGSizeMake(width, self.model.height);
+    if (height <= 0) {
+        height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom - self.collectionContext.containerInset.top - self.collectionContext.containerInset.bottom;
+    }
+
+    return CGSizeMake(width, height);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     UICollectionViewCell *cell;
