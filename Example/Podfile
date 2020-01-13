@@ -8,8 +8,6 @@ target 'FPCommentsModule_Example' do
   pod 'FPRefresh'
   pod 'Masonry'
   pod 'SDWebImage'
-
-
   target 'FPCommentsModule_Tests' do
     inherit! :search_paths
 
