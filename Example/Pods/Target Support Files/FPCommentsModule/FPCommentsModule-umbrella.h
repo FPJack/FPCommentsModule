@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "FPCommentsModule.h"
 #import "FPModuleHelper.h"
 #import "FPModuleProtocoal.h"
 #import "FPNestedCollectionViewCell.h"

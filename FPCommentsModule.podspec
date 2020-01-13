@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPCommentsModule'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of FPCommentsModule.'
 
 # This description is used to generate tags and improve search results.

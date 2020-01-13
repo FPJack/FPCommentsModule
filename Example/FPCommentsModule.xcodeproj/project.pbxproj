@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		025BE8C8A1F16719293710F4 /* Pods_FPCommentsModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCommentsModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		040FF6CE23CC1BED008A1EDA /* FPCommentsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPCommentsModule.h; sourceTree = "<group>"; };
 		041812CA23C5A17400311887 /* example.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.mp4; sourceTree = "<group>"; };
 		0495BE6323C708D500EECE76 /* FPTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTestVC.h; sourceTree = "<group>"; };
 		0495BE6423C708D500EECE76 /* FPTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTestVC.m; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 				0495BE6323C708D500EECE76 /* FPTestVC.h */,
 				0495BE6423C708D500EECE76 /* FPTestVC.m */,
 				0495BE6523C708D500EECE76 /* FPTestVC.xib */,
+				040FF6CE23CC1BED008A1EDA /* FPCommentsModule.h */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,

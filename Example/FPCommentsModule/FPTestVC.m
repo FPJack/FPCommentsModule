@@ -9,9 +9,7 @@
 
 #import "FPTestVC.h"
 #import <IGListKit/IGListKit.h>
-#import <FPCommentsModule/FPModuleProtocoal.h>
-#import <FPNestedSectionController.h>
-#import <FPNestedModel.h>
+#import <FPCommentsModule.h>
 @interface FPTestVC ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
