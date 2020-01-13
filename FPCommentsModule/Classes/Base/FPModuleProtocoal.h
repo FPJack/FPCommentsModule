@@ -71,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
+@property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal,FPSectionControllerProtocal> subSectionModel);
 @end
 NS_ASSUME_NONNULL_END
 

@@ -123,7 +123,6 @@
         };
         [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     };
-    model.diffId = kMoreCommentDiffId;
     model.sectionController = sectionController;
     model.class_name = FPBtnCollectionCell.class;
     model.height = 15;
@@ -267,8 +266,13 @@
             NSMutableArray *arr = [NSMutableArray array];
             NSInteger rand = arc4random() % 10 + 1;
             for (int i = 0; i < rand; i ++) {
-                NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同的业务逻辑，导致整个项目维护起来比较麻烦。";
-                FPCommentSubModel *model = [self createSubComment:text nestedModel:mainModel];
+                NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同比较麻烦。";
+                NSMutableArray *jArr = [NSMutableArray array];
+                NSInteger rand = arc4random() % 10 + 1;
+                for (int j = 0 ; j < rand; j ++) {
+                    [jArr addObject:text];
+                }
+                FPCommentSubModel *model = [self createSubComment:[jArr componentsJoinedByString:@"-"] nestedModel:mainModel];
                 //                model.sectionController.inset = model.inset;
                 [arr addObject:model];
             }
@@ -317,6 +321,9 @@
     return self.datas;
 }
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllerProtocal>)object{
+    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull subSectionModel) {
+        
+    };
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{

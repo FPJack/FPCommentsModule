@@ -40,6 +40,14 @@
     }
     return _height;
 }
+- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal,FPSectionControllerProtocal> _Nonnull))confiureSubSectionModelBlock{
+    if (!confiureSubSectionModelBlock) return;
+    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
+    __weak typeof(self) weakSelf = self;
+    [weakSelf.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        confiureSubSectionModelBlock(obj);
+    }];
+}
 @end
 
 
