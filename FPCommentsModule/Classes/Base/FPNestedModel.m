@@ -25,6 +25,10 @@
 @end
 
 
+@implementation FPModuleBaseModel
+
+@end
+
 
 @implementation FPNestedModel
 @synthesize height = _height;
