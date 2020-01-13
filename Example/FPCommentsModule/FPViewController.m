@@ -135,6 +135,22 @@
         NSMutableArray *subArr = [NSMutableArray array];
         FPNestedSectionController *nestedSC = [FPNestedSectionController new];
         FPNestedModel *mainModel = [FPNestedModel new];
+        
+        {
+            FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
+            reusableModel.class_name = [UICollectionReusableView class];
+            reusableModel.height = 30;
+            reusableModel.width = kSWidth;
+            mainModel.header = reusableModel;
+        }
+        {
+            FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
+            reusableModel.class_name = [UICollectionReusableView class];
+            reusableModel.height = 30;
+            reusableModel.width = kSWidth;
+            mainModel.footer = reusableModel;
+        }
+
         {
             FPUserModel *userModel = [FPUserModel new];
             userModel.diffId = @"FPUserModel";

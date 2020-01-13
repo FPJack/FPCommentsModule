@@ -11,12 +11,12 @@
 @synthesize height = _height;
 - (CGFloat)height{
     if (self.content != nil && self.content.length > 0) {
-      CGFloat width = self.width;
+        CGFloat width = self.width;
         if (self.numberOfLines == 0) {
             _height = [FPModuleHelper configureTextHeight:self.content font:self.font widht:width];
         }else{
-          CGFloat  cHeight = [FPModuleHelper configureTextHeight:self.content font:self.font widht:width];
-           CGFloat  sHeight = [FPModuleHelper configureTextHeightText:self.content font:self.font widht:width numberOfLines:self.numberOfLines];
+            CGFloat  cHeight = [FPModuleHelper configureTextHeight:self.content font:self.font widht:width];
+            CGFloat  sHeight = [FPModuleHelper configureTextHeightText:self.content font:self.font widht:width numberOfLines:self.numberOfLines];
             _height = sHeight > cHeight ? cHeight : sHeight;
         }
     }
@@ -28,6 +28,9 @@
 @implementation FPModuleBaseModel
 
 @end
+@implementation FPDequeueReusableModel
+
+@end
 
 
 @implementation FPNestedModel
@@ -37,7 +40,15 @@
         __block CGFloat height = 0;
         [self.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             height += (obj.height + obj.inset.top + obj.inset.bottom);
+            //头尾部视图高度
+            if ([obj.header respondsToSelector:@selector(height)]) {
+                height += self.header.height;
+            }
+            if ([obj.footer respondsToSelector:@selector(height)]) {
+                height += self.footer.height;
+            }
         }];
+        //contentInset
         height += (self.inset.top + self.inset.bottom);
         height += (self.collectionViewContentInset.top + self.collectionViewContentInset.bottom);
         _height = height;

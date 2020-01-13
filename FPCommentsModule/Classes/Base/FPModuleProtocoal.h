@@ -8,9 +8,15 @@
 #import <Foundation/Foundation.h>
 #import <IGListKit/IGListKit.h>
 typedef void (^FPListSingleSectionCellConfigureBlock)(id __nullable item, __kindof UICollectionViewCell * __nullable cell,IGListSectionController * __nullable sectionController);
-
-
-
+//每个itemSize
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPWidthHeightProtocal  <NSObject>
+@property (nonatomic,assign)CGSize size;
+@optional
+@property (nonatomic,assign)CGFloat height;
+@property (nonatomic,assign)CGFloat width;
+@end
+NS_ASSUME_NONNULL_END
 
 
 //DequeueCell
@@ -18,24 +24,30 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FPDequeueReusableCellProtocal <NSObject>
 @optional
 @property (nonatomic,strong)Class class_name;
-
 @property (nonatomic,copy)NSString* nibName;
 @property (nonatomic,strong)NSBundle *bundle;
 @end
 NS_ASSUME_NONNULL_END
 
+//SupplementaryView
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPSupplementaryViewProtocal <FPDequeueReusableCellProtocal,FPWidthHeightProtocal>
+
+@end
+NS_ASSUME_NONNULL_END
 
 
 
 //配置SectionController宽高 SectionInset
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPSectionModelProtocal <IGListDiffable>
+@protocol FPSectionModelProtocal <IGListDiffable,FPWidthHeightProtocal>
 @required
 @property(nonatomic,copy)NSString *diffId;
-@property (nonatomic,assign)CGFloat height;
 @optional
 @property (nonatomic,assign)UIEdgeInsets inset;
-@property (nonatomic,assign)CGFloat width;
+
+@property (nonatomic,strong)id<FPSupplementaryViewProtocal> header;
+@property (nonatomic,strong)id<FPSupplementaryViewProtocal> footer;
 @end
 NS_ASSUME_NONNULL_END
 
@@ -85,22 +97,15 @@ NS_ASSUME_NONNULL_END
 
 
 
-//每个itemSize
-NS_ASSUME_NONNULL_BEGIN
-@protocol FPItemSizeProtocal  <NSObject>
-@property (nonatomic,assign)CGSize size;
-@end
-NS_ASSUME_NONNULL_END
-
 
 
 //一组有多个item
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNumberOfItemsModelProtocal  <IGListDiffable,FPDequeueReusableCellProtocal,FPItemSizeProtocal>
+@protocol FPNumberOfItemsModelProtocal  <IGListDiffable,FPDequeueReusableCellProtocal,FPWidthHeightProtocal>
 //配合 FPNumberOfItemsSectionController使用
 //sizeForItemAtIndex 优先调用itemModels里面每个item的size 如果每个item无size则调用self全局size
 @required
-@property (nonatomic,strong)NSArray<id<FPItemSizeProtocal,FPDequeueReusableCellProtocal>> *itemModels;
+@property (nonatomic,strong)NSArray<id<FPWidthHeightProtocal,FPDequeueReusableCellProtocal>> *itemModels;
 @optional
 @property (nonatomic,assign)UIEdgeInsets inset;
 @property (nonatomic, assign) CGFloat minimumLineSpacing;

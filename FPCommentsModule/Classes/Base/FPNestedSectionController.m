@@ -7,11 +7,93 @@
 
 #import "FPNestedSectionController.h"
 #import "FPNestedCollectionViewCell.h"
+@interface FPBaseSectionController()<IGListSupplementaryViewSource>
+@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal> model;
+@end
+@implementation FPBaseSectionController
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.supplementaryViewSource = self;
+    }
+    return self;
+}
+#pragma supplementaryViewSource
+- (NSArray<NSString *> *)supportedElementKinds{
+    NSMutableArray *elementKinds = [NSMutableArray array];
+    if ([self.model respondsToSelector:@selector(header)] && self.model.header) {
+        [elementKinds addObject: UICollectionElementKindSectionHeader];
+        }
+    if ([self.model respondsToSelector:@selector(footer)] && self.model.footer) {
+    [elementKinds addObject: UICollectionElementKindSectionFooter];
+    }
+    return elementKinds;
+}
+- (__kindof UICollectionReusableView *)viewForSupplementaryElementOfKind:(NSString *)elementKind
+                                                                 atIndex:(NSInteger)index{
+    id<FPSupplementaryViewProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
+    return [self viewForSupplementaryElementOfKind:elementKind atIndex:index from:model];
+}
+- (UICollectionReusableView*)viewForSupplementaryElementOfKind:(NSString *)elementKind
+                                                       atIndex:(NSInteger)index from:(id<FPSupplementaryViewProtocal>)fromModel{
+    UICollectionReusableView *supplementaryView;
+    if ([fromModel respondsToSelector:@selector(nibName)] &&
+        [fromModel respondsToSelector:@selector(bundle)] &&
+        fromModel.nibName && fromModel.bundle) {
+        supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self nibName:fromModel.nibName bundle:fromModel.bundle atIndex:index];
+
+    }else if([fromModel respondsToSelector:@selector(class_name)] && fromModel.class_name){
+        supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self class:fromModel.class_name atIndex:index];
+    }
+    if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+        supplementaryView.backgroundColor = [UIColor redColor];
+    }else{
+        supplementaryView.backgroundColor = [UIColor orangeColor];
+    }
+    return supplementaryView;
+}
+- (CGSize)sizeForSupplementaryViewOfKind:(NSString *)elementKind
+                                 atIndex:(NSInteger)index{
+    CGFloat height = self.collectionContext.containerSize.height;
+    CGFloat width = self.collectionContext.containerSize.width;
+    if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+        if ([self.model.header respondsToSelector:@selector(width)]) {
+            width = self.model.header.width;
+        }
+        if ([self.model.header respondsToSelector:@selector(height)]) {
+            height = self.model.header.height;
+        }
+    }else if ([elementKind isEqualToString:UICollectionElementKindSectionFooter]){
+        if ([self.model.footer respondsToSelector:@selector(width)]) {
+            width = self.model.header.width;
+        }
+        if ([self.model.footer respondsToSelector:@selector(height)]) {
+            height = self.model.header.height;
+        }
+    }
+    return CGSizeMake(width, height);
+}
+-(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)object{
+    self.inset = object.inset;
+    self.model = object;
+}
+
+- (void)didSelectItemAtIndex:(NSInteger)index{
+    if ([self respondsToSelector:@selector(didSelectItemBlock)] && self.didSelectItemBlock) {
+        self.didSelectItemBlock(self, self.model, index);
+    }
+}
+@end
+
+
+
 @interface FPNestedSectionController()<IGListAdapterDataSource>
 @property (nonatomic,readwrite)IGListAdapter *adapter;
 @property (nonatomic,strong)id<FPNestedSectionControllerProtocal> model;
 @end
 @implementation FPNestedSectionController
+@dynamic model;
 - (IGListAdapter *)adapter{
     if (!_adapter) {
         _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:0];
@@ -42,10 +124,6 @@
     }
     return cell;
 }
-- (void)didUpdateToObject:(id<FPNestedSectionControllerProtocal>)object{
-    self.inset = object.inset;
-    self.model = object;
-}
 - (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {return nil;}
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id <FPSectionModelProtocal,FPSectionControllerProtocal>)object {
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
@@ -57,12 +135,6 @@
 - (nonnull NSArray<id<IGListDiffable>> *)objectsForListAdapter:(nonnull IGListAdapter *)listAdapter {
     return self.model.subSectionModels;
 }
-- (void)didSelectItemAtIndex:(NSInteger)index{
-    if ([self respondsToSelector:@selector(didSelectItemBlock)] && self.didSelectItemBlock) {
-        self.didSelectItemBlock(self, self.model, index);
-    }
-}
-
 @end
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,6 +145,7 @@
 @property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal> model;
 @end
 @implementation FPListSectionController
+@dynamic model;
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat width = self.model.width;
     CGFloat height = self.model.height;
@@ -98,16 +171,6 @@
     if (self.configureCellBlock) self.configureCellBlock(self.model, cell,self);
     return cell;
 }
--(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal>)object{
-    self.inset = object.inset;
-    self.model = object;
-}
-- (void)didSelectItemAtIndex:(NSInteger)index{
-    if ([self respondsToSelector:@selector(didSelectItemBlock)] && self.didSelectItemBlock) {
-        self.didSelectItemBlock(self, self.model, index);
-    }
-}
-
 @end
 
 
@@ -124,7 +187,7 @@
     return self.model.itemModels.count;
 }
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
-    id<FPItemSizeProtocal> model = self.model.itemModels[index];
+    id<FPWidthHeightProtocal> model = self.model.itemModels[index];
     CGSize size = CGSizeZero;
     if (![model respondsToSelector:@selector(size)] || CGSizeEqualToSize(model.size, CGSizeZero)) {
         if ([self.model respondsToSelector:@selector(size)] &&  !CGSizeEqualToSize(self.model.size, CGSizeZero)) {
@@ -144,7 +207,7 @@
     return size;
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
-    id<FPItemSizeProtocal,FPDequeueReusableCellProtocal> model = self.model.itemModels[index];
+    id<FPWidthHeightProtocal,FPDequeueReusableCellProtocal> model = self.model.itemModels[index];
     UICollectionViewCell *cell = [self dequeueCell:model index:index];
     if (!cell) {
         cell = [self dequeueCell:self.model index:index];

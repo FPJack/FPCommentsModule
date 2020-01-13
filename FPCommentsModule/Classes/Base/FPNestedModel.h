@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)UIEdgeInsets inset;
 @property (nonatomic,assign)CGFloat width;
 
+@property (nonatomic,strong)id<FPSupplementaryViewProtocal> header;
+@property (nonatomic,strong)id<FPSupplementaryViewProtocal> footer;
 
 @property (nonatomic,strong)id strongObject;//备用
 @property (nonatomic,weak)id weakObject;//备用
@@ -35,6 +37,16 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+
+NS_ASSUME_NONNULL_BEGIN
+@interface FPDequeueReusableModel : NSObject<FPSupplementaryViewProtocal>
+@property (nonatomic,assign)CGFloat height;
+@property (nonatomic,assign)CGFloat width;
+@property (nonatomic,strong)Class class_name;
+@property (nonatomic,copy)NSString* nibName;
+@property (nonatomic,strong)NSBundle *bundle;
+@end
+NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -78,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPNumberItemModel : NSObject<FPNumberOfItemsModelProtocal>
 @property(nonatomic,copy)NSString *diffId;
 @property (nonatomic,assign)CGSize size;
-@property (nonatomic,strong)NSArray<id<FPItemSizeProtocal,FPDequeueReusableCellProtocal>> *itemModels;
+@property (nonatomic,strong)NSArray<id<FPWidthHeightProtocal,FPDequeueReusableCellProtocal>> *itemModels;
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
 @property (nonatomic,assign)UIEdgeInsets inset;
