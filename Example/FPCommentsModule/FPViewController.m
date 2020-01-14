@@ -271,9 +271,9 @@
             FPNestedModel *commentModel = [FPNestedModel new];
             commentModel.collectionViewContentInset = UIEdgeInsetsMake(10, 12, 10, 12);
             NSMutableArray *arr = [NSMutableArray array];
-            NSInteger rand = arc4random() % 5 + 1;
+            NSInteger rand = arc4random() % 10 + 1;
             for (int i = 0; i < rand; i ++) {
-                NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同比较麻烦。";
+                NSString *text = @"会越来越复赖，而且每个模块可能会有共同比较麻烦。";
                 NSMutableArray *jArr = [NSMutableArray array];
                 NSInteger rand = arc4random() % 10 + 1;
                 for (int j = 0 ; j < rand; j ++) {
@@ -291,7 +291,8 @@
                         [cell.button setTitle:@"查看更多评论" forState:UIControlStateNormal];
                         cell.tapBlock = ^(UIButton * _Nonnull button) {
                             //点击查看更多评论
-                            
+                            [self.navigationController pushViewController:[FPTestVC new] animated:YES];
+
                         };
                         [cell.button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
                     };

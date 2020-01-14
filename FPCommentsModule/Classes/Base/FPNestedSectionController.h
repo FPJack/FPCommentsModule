@@ -31,7 +31,6 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPNumberOfItemsSectionController : IGListSectionController<FPSectionControllerHelperProtocal>
-@property (nonatomic,strong)FPConfigureSectionCellBlock configureCellBlock;
+@interface FPNumberOfItemsSectionController : FPBaseSectionController
 @end
 NS_ASSUME_NONNULL_END

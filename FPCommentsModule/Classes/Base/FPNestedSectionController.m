@@ -192,6 +192,7 @@
 @property (nonatomic,strong)id<FPNumberOfItemSectionModelProtocal> model;
 @end
 @implementation FPNumberOfItemsSectionController
+@dynamic model;
 - (NSInteger)numberOfItems{
     return self.model.cellItems.count;
 }
@@ -204,8 +205,8 @@
         if (cellItem.height > 0) height = cellItem.height;
     }
     if ([cellItem respondsToSelector:@selector(width)]) {
-        if (cellItem.width < 0) height = 0.01;
-        if (cellItem.width > 0) height = cellItem.width;
+        if (cellItem.width < 0) width = 0.01;
+        if (cellItem.width > 0) width = cellItem.width;
     }
     return CGSizeMake(height, width);
 }
@@ -230,7 +231,7 @@
     return cell;
 }
 -(void)didUpdateToObject:(id<FPNumberOfItemSectionModelProtocal>)object{
-    if ([object respondsToSelector:@selector(inset)]) {
+    if ([object respondsToSelector:@selector(sectionInset)]) {
         self.inset = object.sectionInset;
     }
     if ([object respondsToSelector:@selector(minimumLineSpacing)]) {

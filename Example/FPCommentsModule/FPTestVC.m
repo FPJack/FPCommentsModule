@@ -32,15 +32,27 @@
         FPNumberItemModel *model = [FPNumberItemModel new];
         model.minimumLineSpacing = space;
         model.minimumInteritemSpacing = space;
-        model.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+        model.sectionInset = UIEdgeInsetsMake(5, 10, 5, 10);
+        {
+            FPDequeueReusableModel *rModel = [FPDequeueReusableModel new];
+            rModel.class_name = [UICollectionReusableView class];
+            rModel.height = 30;
+            model.footer = rModel;
+        }
+
+        FPNumberOfItemsSectionController *sectionController = [FPNumberOfItemsSectionController new];
+        sectionController.configureCellBlock = ^(id  _Nullable item, __kindof UICollectionViewCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
+            cell.backgroundColor = [UIColor orangeColor];
+        };
+        model.sectionController = sectionController;
         CGFloat width = (kSWidth - 10 * 5)/6;
-        model.width = width;
-        model.height = width;
         NSMutableArray *items = [NSMutableArray array];
         for (int j = 0 ; j < 10 ; j ++ ) {
             FPDequeueReusableModel *subItem = [FPDequeueReusableModel new];
-            subItem.nibName = @"FPPreviewMoreCommentsCell";
-            subItem.bundle = [NSBundle mainBundle];
+            subItem.class_name = [UICollectionViewCell class];
+            subItem.width = width;
+            subItem.height = width;
+
             [items addObject:subItem];
         }
         model.cellItems = items;
@@ -53,7 +65,7 @@
     return self.datas;
 }
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNumberOfItemSectionModelProtocal>)object{
-    return [FPNumberOfItemsSectionController new];
+    return object.sectionController;
 }
 - (nullable UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
     
