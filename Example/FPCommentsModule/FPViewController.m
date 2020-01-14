@@ -156,6 +156,12 @@
             userModel.height = 60;
             userModel.nibName = @"FPUserInfoCollectionCell";
             userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
+            {
+                FPDequeueReusableModel *rModel = [FPDequeueReusableModel new];
+                rModel.class_name = [UICollectionReusableView class];
+                rModel.height = 30;
+                userModel.footer = rModel;
+            }
             [subArr addObject:userModel];
         }
 
@@ -322,9 +328,9 @@
     return self.datas;
 }
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionModelProtocal>)object{
-//    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>  _Nonnull subSectionModel) {
-//        
-//    };
+    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal>  _Nonnull subSectionModel) {
+        
+    };
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{

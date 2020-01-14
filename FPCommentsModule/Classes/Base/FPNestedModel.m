@@ -56,13 +56,12 @@
     }
     return _height;
 }
-- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal> _Nonnull))confiureSubSectionModelBlock{
-//    if (!confiureSubSectionModelBlock) return;
-//    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
-//    __weak typeof(self) weakSelf = self;
-//    [weakSelf.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        confiureSubSectionModelBlock(obj);
-//    }];
+- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal> _Nonnull))confiureSubSectionModelBlock{
+    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
+    if (!confiureSubSectionModelBlock) return;
+    [self.nestedCellItems enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        confiureSubSectionModelBlock(obj);
+    }];
 }
 @end
 

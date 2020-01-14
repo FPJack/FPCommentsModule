@@ -76,7 +76,6 @@ NS_ASSUME_NONNULL_END
 // 一个section一个cellItem
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSingleSectionModelProtocal <FPSectionModelProtocal,FPLoadReusableViewProtocal>
-//@property (nonatomic,strong)id<FPLoadReusableViewProtocal> cellItem;
 @end
 NS_ASSUME_NONNULL_END
 
@@ -86,6 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FPNestedSectionModelProtocal <FPSectionModelProtocal,FPWidthHeightProtocal>
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
+@property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal> subSectionModel);
 @end
 NS_ASSUME_NONNULL_END
 

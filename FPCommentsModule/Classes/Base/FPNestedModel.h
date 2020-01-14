@@ -59,6 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedModel : FPBaseSectionModel<FPNestedSectionModelProtocal>
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
+@property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal> subSectionModel);
 @end
 NS_ASSUME_NONNULL_END
 
