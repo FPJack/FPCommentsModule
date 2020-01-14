@@ -126,7 +126,7 @@
     model.sectionController = sectionController;
     model.class_name = FPBtnCollectionCell.class;
     model.height = 15;
-    model.inset = UIEdgeInsetsMake(5, 68, 0, 0);
+    model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 0);
     return model;
     
 }
@@ -205,8 +205,8 @@
             textModel.numberOfLines = kDefaultNumberOfLines;
             NSString *content = [stringArr componentsJoinedByString:@"-"];
             textModel.content = content;
-            textModel.inset = UIEdgeInsetsMake(0, 68, 0, 50);
-            textModel.width = kSWidth - textModel.inset.left - textModel.inset.right;
+            textModel.sectionInset = UIEdgeInsetsMake(0, 68, 0, 50);
+            textModel.width = kSWidth - textModel.sectionInset.left - textModel.sectionInset.right;
             [subArr addObject:textModel];
             
             if ([FPModuleHelper compareTextHeightWithNumberOfLines:textModel.numberOfLines font:textModel.font widht:textModel.width text:textModel.content]) {
@@ -245,11 +245,11 @@
                 model.sources = arr;
                 model.type = FPImageTypeShowImage;
                 if (rand == 4) {
-                    model.inset = UIEdgeInsetsMake(5, 68, 0, 100);
+                    model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 100);
                     model.column = 2;
                     
                 }else{
-                    model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
+                    model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 20);
                 }
             }else{
                 //视频
@@ -262,10 +262,10 @@
                 model.type = FPImageTypeShowVideo;
                 model.oneItemSize = item.itemSize;
                 model.sources = [@[item] mutableCopy];
-                model.inset = UIEdgeInsetsMake(5, 68, 0, 20);
+                model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 20);
                 
             }
-            model.width = kSWidth - model.inset.left - model.inset.right;
+            model.width = kSWidth - model.sectionInset.left - model.sectionInset.right;
             if (model.sources.count > 0) {[subArr addObject:model];}
         }
         
@@ -280,7 +280,7 @@
             model.sectionController = sectionController;
             model.class_name = FPTextCollectionCell.class;
             model.height = 30;
-            model.inset = UIEdgeInsetsMake(5, 68, 0, 0);
+            model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 0);
             {
                 FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
                 reusableModel.class_name = [UICollectionReusableView class];
@@ -324,7 +324,7 @@
                     model.sectionController = sectionController;
                     model.class_name = FPBtnCollectionCell.class;
                     model.height = 15;
-                    model.inset = UIEdgeInsetsMake(5, 0, 0, 0);
+                    model.sectionInset = UIEdgeInsetsMake(5, 0, 0, 0);
                     [arr addObject:model];
                 }
             }
@@ -335,14 +335,14 @@
                 cell.contentView.layer.cornerRadius = 5;
                 cell.contentView.layer.masksToBounds = YES;
             };
-            commentModel.inset = UIEdgeInsetsMake(0, 68, 0, 20);
+            commentModel.sectionInset = UIEdgeInsetsMake(0, 68, 0, 20);
             commentModel.sectionController = sc;
             commentModel.diffId = @"comment";
             [subArr addObject:commentModel];
         }
         
         mainModel.subSectionModels = subArr;
-        mainModel.inset = UIEdgeInsetsMake(5, 0, 5, 0);
+        mainModel.sectionInset = UIEdgeInsetsMake(5, 0, 5, 0);
         mainModel.sectionController = nestedSC;
         return mainModel;
     }

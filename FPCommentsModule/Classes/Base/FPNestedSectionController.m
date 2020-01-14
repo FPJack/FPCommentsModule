@@ -32,7 +32,7 @@
 }
 - (__kindof UICollectionReusableView *)viewForSupplementaryElementOfKind:(NSString *)elementKind
                                                                  atIndex:(NSInteger)index{
-    id<FPSupplementaryViewProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
+    id<FPConfigureReusableViewProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
     UICollectionReusableView *supplementaryView = [self viewForSupplementaryElementOfKind:elementKind atIndex:index from:model];
     if (self.configureSupplementaryViewBlock) {
         self.configureSupplementaryViewBlock(self.model, supplementaryView, self);
@@ -40,7 +40,7 @@
     return supplementaryView;
 }
 - (UICollectionReusableView*)viewForSupplementaryElementOfKind:(NSString *)elementKind
-                                                       atIndex:(NSInteger)index from:(id<FPSupplementaryViewProtocal>)fromModel{
+                                                       atIndex:(NSInteger)index from:(id<FPConfigureReusableViewProtocal>)fromModel{
     UICollectionReusableView *supplementaryView;
     if ([fromModel respondsToSelector:@selector(nibName)] &&
         [fromModel respondsToSelector:@selector(bundle)] &&
@@ -79,7 +79,7 @@
     return CGSizeMake(width, height);
 }
 -(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)object{
-    self.inset = object.inset;
+    self.inset = object.sectionInset;
     self.model = object;
 }
 
@@ -146,7 +146,7 @@
 
 
 @interface FPListSectionController()
-@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPDequeueReusableCellProtocal> model;
+@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPLoadReusableViewProtocal> model;
 @end
 @implementation FPListSectionController
 @dynamic model;
@@ -211,7 +211,7 @@
     return size;
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
-    id<FPWidthHeightProtocal,FPDequeueReusableCellProtocal> model = self.model.itemModels[index];
+    id<FPWidthHeightProtocal,FPLoadReusableViewProtocal> model = self.model.itemModels[index];
     UICollectionViewCell *cell = [self dequeueCell:model index:index];
     if (!cell) {
         cell = [self dequeueCell:self.model index:index];
@@ -219,7 +219,7 @@
     if (self.configureCellBlock) self.configureCellBlock(model, cell,self);
     return cell;
 }
-- (UICollectionViewCell*)dequeueCell:(id<FPDequeueReusableCellProtocal>)model index:(NSInteger)index{
+- (UICollectionViewCell*)dequeueCell:(id<FPLoadReusableViewProtocal>)model index:(NSInteger)index{
     UICollectionViewCell *cell;
     if ([model respondsToSelector:@selector(nibName)] &&
         [model respondsToSelector:@selector(bundle)] &&

@@ -19,10 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-
-//DequeueCell
+//load cell or supplementaryView
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPDequeueReusableCellProtocal <NSObject>
+@protocol FPLoadReusableViewProtocal <NSObject>
 @optional
 @property (nonatomic,strong)Class class_name;
 @property (nonatomic,copy)NSString* nibName;
@@ -30,10 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
-//SupplementaryView
+//FPLoadReusableViewProtocal + FPWidthHeightProtocal
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPSupplementaryViewProtocal <FPDequeueReusableCellProtocal,FPWidthHeightProtocal>
-
+@protocol FPConfigureReusableViewProtocal <FPLoadReusableViewProtocal,FPWidthHeightProtocal>
 @end
 NS_ASSUME_NONNULL_END
 
@@ -45,10 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 @property(nonatomic,copy)NSString *diffId;
 @optional
-@property (nonatomic,assign)UIEdgeInsets inset;
+@property (nonatomic,assign)UIEdgeInsets sectionInset;
 
-@property (nonatomic,strong)id<FPSupplementaryViewProtocal> header;
-@property (nonatomic,strong)id<FPSupplementaryViewProtocal> footer;
+@property (nonatomic,strong)id<FPConfigureReusableViewProtocal> header;
+@property (nonatomic,strong)id<FPConfigureReusableViewProtocal> footer;
 @end
 NS_ASSUME_NONNULL_END
 
@@ -103,11 +101,11 @@ NS_ASSUME_NONNULL_END
 
 //一组有多个item
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNumberOfItemsModelProtocal  <IGListDiffable,FPDequeueReusableCellProtocal,FPWidthHeightProtocal>
+@protocol FPNumberOfItemsModelProtocal  <IGListDiffable,FPLoadReusableViewProtocal,FPWidthHeightProtocal>
 //配合 FPNumberOfItemsSectionController使用
 //sizeForItemAtIndex 优先调用itemModels里面每个item的size 如果每个item无size则调用self全局size
 @required
-@property (nonatomic,strong)NSArray<id<FPWidthHeightProtocal,FPDequeueReusableCellProtocal>> *itemModels;
+@property (nonatomic,strong)NSArray<id<FPWidthHeightProtocal,FPLoadReusableViewProtocal>> *itemModels;
 @optional
 @property (nonatomic,assign)UIEdgeInsets inset;
 @property (nonatomic, assign) CGFloat minimumLineSpacing;

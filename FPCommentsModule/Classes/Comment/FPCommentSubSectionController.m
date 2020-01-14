@@ -29,7 +29,7 @@
     return cell;
 }
 - (void)didUpdateToObject:(id<FPCommentSubProtocal>)object{
-    self.inset = object.inset;
+    self.inset = object.sectionInset;
     self.model = object;
 }
 - (void)didSelectItemAtIndex:(NSInteger)index{

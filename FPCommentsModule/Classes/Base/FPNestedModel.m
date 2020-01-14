@@ -41,7 +41,7 @@
     if (_height == 0) {
         __block CGFloat height = 0;
         [self.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            height += (obj.height + obj.inset.top + obj.inset.bottom);
+            height += (obj.height + obj.sectionInset.top + obj.sectionInset.bottom);
             //头尾部视图高度
             if ([obj.header respondsToSelector:@selector(height)]) {
                 height += obj.header.height;
@@ -51,7 +51,7 @@
             }
         }];
         //contentInset
-        height += (self.inset.top + self.inset.bottom);
+        height += (self.sectionInset.top + self.sectionInset.bottom);
         height += (self.collectionViewContentInset.top + self.collectionViewContentInset.bottom);
         _height = height;
     }
