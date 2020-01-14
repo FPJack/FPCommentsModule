@@ -68,7 +68,7 @@
         if (sectionController.section == 0) {
             //删除操作
             [FPModuleHelper removeSectionModelWithDiffId:commentModel.diffId fromNestedModel:comment];
-            if (comment.subSectionModels.count == 0) {
+            if (comment.nestedSectionModels.count == 0) {
                 [FPModuleHelper removeSectionModelWithDiffId:comment.diffId fromNestedModel:nestedModel];
             }
             nestedModel.height = 0;
@@ -328,7 +328,7 @@
                     [arr addObject:model];
                 }
             }
-            commentModel.subSectionModels = arr;
+            commentModel.nestedSectionModels = arr;
             FPNestedSectionController *sc = [FPNestedSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof FPNestedCollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -341,7 +341,7 @@
             [subArr addObject:commentModel];
         }
         
-        mainModel.subSectionModels = subArr;
+        mainModel.nestedSectionModels = subArr;
         mainModel.sectionInset = UIEdgeInsetsMake(5, 0, 5, 0);
         mainModel.sectionController = nestedSC;
         return mainModel;

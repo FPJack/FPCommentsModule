@@ -79,9 +79,9 @@ NS_ASSUME_NONNULL_END
 
 //子SectionControllers
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPSubSectionModelsProtocal <NSObject>
+@protocol FPNestedSectionModelsProtocal <NSObject>
 @required
-@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
+@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *nestedSectionModels;
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal,FPSectionControllerProtocal> subSectionModel);
 @end
@@ -91,7 +91,7 @@ NS_ASSUME_NONNULL_END
 
 //嵌套SectionControllers 配合FPNestedSectionController使用
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNestedSectionControllerProtocal  <FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>
+@protocol FPNestedSectionControllerProtocal  <FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>
 @end
 NS_ASSUME_NONNULL_END
 

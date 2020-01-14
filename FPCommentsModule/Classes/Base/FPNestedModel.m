@@ -40,7 +40,7 @@
 - (CGFloat)height{
     if (_height == 0) {
         __block CGFloat height = 0;
-        [self.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             height += (obj.height + obj.sectionInset.top + obj.sectionInset.bottom);
             //头尾部视图高度
             if ([obj.header respondsToSelector:@selector(height)]) {
@@ -61,7 +61,7 @@
     if (!confiureSubSectionModelBlock) return;
     _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
     __weak typeof(self) weakSelf = self;
-    [weakSelf.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [weakSelf.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         confiureSubSectionModelBlock(obj);
     }];
 }

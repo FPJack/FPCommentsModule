@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedModel : FPIgListBaseModel<FPNestedSectionControllerProtocal>
-@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *subSectionModels;
+@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *nestedSectionModels;
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal,FPSectionControllerProtocal> subSectionModel);
 

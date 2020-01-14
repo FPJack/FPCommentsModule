@@ -7,18 +7,18 @@
 #import "FPModuleHelper.h"
 @implementation FPModuleHelper
 
-+ (NSInteger)indexWithSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (NSInteger)indexWithSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     __block NSInteger index = NSNotFound;
-    [nestedModel.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [nestedModel.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isEqual:sectionModel]) {
             index = idx;
         }
     }];
     return index;
 }
-+ (NSInteger)indexWithDiffid:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (NSInteger)indexWithDiffid:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     __block NSInteger index = NSNotFound;
-    [nestedModel.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [nestedModel.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([diffId isEqualToString:obj.diffId]) {
             index = idx;
         }
@@ -27,9 +27,9 @@
 }
 
 
-+(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     __block id <FPSectionModelProtocal,FPSectionControllerProtocal> model;
-    [nestedModel.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [nestedModel.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj.diffId isEqualToString:diffId]) {
             model = obj;
             *stop = YES;
@@ -37,64 +37,64 @@
     }];
     return model;
 }
-+(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
-    if (index < 0 || !nestedModel ||!nestedModel.subSectionModels) {
++(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
+    if (index < 0 || !nestedModel ||!nestedModel.nestedSectionModels) {
         return nil;
     }
-    if (index < nestedModel.subSectionModels.count) {
-        return nestedModel.subSectionModels[index];
+    if (index < nestedModel.nestedSectionModels.count) {
+        return nestedModel.nestedSectionModels[index];
     }
     return nil;
 }
 
-+ (void)removeSectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)removeSectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     __weak typeof(nestedModel) weakNestedModel = nestedModel;
-    [nestedModel.subSectionModels enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [nestedModel.nestedSectionModels enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj.diffId isEqualToString:diffId]) {
             nestedModel.height = 0;
-            [weakNestedModel.subSectionModels removeObject:obj];
+            [weakNestedModel.nestedSectionModels removeObject:obj];
             *stop = YES;
         }
     }];
 }
-+ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     [self removeSectionModelWithDiffId:sectionModel.diffId fromNestedModel:nestedModel];
 }
-+ (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
-    if (nestedModel.subSectionModels.count > index) {
++ (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
+    if (nestedModel.nestedSectionModels.count > index) {
         nestedModel.height = 0;
-        [nestedModel.subSectionModels removeObjectAtIndex:index];
+        [nestedModel.nestedSectionModels removeObjectAtIndex:index];
     }
 }
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
-    if (sectionModel && nestedModel && nestedModel.subSectionModels) {
-        [nestedModel.subSectionModels addObject:sectionModel];
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
+    if (sectionModel && nestedModel && nestedModel.nestedSectionModels) {
+        [nestedModel.nestedSectionModels addObject:sectionModel];
         nestedModel.height = 0;
     }
 }
 
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     id<FPSectionModelProtocal,FPSectionControllerProtocal> afterSectionModel = [self sectionModelWithDiffId:diffId fromNestedModel:nestedModel];
     [self addSectionModel:sectionModel afterSectionModel:afterSectionModel fromNestedModel:nestedModel];
 }
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)afterSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)afterSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     NSInteger afterIndex = [self indexWithSectionModel:afterSectionModel fromNestedModel:nestedModel];
     if (afterIndex != NSNotFound) {
-        [nestedModel.subSectionModels insertObject:sectionModel atIndex:afterIndex + 1];
+        [nestedModel.nestedSectionModels insertObject:sectionModel atIndex:afterIndex + 1];
         nestedModel.height = 0;
     }
 }
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     id<FPSectionModelProtocal,FPSectionControllerProtocal> beforSectionModel = [self sectionModelWithDiffId:diffId fromNestedModel:nestedModel];
     [self addSectionModel:sectionModel beforSectionModel:beforSectionModel fromNestedModel:nestedModel];
 }
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)beforSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPSubSectionModelsProtocal>)nestedModel{
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)beforSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel{
     NSInteger beforIndex = [self indexWithSectionModel:beforSectionModel fromNestedModel:nestedModel];
     if (beforIndex != NSNotFound) {
-        [nestedModel.subSectionModels insertObject:sectionModel atIndex:beforIndex];
+        [nestedModel.nestedSectionModels insertObject:sectionModel atIndex:beforIndex];
         nestedModel.height = 0;
     }
 }

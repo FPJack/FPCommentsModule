@@ -137,7 +137,7 @@
     }
 }
 - (nonnull NSArray<id<IGListDiffable>> *)objectsForListAdapter:(nonnull IGListAdapter *)listAdapter {
-    return self.model.subSectionModels;
+    return self.model.nestedSectionModels;
 }
 @end
 
