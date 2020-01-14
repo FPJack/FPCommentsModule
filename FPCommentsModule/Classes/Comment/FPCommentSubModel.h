@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FPCommentSubModel : FPBaseSectionModel<FPCreateSectionControllerProtocal,FPCommentSubProtocal>
-@property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,strong)UIFont *textFont;
 @property(nonatomic,copy)NSString *parentId;
 @property(nonatomic,copy)NSString *commentId;
