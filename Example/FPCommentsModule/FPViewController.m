@@ -25,7 +25,7 @@
 @interface FPViewController ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)NSMutableArray <id<FPNestedSectionControllerProtocal>> *datas;
+@property (nonatomic,strong)NSMutableArray <id<FPNestedSectionModelProtocal>> *datas;
 @end
 
 @implementation FPViewController
@@ -53,7 +53,7 @@
     [self.datas insertObject:[self createModel:self.datas.count] atIndex:0];
     [self.adapter performUpdatesAnimated:YES completion:nil];
 }
-- (id)createSubComment:(NSString*)text nestedModel:(id<FPNestedSectionControllerProtocal>)nestedModel{
+- (id)createSubComment:(NSString*)text nestedModel:(id<FPNestedSectionModelProtocal>)nestedModel{
     FPCommentSubModel *model = [FPCommentSubModel new];
     CGFloat width = kSWidth - 68 - 12 * 2 - 20;
     FPCommentSubSectionController *sectionController = [FPCommentSubSectionController new];
@@ -62,13 +62,13 @@
         //点击用户名
     };
     sectionController.didSelectItemBlock = ^(IGListSectionController *sectionController,id<FPCommentSubProtocal> commentModel,NSInteger index) {
-        id<FPNestedSectionControllerProtocal> comment = (id<FPNestedSectionControllerProtocal>)[FPModuleHelper sectionModelWithDiffId:@"comment" fromNestedModel:nestedModel];
+        id<FPNestedSectionModelProtocal> comment = (id<FPNestedSectionModelProtocal>)[FPModuleHelper sectionModelWithDiffId:@"comment" fromNestedModel:nestedModel];
         
         //点击回复内容
         if (sectionController.section == 0) {
             //删除操作
             [FPModuleHelper removeSectionModelWithDiffId:commentModel.diffId fromNestedModel:comment];
-            if (comment.nestedSectionModels.count == 0) {
+            if (comment.nestedCellItems.count == 0) {
                 [FPModuleHelper removeSectionModelWithDiffId:comment.diffId fromNestedModel:nestedModel];
             }
             nestedModel.height = 0;
@@ -106,7 +106,7 @@
 - (id)createExpandSection:(FPNestedModel*)nestedModel{
     
     FPTextModel *model = [FPTextModel new];
-    FPListSectionController *sectionController = [FPListSectionController new];
+    FPSingleSectionController *sectionController = [FPSingleSectionController new];
     sectionController.configureCellBlock = ^(FPTextModel*  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
         [cell.button setTitle:item.strongObject ? @"收起" : @"全文" forState:UIControlStateNormal];
         cell.tapBlock = ^(UIButton * _Nonnull button) {
@@ -135,28 +135,12 @@
         NSMutableArray *subArr = [NSMutableArray array];
         FPNestedSectionController *nestedSC = [FPNestedSectionController new];
         FPNestedModel *mainModel = [FPNestedModel new];
-        
-        {
-            FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
-            reusableModel.class_name = [UICollectionReusableView class];
-            reusableModel.height = 30;
-            reusableModel.width = kSWidth;
-            mainModel.header = reusableModel;
-        }
-        {
-            FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
-            reusableModel.class_name = [UICollectionReusableView class];
-            reusableModel.height = 30;
-            reusableModel.width = kSWidth;
-            mainModel.footer = reusableModel;
-        }
-
         {
             FPUserModel *userModel = [FPUserModel new];
             userModel.diffId = @"FPUserModel";
             userModel.userName = [NSString stringWithFormat:@"%d--Jack",index];
             userModel.time = @"2019-09-02";
-            FPListSectionController *sectonController = [FPListSectionController new];
+            FPSingleSectionController *sectonController = [FPSingleSectionController new];
             sectonController.configureCellBlock = ^(FPUserModel*  _Nonnull item, __kindof FPUserInfoCollectionCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.imgView.backgroundColor = [UIColor orangeColor];
                 cell.label1.text = item.userName;
@@ -172,21 +156,14 @@
             userModel.height = 60;
             userModel.nibName = @"FPUserInfoCollectionCell";
             userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
-            {
-                        FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
-                        reusableModel.class_name = [UICollectionReusableView class];
-                        reusableModel.height = 30;
-                        reusableModel.width = kSWidth;
-                        userModel.footer = reusableModel;
-            }
-
             [subArr addObject:userModel];
         }
+
         {
             FPTextModel *textModel = [FPTextModel new];
             textModel.diffId = @"FPTextModel";
             textModel.class_name = FPTextCollectionCell.class;
-            FPListSectionController *sectonController = [FPListSectionController new];
+            FPSingleSectionController *sectonController = [FPSingleSectionController new];
             textModel.font = [UIFont systemFontOfSize:13];
             sectonController.configureCellBlock = ^(FPTextModel*  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell,IGListSectionController * sectionController) {
                 cell.label.text = item.content;
@@ -213,7 +190,7 @@
                 [subArr addObject:[self createExpandSection:mainModel]];
             }
         }
-        
+
         
         {
             FPVideoPictureModel *model = [FPVideoPictureModel new];
@@ -268,10 +245,10 @@
             model.width = kSWidth - model.sectionInset.left - model.sectionInset.right;
             if (model.sources.count > 0) {[subArr addObject:model];}
         }
-        
+
         {
             FPTextModel *model = [FPTextModel new];
-            FPListSectionController *sectionController = [FPListSectionController new];
+            FPSingleSectionController *sectionController = [FPSingleSectionController new];
             sectionController.configureCellBlock = ^(id  _Nonnull item, __kindof FPTextCollectionCell * _Nonnull cell,IGListSectionController * sectionController) {
                 cell.label.text = @"两小时前";
                 cell.label.font = [UIFont systemFontOfSize:12];
@@ -281,17 +258,9 @@
             model.class_name = FPTextCollectionCell.class;
             model.height = 30;
             model.sectionInset = UIEdgeInsetsMake(5, 68, 0, 0);
-            {
-                FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
-                reusableModel.class_name = [UICollectionReusableView class];
-                reusableModel.height = 30;
-//                reusableModel.width = kSWidth - 68;
-                model.header = reusableModel;
-            }
-
             [subArr addObject:model];
         }
-        
+
         {
             FPNestedModel *commentModel = [FPNestedModel new];
             commentModel.collectionViewContentInset = UIEdgeInsetsMake(10, 12, 10, 12);
@@ -311,7 +280,7 @@
             if (rand > 5) {
                 {
                     FPTextModel *model = [FPTextModel new];
-                    FPListSectionController *sectionController = [FPListSectionController new];
+                    FPSingleSectionController *sectionController = [FPSingleSectionController new];
                     sectionController.configureCellBlock = ^(id  _Nullable item, __kindof FPBtnCollectionCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
                         [cell.button setTitle:@"查看更多评论" forState:UIControlStateNormal];
                         cell.tapBlock = ^(UIButton * _Nonnull button) {
@@ -328,7 +297,7 @@
                     [arr addObject:model];
                 }
             }
-            commentModel.nestedSectionModels = arr;
+            commentModel.nestedCellItems = arr;
             FPNestedSectionController *sc = [FPNestedSectionController new];
             sc.configureCellBlock = ^(id  _Nonnull item, __kindof FPNestedCollectionViewCell * _Nonnull cell,IGListSectionController *sectionController) {
                 cell.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -341,7 +310,7 @@
             [subArr addObject:commentModel];
         }
         
-        mainModel.nestedSectionModels = subArr;
+        mainModel.nestedCellItems = subArr;
         mainModel.sectionInset = UIEdgeInsetsMake(5, 0, 5, 0);
         mainModel.sectionController = nestedSC;
         return mainModel;
@@ -352,10 +321,10 @@
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     return self.datas;
 }
-- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllerProtocal>)object{
-    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull subSectionModel) {
-        
-    };
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionModelProtocal>)object{
+//    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>  _Nonnull subSectionModel) {
+//        
+//    };
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{

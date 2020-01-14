@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FPCommentSubSectionController : IGListSectionController
 @property (nonatomic,copy)void (^tapLinkBlock)(FPCommentSubSectionController *sectionController,id<FPCommentSubProtocal> commentModel,id<FPHyperlinkProtocal>  _Nonnull link);
-@property (nonatomic,copy)void (^didSelectItemBlock)(IGListSectionController *sectionController,id<FPSectionModelProtocal,FPSectionControllerProtocal> model,NSInteger index);
+@property (nonatomic,copy)void (^didSelectItemBlock)(IGListSectionController *sectionController,id<FPSectionModelProtocal,FPCreateSectionControllerProtocal> model,NSInteger index);
 
 @end
 

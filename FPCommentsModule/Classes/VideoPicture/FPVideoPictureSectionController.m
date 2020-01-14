@@ -7,6 +7,7 @@
 
 #import "FPVideoPictureSectionController.h"
 @implementation FPVideoPictureModel
+
 @synthesize height = _height;
 - (CGFloat)height{
     #warning  height = 0 下面的sectionController不会显示 可能是IGListKit的问题 后续再看

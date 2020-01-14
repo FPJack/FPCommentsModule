@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPCommentSubProtocal <FPSectionModelProtocal,FPSectionControllerProtocal>
+@protocol FPCommentSubProtocal <FPSingleSectionModelProtocal>
 @required
 @property (nonatomic,strong)UIFont *textFont;
 @optional

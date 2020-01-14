@@ -11,26 +11,26 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPModuleHelper : NSObject
 
 
-+ (NSInteger)indexWithSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+ (NSInteger)indexWithDiffid:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++ (NSInteger)indexWithSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++ (NSInteger)indexWithDiffid:(NSString*)diffId fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
 
-+(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
 
 
-+ (void)removeSectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+ (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++ (void)removeSectionModelWithDiffId:(NSString*)diffId fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++ (void)removeSectionModelWithIndex:(NSInteger)index fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++ (void)removeSectionModelWithModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel  fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel afterSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)afterSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel afterSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel afterSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)afterSectionModel  fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
-+ (void)addSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)sectionModel beforSectionModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)beforSectionModel  fromNestedModel:(id<FPSectionModelProtocal,FPSectionControllerProtocal,FPNestedSectionModelsProtocal>)nestedModel;
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel beforSectionModelDiffId:(NSString*)diffId  fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
++ (void)addSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)sectionModel beforSectionModel:(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>)beforSectionModel  fromNestedModel:(id<FPNestedSectionModelProtocal>)nestedModel;
 
 
 

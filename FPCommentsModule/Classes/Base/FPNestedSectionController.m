@@ -8,7 +8,7 @@
 #import "FPNestedSectionController.h"
 #import "FPNestedCollectionViewCell.h"
 @interface FPBaseSectionController()<IGListSupplementaryViewSource>
-@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal> model;
+@property (nonatomic,strong)id<FPSectionModelProtocal> model;
 @end
 @implementation FPBaseSectionController
 - (instancetype)init
@@ -78,7 +78,7 @@
     }
     return CGSizeMake(width, height);
 }
--(void)didUpdateToObject:(id<FPSectionModelProtocal,FPSectionControllerProtocal>)object{
+-(void)didUpdateToObject:(id<FPSectionModelProtocal>)object{
     self.inset = object.sectionInset;
     self.model = object;
 }
@@ -90,11 +90,13 @@
 }
 @end
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                    FPNestedSectionController
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @interface FPNestedSectionController()<IGListAdapterDataSource>
 @property (nonatomic,readwrite)IGListAdapter *adapter;
-@property (nonatomic,strong)id<FPNestedSectionControllerProtocal> model;
+@property (nonatomic,strong)id<FPNestedSectionModelProtocal> model;
 @end
 @implementation FPNestedSectionController
 @dynamic model;
@@ -106,13 +108,15 @@
     return _adapter;
 }
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
-    CGFloat width = self.model.width;
-    CGFloat height = self.model.height;
-    if (width <= 0) {
-        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+   CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+   CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
+    if ([self.model respondsToSelector:@selector(height)]) {
+        if (self.model.height < 0) height = 0.01;
+        if (self.model.height > 0) height = self.model.height;
     }
-    if (height <= 0) {
-        height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
+    if ([self.model respondsToSelector:@selector(width)]) {
+        if (self.model.width < 0) width = 0.01;
+        if (self.model.width > 0) width = self.model.width;
     }
     return CGSizeMake(width, height);
 }
@@ -129,7 +133,7 @@
     return cell;
 }
 - (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {return nil;}
-- (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id <FPSectionModelProtocal,FPSectionControllerProtocal>)object {
+- (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id <FPSectionModelProtocal>)object {
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{
@@ -137,41 +141,42 @@
     }
 }
 - (nonnull NSArray<id<IGListDiffable>> *)objectsForListAdapter:(nonnull IGListAdapter *)listAdapter {
-    return self.model.nestedSectionModels;
+    return self.model.nestedCellItems;
 }
 @end
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////       FPSingleSectionController
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-@interface FPListSectionController()
-@property (nonatomic,strong)id<FPSectionModelProtocal,FPSectionControllerProtocal,FPLoadReusableViewProtocal> model;
+@interface FPSingleSectionController()
+@property (nonatomic,strong)id<FPSingleSectionModelProtocal> model;
 @end
-@implementation FPListSectionController
+@implementation FPSingleSectionController
 @dynamic model;
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
-    CGFloat width = self.model.width;
-    CGFloat height = self.model.height;
-
-    if (width <= 0) {
-        width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right- self.collectionContext.containerInset.left - self.collectionContext.containerInset.right;
+    CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right- self.collectionContext.containerInset.left - self.collectionContext.containerInset.right;
+    CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom - self.collectionContext.containerInset.top - self.collectionContext.containerInset.bottom;
+    
+    if ([self.model respondsToSelector:@selector(height)]) {
+        if (self.model.height < 0) height = 0.01;
+        if (self.model.height > 0) height = self.model.height;
     }
-    if (height <= 0) {
-        height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom - self.collectionContext.containerInset.top - self.collectionContext.containerInset.bottom;
+    if ([self.model respondsToSelector:@selector(width)]) {
+        if (self.model.width < 0) width = 0.01;
+        if (self.model.width > 0) width = self.model.width;
     }
-
     return CGSizeMake(width, height);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     UICollectionViewCell *cell;
-    if ([self.model respondsToSelector:@selector(nibName)] &&
-        [self.model respondsToSelector:@selector(bundle)] &&
-        self.model.nibName && self.model.bundle) {
-        cell = [self.collectionContext dequeueReusableCellWithNibName:self.model.nibName bundle:self.model.bundle forSectionController:self atIndex:index];
-    }else{
-        cell = [self.collectionContext dequeueReusableCellOfClass:self.model.class_name forSectionController:self atIndex:index];
-    }
+    id<FPLoadReusableViewProtocal> cellItem = self.model;
+      if ([cellItem respondsToSelector:@selector(nibName)] && [cellItem respondsToSelector:@selector(bundle)] && cellItem.nibName && cellItem.bundle) {
+          cell = [self.collectionContext dequeueReusableCellWithNibName:cellItem.nibName bundle:cellItem.bundle forSectionController:self atIndex:index];
+      }else{
+          cell = [self.collectionContext dequeueReusableCellOfClass:cellItem.class_name forSectionController:self atIndex:index];
+      }
     if (self.configureCellBlock) self.configureCellBlock(self.model, cell,self);
     return cell;
 }
@@ -184,42 +189,36 @@
 
 
 @interface FPNumberOfItemsSectionController()
-@property (nonatomic,strong)id<FPNumberOfItemsModelProtocal> model;
+@property (nonatomic,strong)id<FPNumberOfItemSectionModelProtocal> model;
 @end
 @implementation FPNumberOfItemsSectionController
 - (NSInteger)numberOfItems{
-    return self.model.itemModels.count;
+    return self.model.cellItems.count;
 }
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
-    id<FPWidthHeightProtocal> model = self.model.itemModels[index];
-    CGSize size = CGSizeZero;
-    if (![model respondsToSelector:@selector(size)] || CGSizeEqualToSize(model.size, CGSizeZero)) {
-        if ([self.model respondsToSelector:@selector(size)] &&  !CGSizeEqualToSize(self.model.size, CGSizeZero)) {
-            size = self.model.size;
-        }
+    CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
+    CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+    id<FPConfigureReusableViewProtocal> cellItem = self.model.cellItems[index];
+    if ([cellItem respondsToSelector:@selector(height)]) {
+        if (cellItem.height < 0) height = 0.01;
+        if (cellItem.height > 0) height = cellItem.height;
     }
-    if (CGSizeEqualToSize(size, CGSizeZero)) {
-        return self.collectionContext.containerSize;
+    if ([cellItem respondsToSelector:@selector(width)]) {
+        if (cellItem.width < 0) height = 0.01;
+        if (cellItem.width > 0) height = cellItem.width;
     }
-    
-    if (size.width <= 0) {
-        return CGSizeMake(self.collectionContext.containerSize.width, size.height);
-    }
-    if (size.height <= 0) {
-        return CGSizeMake(size.width, self.collectionContext.containerSize.height);
-    }
-    return size;
+    return CGSizeMake(height, width);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
-    id<FPWidthHeightProtocal,FPLoadReusableViewProtocal> model = self.model.itemModels[index];
+    id<FPConfigureReusableViewProtocal> model = self.model.cellItems[index];
     UICollectionViewCell *cell = [self dequeueCell:model index:index];
     if (!cell) {
-        cell = [self dequeueCell:self.model index:index];
+        cell = [self dequeueCell:model index:index];
     }
     if (self.configureCellBlock) self.configureCellBlock(model, cell,self);
     return cell;
 }
-- (UICollectionViewCell*)dequeueCell:(id<FPLoadReusableViewProtocal>)model index:(NSInteger)index{
+- (UICollectionViewCell*)dequeueCell:(id<FPConfigureReusableViewProtocal>)model index:(NSInteger)index{
     UICollectionViewCell *cell;
     if ([model respondsToSelector:@selector(nibName)] &&
         [model respondsToSelector:@selector(bundle)] &&
@@ -230,9 +229,9 @@
     }
     return cell;
 }
--(void)didUpdateToObject:(id<FPNumberOfItemsModelProtocal>)object{
+-(void)didUpdateToObject:(id<FPNumberOfItemSectionModelProtocal>)object{
     if ([object respondsToSelector:@selector(inset)]) {
-        self.inset = object.inset;
+        self.inset = object.sectionInset;
     }
     if ([object respondsToSelector:@selector(minimumLineSpacing)]) {
         self.minimumLineSpacing = object.minimumLineSpacing;

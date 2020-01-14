@@ -10,30 +10,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface FPBaseSectionController : IGListSectionController
-<FPSectionControllerConfigureProtocal>
+<FPSectionControllerHelperProtocal>
 @property (nonatomic,strong)FPConfigureSectionCellBlock configureCellBlock;
 @property (nonatomic,strong)FPConfigureSupplementaryViewBlock configureSupplementaryViewBlock;
-@property (nonatomic,copy)void (^didSelectItemBlock)(IGListSectionController *sectionController,id<FPSectionModelProtocal,FPSectionControllerProtocal> model,NSInteger index);
+@property (nonatomic,copy)void (^didSelectItemBlock)(IGListSectionController *sectionController,id model,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 
-
 NS_ASSUME_NONNULL_BEGIN
 @interface FPNestedSectionController : FPBaseSectionController
-<FPSectionControllerConfigureProtocal>
 @property (nonatomic,readonly)IGListAdapter *adapter;
 @end
 
 NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPListSectionController : FPBaseSectionController<FPSectionControllerConfigureProtocal>
+@interface FPSingleSectionController : FPBaseSectionController
 @end
 NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPNumberOfItemsSectionController : IGListSectionController<FPSectionControllerConfigureProtocal>
+@interface FPNumberOfItemsSectionController : IGListSectionController<FPSectionControllerHelperProtocal>
 @property (nonatomic,strong)FPConfigureSectionCellBlock configureCellBlock;
 @end
 NS_ASSUME_NONNULL_END

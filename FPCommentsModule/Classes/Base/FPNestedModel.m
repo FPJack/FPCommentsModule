@@ -1,5 +1,5 @@
 //
-//  FPIgListBaseModel.m
+//  FPBaseSectionModel.m
 //  FPCommentsModule
 //
 //  Created by fanpeng on 2020/1/4.
@@ -25,12 +25,11 @@
 @end
 
 
-@implementation FPModuleBaseModel
+@implementation FPSingleSectionModel
 
 @end
 @implementation FPDequeueReusableModel
 
-@synthesize size;
 
 @end
 
@@ -40,7 +39,7 @@
 - (CGFloat)height{
     if (_height == 0) {
         __block CGFloat height = 0;
-        [self.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.nestedCellItems enumerateObjectsUsingBlock:^(id<FPSingleSectionModelProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             height += (obj.height + obj.sectionInset.top + obj.sectionInset.bottom);
             //头尾部视图高度
             if ([obj.header respondsToSelector:@selector(height)]) {
@@ -57,18 +56,18 @@
     }
     return _height;
 }
-- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal,FPSectionControllerProtocal> _Nonnull))confiureSubSectionModelBlock{
-    if (!confiureSubSectionModelBlock) return;
-    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
-    __weak typeof(self) weakSelf = self;
-    [weakSelf.nestedSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        confiureSubSectionModelBlock(obj);
-    }];
+- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal> _Nonnull))confiureSubSectionModelBlock{
+//    if (!confiureSubSectionModelBlock) return;
+//    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
+//    __weak typeof(self) weakSelf = self;
+//    [weakSelf.subSectionModels enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal,FPCreateSectionControllerProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        confiureSubSectionModelBlock(obj);
+//    }];
 }
 @end
 
 
-@implementation FPIgListBaseModel
+@implementation FPBaseSectionModel
 - (instancetype)init
 {
     self = [super init];
@@ -79,8 +78,8 @@
 }
 - (nonnull id<NSObject>)diffIdentifier {return self.diffId;}
 - (BOOL)isEqualToDiffableObject:(nullable id<IGListDiffable>)object {
-    FPIgListBaseModel *obj = (FPIgListBaseModel*)object;
-    if (![obj isKindOfClass:[FPIgListBaseModel class]]) return NO;
+    FPBaseSectionModel *obj = (FPBaseSectionModel*)object;
+    if (![obj isKindOfClass:[FPBaseSectionModel class]]) return NO;
     if (![self isEqual:object]) return NO;
     return [self.diffId isEqualToString:obj.diffId];
 }

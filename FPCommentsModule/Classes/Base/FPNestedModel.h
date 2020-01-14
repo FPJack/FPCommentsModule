@@ -1,5 +1,5 @@
 //
-//  FPIgListBaseModel.h
+//  FPBaseSectionModel.h
 //  FPCommentsModule
 //
 //  Created by fanpeng on 2020/1/4.
@@ -12,25 +12,31 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPIgListBaseModel : NSObject<FPSectionModelProtocal>
+@interface FPBaseSectionModel : NSObject<FPSectionModelProtocal>
 @property(nonatomic,copy)NSString *diffId;
 @property (nonatomic,assign)CGFloat height;
-@property (nonatomic,assign)UIEdgeInsets sectionInset;
 @property (nonatomic,assign)CGFloat width;
+
+@property (nonatomic,assign)UIEdgeInsets sectionInset;
 
 @property (nonatomic,strong)id<FPConfigureReusableViewProtocal> header;
 @property (nonatomic,strong)id<FPConfigureReusableViewProtocal> footer;
+
+
+//生成sectionController
+@property (nonatomic,strong)IGListSectionController *sectionController;
+@property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
+
 
 @property (nonatomic,strong)id strongObject;//备用
 @property (nonatomic,weak)id weakObject;//备用
 @end
 NS_ASSUME_NONNULL_END
 
-NS_ASSUME_NONNULL_BEGIN
-@interface FPModuleBaseModel : FPIgListBaseModel<FPSectionControllerProtocal,FPLoadReusableViewProtocal>
-@property (nonatomic,strong)IGListSectionController *sectionController;
-@property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
 
+
+NS_ASSUME_NONNULL_BEGIN
+@interface FPSingleSectionModel : FPBaseSectionModel
 @property (nonatomic,strong)Class class_name;
 @property (nonatomic,copy)NSString* nibName;
 @property (nonatomic,strong)NSBundle *bundle;
@@ -50,21 +56,16 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPNestedModel : FPIgListBaseModel<FPNestedSectionControllerProtocal>
-@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal,FPSectionControllerProtocal>> *nestedSectionModels;
+@interface FPNestedModel : FPBaseSectionModel<FPNestedSectionModelProtocal>
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
-@property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal,FPSectionControllerProtocal> subSectionModel);
-
-
-@property (nonatomic,strong)IGListSectionController *sectionController;
-@property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
+@property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
 @end
 NS_ASSUME_NONNULL_END
 
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPUserModel : FPModuleBaseModel
+@interface FPUserModel : FPSingleSectionModel
 @property(nonatomic,copy)NSString *userId;
 @property(nonatomic,copy)NSString *time;
 @property(nonatomic,copy)NSString *rightBtnImageName;
@@ -77,7 +78,7 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPTextModel : FPModuleBaseModel
+@interface FPTextModel : FPSingleSectionModel
 @property(nonatomic,copy)NSString *content;
 @property (nonatomic,assign)int numberOfLines;
 @property (nonatomic,strong)UIFont *font;
@@ -87,17 +88,9 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPNumberItemModel : NSObject<FPNumberOfItemsModelProtocal>
-@property(nonatomic,copy)NSString *diffId;
-@property (nonatomic,assign)CGSize size;
-@property (nonatomic,strong)NSArray<id<FPWidthHeightProtocal,FPLoadReusableViewProtocal>> *itemModels;
+@interface FPNumberItemModel : FPBaseSectionModel<FPNumberOfItemSectionModelProtocal>
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
-@property (nonatomic,assign)UIEdgeInsets inset;
-@property (nonatomic,strong)Class class_name;
-@property (nonatomic,copy)NSString* nibName;
-@property (nonatomic,strong)NSBundle *bundle;
-
-@property (nonatomic,strong)IGListSectionController *sectionController;
+@property (nonatomic,strong)NSMutableArray <id<FPConfigureReusableViewProtocal>> *cellItems;
 @end
 NS_ASSUME_NONNULL_END

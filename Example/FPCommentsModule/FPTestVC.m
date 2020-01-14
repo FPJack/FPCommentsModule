@@ -13,7 +13,7 @@
 @interface FPTestVC ()<IGListAdapterDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)IGListAdapter *adapter;
-@property (nonatomic,strong)NSMutableArray <id<FPNumberOfItemsModelProtocal>> *datas;
+@property (nonatomic,strong)NSMutableArray <id<FPNumberOfItemSectionModelProtocal>> *datas;
 @end
 @implementation FPTestVC
 - (IGListAdapter *)adapter{
@@ -32,30 +32,27 @@
         FPNumberItemModel *model = [FPNumberItemModel new];
         model.minimumLineSpacing = space;
         model.minimumInteritemSpacing = space;
-        model.inset = UIEdgeInsetsMake(20, 0, 20, 0);
+        model.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
         CGFloat width = (kSWidth - 10 * 5)/6;
-        model.size = CGSizeMake(width, width);
-        model.class_name = UICollectionViewCell.class;
+        model.width = width;
+        model.height = width;
         NSMutableArray *items = [NSMutableArray array];
         for (int j = 0 ; j < 10 ; j ++ ) {
-            FPNumberItemModel *subItem = [FPNumberItemModel new];
+            FPDequeueReusableModel *subItem = [FPDequeueReusableModel new];
             subItem.nibName = @"FPPreviewMoreCommentsCell";
             subItem.bundle = [NSBundle mainBundle];
             [items addObject:subItem];
         }
-        model.itemModels = items;
+        model.cellItems = items;
         [datas addObject:model];
     }
     self.datas = datas;
     [self.adapter performUpdatesAnimated:YES completion:nil];
-    
 }
-
-
 - (NSArray<id <IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     return self.datas;
 }
-- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionControllerProtocal>)object{
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNumberOfItemSectionModelProtocal>)object{
     return [FPNumberOfItemsSectionController new];
 }
 - (nullable UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
