@@ -41,7 +41,7 @@
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     NSMutableArray *datas = [NSMutableArray array];
-    for (int i = 0 ; i < 20; i ++) {
+    for (int i = 0 ; i < 10; i ++) {
         [datas addObject:[self createModel:i]];
     }
     self.datas = datas;
@@ -172,6 +172,14 @@
             userModel.height = 60;
             userModel.nibName = @"FPUserInfoCollectionCell";
             userModel.bundle = [FPUserInfoCollectionCell userInfoCollectionCellBundle];
+            {
+                        FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
+                        reusableModel.class_name = [UICollectionReusableView class];
+                        reusableModel.height = 30;
+                        reusableModel.width = kSWidth;
+                        userModel.footer = reusableModel;
+            }
+
             [subArr addObject:userModel];
         }
         {
@@ -272,7 +280,15 @@
             model.sectionController = sectionController;
             model.class_name = FPTextCollectionCell.class;
             model.height = 30;
-            model.inset = UIEdgeInsetsMake(0, 68, 0, 0);
+            model.inset = UIEdgeInsetsMake(5, 68, 0, 0);
+            {
+                FPDequeueReusableModel *reusableModel = [FPDequeueReusableModel new];
+                reusableModel.class_name = [UICollectionReusableView class];
+                reusableModel.height = 30;
+//                reusableModel.width = kSWidth - 68;
+                model.header = reusableModel;
+            }
+
             [subArr addObject:model];
         }
         
@@ -280,7 +296,7 @@
             FPNestedModel *commentModel = [FPNestedModel new];
             commentModel.collectionViewContentInset = UIEdgeInsetsMake(10, 12, 10, 12);
             NSMutableArray *arr = [NSMutableArray array];
-            NSInteger rand = arc4random() % 10 + 1;
+            NSInteger rand = arc4random() % 5 + 1;
             for (int i = 0; i < rand; i ++) {
                 NSString *text = @"随着项目的不断迭代，各个模块会越来越复杂，各个模块相互依赖，而且每个模块可能会有共同比较麻烦。";
                 NSMutableArray *jArr = [NSMutableArray array];

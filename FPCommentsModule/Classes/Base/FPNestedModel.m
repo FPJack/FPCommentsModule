@@ -30,6 +30,8 @@
 @end
 @implementation FPDequeueReusableModel
 
+@synthesize size;
+
 @end
 
 
@@ -42,10 +44,10 @@
             height += (obj.height + obj.inset.top + obj.inset.bottom);
             //头尾部视图高度
             if ([obj.header respondsToSelector:@selector(height)]) {
-                height += self.header.height;
+                height += obj.header.height;
             }
             if ([obj.footer respondsToSelector:@selector(height)]) {
-                height += self.footer.height;
+                height += obj.footer.height;
             }
         }];
         //contentInset

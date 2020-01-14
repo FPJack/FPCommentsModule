@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <IGListKit/IGListKit.h>
-typedef void (^FPListSingleSectionCellConfigureBlock)(id __nullable item, __kindof UICollectionViewCell * __nullable cell,IGListSectionController * __nullable sectionController);
+typedef void (^FPConfigureSectionCellBlock)(id __nullable item, __kindof UICollectionViewCell * __nullable cell,IGListSectionController * __nullable sectionController);
+typedef void (^FPConfigureSupplementaryViewBlock)(id __nullable item, __kindof UICollectionReusableView * __nullable cell,IGListSectionController * __nullable sectionController);
 //每个itemSize
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPWidthHeightProtocal  <NSObject>
@@ -71,7 +72,8 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPSectionControllerConfigureProtocal <NSObject>
 @optional
-@property (nonatomic,strong)FPListSingleSectionCellConfigureBlock configureCellBlock;
+@property (nonatomic,strong)FPConfigureSectionCellBlock configureCellBlock;
+@property (nonatomic,strong)FPConfigureSupplementaryViewBlock configureSupplementaryViewBlock;
 @property (nonatomic,copy)void (^didSelectItemBlock)(IGListSectionController *sectionController,id<FPSectionModelProtocal,FPSectionControllerProtocal> model,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END

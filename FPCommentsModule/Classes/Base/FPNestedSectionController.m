@@ -33,7 +33,11 @@
 - (__kindof UICollectionReusableView *)viewForSupplementaryElementOfKind:(NSString *)elementKind
                                                                  atIndex:(NSInteger)index{
     id<FPSupplementaryViewProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
-    return [self viewForSupplementaryElementOfKind:elementKind atIndex:index from:model];
+    UICollectionReusableView *supplementaryView = [self viewForSupplementaryElementOfKind:elementKind atIndex:index from:model];
+    if (self.configureSupplementaryViewBlock) {
+        self.configureSupplementaryViewBlock(self.model, supplementaryView, self);
+    }
+    return supplementaryView;
 }
 - (UICollectionReusableView*)viewForSupplementaryElementOfKind:(NSString *)elementKind
                                                        atIndex:(NSInteger)index from:(id<FPSupplementaryViewProtocal>)fromModel{
@@ -66,10 +70,10 @@
         }
     }else if ([elementKind isEqualToString:UICollectionElementKindSectionFooter]){
         if ([self.model.footer respondsToSelector:@selector(width)]) {
-            width = self.model.header.width;
+            width = self.model.footer.width;
         }
         if ([self.model.footer respondsToSelector:@selector(height)]) {
-            height = self.model.header.height;
+            height = self.model.footer.height;
         }
     }
     return CGSizeMake(width, height);
