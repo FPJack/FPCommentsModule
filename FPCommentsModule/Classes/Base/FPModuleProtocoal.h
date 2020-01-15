@@ -12,6 +12,19 @@ typedef void (^FPConfigureSupplementaryViewBlock)(id __nullable item, __kindof U
 @protocol FPSubSectionModelsProtocal;
 @protocol FPSectionModelProtocal;
 
+//
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPCollectionViewProtocal <NSObject>
+@property (nonatomic,strong)UICollectionView *collectionView;
+@end
+NS_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPListAdapterProtocal <NSObject>
+@property (nonatomic,readonly)IGListAdapter *adapter;
+@end
+NS_ASSUME_NONNULL_END
+
+
 //SectionController生成器
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPCreateSectionControllerProtocal <NSObject>
@@ -48,9 +61,12 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPLoadReusableViewProtocal <NSObject>
 @optional
+
+
 @property (nonatomic,strong)Class class_name;
 @property (nonatomic,copy)NSString* nibName;
 @property (nonatomic,strong)NSBundle* bundle;
+@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id<FPSectionModelProtocal> model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 
@@ -80,12 +96,14 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 
+
 //一个section嵌套多个section  场景cell上面放一个UICollectionView
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNestedSectionModelProtocal <FPSectionModelProtocal,FPWidthHeightProtocal>
+@protocol FPNestedSectionModelProtocal <FPSectionModelProtocal>
+@optional
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
-@property (nonatomic,copy)void (^confiureSubSectionModelBlock)(id<FPSectionModelProtocal> subSectionModel);
+@property (nonatomic,copy)UICollectionViewCell<FPCollectionViewProtocal>  *(^dequeueReusableCellBlock)(id<FPSectionModelProtocal> model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 

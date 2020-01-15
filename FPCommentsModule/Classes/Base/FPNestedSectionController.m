@@ -121,7 +121,12 @@
     return CGSizeMake(width, height);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
-    FPNestedCollectionViewCell* cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
+    UICollectionViewCell<FPCollectionViewProtocal> *cell;
+    if ([self.model respondsToSelector:@selector(dequeueReusableCellBlock)] && self.model.dequeueReusableCellBlock) {
+        cell = self.model.dequeueReusableCellBlock(self.model,self,self.collectionContext,index);
+    }else{
+        cell = [self.collectionContext dequeueReusableCellOfClass:FPNestedCollectionViewCell.class forSectionController:self atIndex:index];
+    }
     if ([self.model respondsToSelector:@selector(collectionViewContentInset)]) {
         cell.collectionView.contentInset = self.model.collectionViewContentInset;
     }
@@ -171,12 +176,16 @@
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     UICollectionViewCell *cell;
-    id<FPLoadReusableViewProtocal> cellItem = self.model;
+    if ([self.model respondsToSelector:@selector(dequeueReusableCellBlock)] && self.model.dequeueReusableCellBlock) {
+        cell = self.model.dequeueReusableCellBlock(self.model,self,self.collectionContext,index);
+    }else{
+      id<FPLoadReusableViewProtocal> cellItem = self.model;
       if ([cellItem respondsToSelector:@selector(nibName)] && [cellItem respondsToSelector:@selector(bundle)] && cellItem.nibName && cellItem.bundle) {
           cell = [self.collectionContext dequeueReusableCellWithNibName:cellItem.nibName bundle:cellItem.bundle forSectionController:self atIndex:index];
       }else{
           cell = [self.collectionContext dequeueReusableCellOfClass:cellItem.class_name forSectionController:self atIndex:index];
       }
+    }
     if (self.configureCellBlock) self.configureCellBlock(self.model, cell,self);
     return cell;
 }

@@ -56,13 +56,6 @@
     }
     return _height;
 }
-- (void)setConfiureSubSectionModelBlock:(void (^)(id<FPSectionModelProtocal> _Nonnull))confiureSubSectionModelBlock{
-    _confiureSubSectionModelBlock = confiureSubSectionModelBlock;
-    if (!confiureSubSectionModelBlock) return;
-    [self.nestedCellItems enumerateObjectsUsingBlock:^(id<FPSectionModelProtocal>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        confiureSubSectionModelBlock(obj);
-    }];
-}
 @end
 
 

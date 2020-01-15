@@ -320,6 +320,9 @@
         mainModel.nestedCellItems = subArr;
         mainModel.sectionInset = UIEdgeInsetsMake(5, 0, 5, 0);
         mainModel.sectionController = nestedSC;
+        mainModel.dequeueReusableCellBlock = ^UICollectionViewCell<FPCollectionViewProtocal> * _Nonnull(id<FPSectionModelProtocal>  _Nonnull model, IGListSectionController * _Nonnull sectionController, id<IGListCollectionContext>  _Nonnull collectionContext, NSInteger index) {
+          return  [collectionContext dequeueReusableCellOfClass:[FPNestedCollectionViewCell class] forSectionController:sectionController atIndex:index];
+        };
         return mainModel;
     }
     
@@ -329,9 +332,6 @@
     return self.datas;
 }
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id<FPNestedSectionModelProtocal>)object{
-    object.confiureSubSectionModelBlock = ^(id<FPSectionModelProtocal>  _Nonnull subSectionModel) {
-        
-    };
     if ([object respondsToSelector:@selector(sectionController)] && object.sectionController) {
         return object.sectionController;
     }else{
