@@ -32,7 +32,7 @@
 }
 - (__kindof UICollectionReusableView *)viewForSupplementaryElementOfKind:(NSString *)elementKind
                                                                  atIndex:(NSInteger)index{
-    id<FPConfigureReusableViewProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
+    id<FPConfigureReusableSupplementaryProtocal> model = [elementKind isEqualToString:UICollectionElementKindSectionHeader] ? self.model.header : self.model.footer;
     UICollectionReusableView *supplementaryView = [self viewForSupplementaryElementOfKind:elementKind atIndex:index from:model];
     if (self.configureSupplementaryViewBlock) {
         self.configureSupplementaryViewBlock(self.model, supplementaryView, self);
@@ -40,15 +40,19 @@
     return supplementaryView;
 }
 - (UICollectionReusableView*)viewForSupplementaryElementOfKind:(NSString *)elementKind
-                                                       atIndex:(NSInteger)index from:(id<FPConfigureReusableViewProtocal>)fromModel{
+                                                       atIndex:(NSInteger)index from:(id<FPConfigureReusableSupplementaryProtocal>)fromModel{
     UICollectionReusableView *supplementaryView;
-    if ([fromModel respondsToSelector:@selector(nibName)] &&
-        [fromModel respondsToSelector:@selector(bundle)] &&
-        fromModel.nibName && fromModel.bundle) {
-        supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self nibName:fromModel.nibName bundle:fromModel.bundle atIndex:index];
-        
-    }else if([fromModel respondsToSelector:@selector(class_name)] && fromModel.class_name){
-        supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self class:fromModel.class_name atIndex:index];
+    if ([fromModel respondsToSelector:@selector(dequeueReusableSupplementaryBlock)] &&  fromModel.dequeueReusableSupplementaryBlock) {
+        supplementaryView = fromModel.dequeueReusableSupplementaryBlock(elementKind,self.model,self,self.collectionContext,index);
+    }else{
+        if ([fromModel respondsToSelector:@selector(nibName)] &&
+            [fromModel respondsToSelector:@selector(bundle)] &&
+            fromModel.nibName && fromModel.bundle) {
+            supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self nibName:fromModel.nibName bundle:fromModel.bundle atIndex:index];
+            
+        }else if([fromModel respondsToSelector:@selector(class_name)] && fromModel.class_name){
+            supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self class:fromModel.class_name atIndex:index];
+        }
     }
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
         supplementaryView.backgroundColor = [UIColor redColor];
@@ -212,7 +216,7 @@
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
     CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
     CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
-    id<FPConfigureReusableViewProtocal> cellItem = self.model.cellItems[index];
+    id<FPConfigureReusableCellProtocal> cellItem = self.model.cellItems[index];
     if ([cellItem respondsToSelector:@selector(height)]) {
         if (cellItem.height < 0) height = 0.01;
         if (cellItem.height > 0) height = cellItem.height;
@@ -225,7 +229,7 @@
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
     UICollectionViewCell *cell;
-    id<FPConfigureReusableViewProtocal> model = self.model.cellItems[index];
+    id<FPConfigureReusableCellProtocal> model = self.model.cellItems[index];
     if ([self.model respondsToSelector:@selector(dequeueReusableCellBlock)] && self.model.dequeueReusableCellBlock) {
         cell =  self.model.dequeueReusableCellBlock(self.model,self,self.collectionContext,index);
     }else{
@@ -234,7 +238,7 @@
     if (self.configureCellBlock) self.configureCellBlock(model, cell,self);
     return cell;
 }
-- (UICollectionViewCell*)dequeueCell:(id<FPConfigureReusableViewProtocal>)model index:(NSInteger)index{
+- (UICollectionViewCell*)dequeueCell:(id<FPConfigureReusableCellProtocal>)model index:(NSInteger)index{
     UICollectionViewCell *cell;
     if ([model respondsToSelector:@selector(dequeueReusableCellBlock)] && model.dequeueReusableCellBlock) {
         cell = model.dequeueReusableCellBlock(model,self,self.collectionContext,index);

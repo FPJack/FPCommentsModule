@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,assign)UIEdgeInsets sectionInset;
 
-@property (nonatomic,strong)id<FPConfigureReusableViewProtocal> header;
-@property (nonatomic,strong)id<FPConfigureReusableViewProtocal> footer;
+@property (nonatomic,strong)id<FPConfigureReusableSupplementaryProtocal> header;
+@property (nonatomic,strong)id<FPConfigureReusableSupplementaryProtocal> footer;
 
 
 //生成sectionController
@@ -46,12 +46,14 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPDequeueReusableModel : NSObject<FPConfigureReusableViewProtocal>
+@interface FPDequeueReusableModel : NSObject<FPLoadReusableViewProtocal,FPWidthHeightProtocal,FPLoadReusableCellBlockProtocal,FPLoadReusableSupplementaryBlockProtocal>
 @property (nonatomic,assign)CGFloat height;
 @property (nonatomic,assign)CGFloat width;
 @property (nonatomic,strong)Class class_name;
 @property (nonatomic,copy)NSString* nibName;
 @property (nonatomic,strong)NSBundle *bundle;
+@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
+@property (nonatomic,copy)UICollectionReusableView  *(^dequeueReusableSupplementaryBlock)(NSString *elementKind,id model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 
@@ -94,6 +96,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FPNumberItemModel : FPBaseSectionModel<FPNumberOfItemSectionModelProtocal>
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
-@property (nonatomic,strong)NSMutableArray <id<FPConfigureReusableViewProtocal>> *cellItems;
+@property (nonatomic,strong)NSMutableArray <id<FPConfigureReusableCellProtocal>> *cellItems;
 @end
 NS_ASSUME_NONNULL_END

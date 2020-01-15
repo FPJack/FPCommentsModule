@@ -56,7 +56,7 @@
         {
         [self.button setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self addSubview:self.button];
-        self.buttonRightCon = [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:15];
+        self.buttonRightCon = [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-15];
         NSLayoutConstraint* centerYCon = [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
             [self addConstraints:@[self.buttonRightCon,centerYCon]];
         }
@@ -79,10 +79,6 @@
     return _button;
 }
 - (void)buttonAction:(UIButton*)btn{if (self.buttonTapBlock) self.buttonTapBlock(btn);}
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    NSLog(@"%@",self.label);
-}
 @end
 
 
