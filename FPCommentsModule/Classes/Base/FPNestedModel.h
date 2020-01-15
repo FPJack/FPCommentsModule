@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface FPDequeueReusableModel : NSObject<FPLoadReusableViewProtocal,FPWidthHeightProtocal,FPLoadReusableCellBlockProtocal,FPLoadReusableSupplementaryBlockProtocal>
+@interface FPDequeueReusableModel : NSObject<FPConfigureReusableCellProtocal,FPConfigureReusableSupplementaryProtocal>
 @property (nonatomic,assign)CGFloat height;
 @property (nonatomic,assign)CGFloat width;
 @property (nonatomic,strong)Class class_name;
