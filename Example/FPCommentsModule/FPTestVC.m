@@ -40,12 +40,16 @@
         };
         {
             FPDequeueReusableModel *rModel = [FPDequeueReusableModel new];
-            rModel.class_name = [UICollectionReusableView class];
+            rModel.class_name = [FPCollectionReusableView class];
             rModel.height = 30;
             model.footer = rModel;
         }
 
         FPNumberOfItemsSectionController *sectionController = [FPNumberOfItemsSectionController new];
+        sectionController.configureSupplementaryViewBlock = ^(id  _Nullable item, __kindof FPCollectionReusableView * _Nullable cell, IGListSectionController * _Nullable sectionController) {
+            cell.label.text = @"ddd";
+            [cell.button setTitle:@"dddd" forState:UIControlStateNormal];
+        };
         model.sectionController = sectionController;
         CGFloat width = (kSWidth - 10 * 5)/6;
         NSMutableArray *items = [NSMutableArray array];

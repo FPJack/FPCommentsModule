@@ -40,7 +40,50 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+@implementation FPCollectionReusableView
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        {
+        [self.label setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.label];
+        NSLayoutConstraint *leftCon = [NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:15];
+        NSLayoutConstraint *centerYCon = [NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationLessThanOrEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+        self.labelLeftCon = leftCon;
+        [self addConstraints:@[leftCon,centerYCon]];
+        }
+        {
+        [self.button setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.button];
+        self.buttonRightCon = [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:15];
+        NSLayoutConstraint* centerYCon = [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+            [self addConstraints:@[self.buttonRightCon,centerYCon]];
+        }
+    }
+    return self;
+}
+- (UILabel *)label{
+    if (!_label) {
+        _label = [UILabel new];
+        _label.font = [UIFont systemFontOfSize:13];
+    }
+    return _label;
+}
+- (UIButton *)button{
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        _button.titleLabel.font = [UIFont systemFontOfSize:13];
+        [_button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _button;
+}
+- (void)buttonAction:(UIButton*)btn{if (self.buttonTapBlock) self.buttonTapBlock(btn);}
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    NSLog(@"%@",self.label);
+}
+@end
 
 
 @implementation FPBtnCollectionCell

@@ -44,6 +44,17 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 
+NS_ASSUME_NONNULL_BEGIN
+@interface FPCollectionReusableView : UICollectionReusableView
+@property (strong, nonatomic)NSLayoutConstraint *labelLeftCon;
+@property (strong, nonatomic)NSLayoutConstraint *buttonRightCon;
+
+@property (nonatomic,strong)UILabel *label;
+@property (nonatomic,strong)UIButton *button;
+@property (nonatomic,copy)void (^buttonTapBlock)(UIButton *button);
+@end
+NS_ASSUME_NONNULL_END
+
 
 
 
