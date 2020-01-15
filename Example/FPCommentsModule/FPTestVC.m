@@ -42,6 +42,11 @@
             FPDequeueReusableModel *rModel = [FPDequeueReusableModel new];
             rModel.class_name = [FPCollectionReusableView class];
             rModel.height = 30;
+            rModel.dequeueReusableSupplementaryBlock = ^UICollectionReusableView * _Nonnull(NSString * _Nonnull elementKind, id  _Nonnull model, IGListSectionController * _Nonnull sectionController, id<IGListCollectionContext>  _Nonnull collectionContext, NSInteger index) {
+                FPCollectionReusableView *view = [collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:sectionController class:[FPCollectionReusableView class] atIndex:index];
+                view.backgroundColor = [UIColor grayColor];
+                return view;
+            };
             model.footer = rModel;
         }
 

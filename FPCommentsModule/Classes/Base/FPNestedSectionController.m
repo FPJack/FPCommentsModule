@@ -54,11 +54,6 @@
             supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self class:fromModel.class_name atIndex:index];
         }
     }
-    if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        supplementaryView.backgroundColor = [UIColor redColor];
-    }else{
-        supplementaryView.backgroundColor = [UIColor orangeColor];
-    }
     return supplementaryView;
 }
 - (CGSize)sizeForSupplementaryViewOfKind:(NSString *)elementKind
