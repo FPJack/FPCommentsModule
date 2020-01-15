@@ -24,9 +24,9 @@
     NSMutableArray *elementKinds = [NSMutableArray array];
     if ([self.model respondsToSelector:@selector(header)] && self.model.header) {
         [elementKinds addObject: UICollectionElementKindSectionHeader];
-        }
+    }
     if ([self.model respondsToSelector:@selector(footer)] && self.model.footer) {
-    [elementKinds addObject: UICollectionElementKindSectionFooter];
+        [elementKinds addObject: UICollectionElementKindSectionFooter];
     }
     return elementKinds;
 }
@@ -46,7 +46,7 @@
         [fromModel respondsToSelector:@selector(bundle)] &&
         fromModel.nibName && fromModel.bundle) {
         supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self nibName:fromModel.nibName bundle:fromModel.bundle atIndex:index];
-
+        
     }else if([fromModel respondsToSelector:@selector(class_name)] && fromModel.class_name){
         supplementaryView = [self.collectionContext dequeueReusableSupplementaryViewOfKind:elementKind forSectionController:self class:fromModel.class_name atIndex:index];
     }
@@ -108,8 +108,8 @@
     return _adapter;
 }
 - (CGSize)sizeForItemAtIndex:(NSInteger)index{
-   CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
-   CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
+    CGFloat width = self.collectionContext.containerSize.width - self.inset.left - self.inset.right;
+    CGFloat height = self.collectionContext.containerSize.height - self.inset.top - self.inset.bottom;
     if ([self.model respondsToSelector:@selector(height)]) {
         if (self.model.height < 0) height = 0.01;
         if (self.model.height > 0) height = self.model.height;
@@ -179,12 +179,12 @@
     if ([self.model respondsToSelector:@selector(dequeueReusableCellBlock)] && self.model.dequeueReusableCellBlock) {
         cell = self.model.dequeueReusableCellBlock(self.model,self,self.collectionContext,index);
     }else{
-      id<FPLoadReusableViewProtocal> cellItem = self.model;
-      if ([cellItem respondsToSelector:@selector(nibName)] && [cellItem respondsToSelector:@selector(bundle)] && cellItem.nibName && cellItem.bundle) {
-          cell = [self.collectionContext dequeueReusableCellWithNibName:cellItem.nibName bundle:cellItem.bundle forSectionController:self atIndex:index];
-      }else{
-          cell = [self.collectionContext dequeueReusableCellOfClass:cellItem.class_name forSectionController:self atIndex:index];
-      }
+        id<FPLoadReusableViewProtocal> cellItem = self.model;
+        if ([cellItem respondsToSelector:@selector(nibName)] && [cellItem respondsToSelector:@selector(bundle)] && cellItem.nibName && cellItem.bundle) {
+            cell = [self.collectionContext dequeueReusableCellWithNibName:cellItem.nibName bundle:cellItem.bundle forSectionController:self atIndex:index];
+        }else{
+            cell = [self.collectionContext dequeueReusableCellOfClass:cellItem.class_name forSectionController:self atIndex:index];
+        }
     }
     if (self.configureCellBlock) self.configureCellBlock(self.model, cell,self);
     return cell;
@@ -220,9 +220,11 @@
     return CGSizeMake(height, width);
 }
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
+    UICollectionViewCell *cell;
     id<FPConfigureReusableViewProtocal> model = self.model.cellItems[index];
-    UICollectionViewCell *cell = [self dequeueCell:model index:index];
-    if (!cell) {
+    if ([self.model respondsToSelector:@selector(dequeueReusableCellBlock)] && self.model.dequeueReusableCellBlock) {
+        cell =  self.model.dequeueReusableCellBlock(self.model,self,self.collectionContext,index);
+    }else{
         cell = [self dequeueCell:model index:index];
     }
     if (self.configureCellBlock) self.configureCellBlock(model, cell,self);
@@ -230,12 +232,16 @@
 }
 - (UICollectionViewCell*)dequeueCell:(id<FPConfigureReusableViewProtocal>)model index:(NSInteger)index{
     UICollectionViewCell *cell;
-    if ([model respondsToSelector:@selector(nibName)] &&
-        [model respondsToSelector:@selector(bundle)] &&
-        model.nibName && model.bundle) {
-        cell = [self.collectionContext dequeueReusableCellWithNibName:model.nibName bundle:model.bundle forSectionController:self atIndex:index];
-    }else if([model respondsToSelector:@selector(class_name)] && model.class_name){
-        cell = [self.collectionContext dequeueReusableCellOfClass:model.class_name forSectionController:self atIndex:index];
+    if ([model respondsToSelector:@selector(dequeueReusableCellBlock)] && model.dequeueReusableCellBlock) {
+        cell = model.dequeueReusableCellBlock(model,self,self.collectionContext,index);
+    }else{
+        if ([model respondsToSelector:@selector(nibName)] &&
+            [model respondsToSelector:@selector(bundle)] &&
+            model.nibName && model.bundle) {
+            cell = [self.collectionContext dequeueReusableCellWithNibName:model.nibName bundle:model.bundle forSectionController:self atIndex:index];
+        }else if([model respondsToSelector:@selector(class_name)] && model.class_name){
+            cell = [self.collectionContext dequeueReusableCellOfClass:model.class_name forSectionController:self atIndex:index];
+        }
     }
     return cell;
 }

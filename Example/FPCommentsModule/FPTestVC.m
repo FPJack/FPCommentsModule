@@ -33,6 +33,11 @@
         model.minimumLineSpacing = space;
         model.minimumInteritemSpacing = space;
         model.sectionInset = UIEdgeInsetsMake(5, 10, 5, 10);
+        model.dequeueReusableCellBlock = ^UICollectionViewCell * _Nonnull(id  _Nonnull model, IGListSectionController * _Nonnull sectionController, id<IGListCollectionContext>  _Nonnull collectionContext, NSInteger index) {
+            UICollectionViewCell *cell = [collectionContext dequeueReusableCellOfClass:[UICollectionViewCell class] forSectionController:sectionController atIndex:index];
+            cell.backgroundColor = [UIColor redColor];
+            return cell;
+        };
         {
             FPDequeueReusableModel *rModel = [FPDequeueReusableModel new];
             rModel.class_name = [UICollectionReusableView class];
@@ -41,9 +46,6 @@
         }
 
         FPNumberOfItemsSectionController *sectionController = [FPNumberOfItemsSectionController new];
-        sectionController.configureCellBlock = ^(id  _Nullable item, __kindof UICollectionViewCell * _Nullable cell, IGListSectionController * _Nullable sectionController) {
-            cell.backgroundColor = [UIColor orangeColor];
-        };
         model.sectionController = sectionController;
         CGFloat width = (kSWidth - 10 * 5)/6;
         NSMutableArray *items = [NSMutableArray array];

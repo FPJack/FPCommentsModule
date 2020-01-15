@@ -18,12 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)UICollectionView *collectionView;
 @end
 NS_ASSUME_NONNULL_END
-NS_ASSUME_NONNULL_BEGIN
-@protocol FPListAdapterProtocal <NSObject>
-@property (nonatomic,readonly)IGListAdapter *adapter;
-@end
-NS_ASSUME_NONNULL_END
-
 
 //SectionController生成器
 NS_ASSUME_NONNULL_BEGIN
@@ -61,18 +55,24 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPLoadReusableViewProtocal <NSObject>
 @optional
-
-
 @property (nonatomic,strong)Class class_name;
 @property (nonatomic,copy)NSString* nibName;
 @property (nonatomic,strong)NSBundle* bundle;
-@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id<FPSectionModelProtocal> model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 
+NS_ASSUME_NONNULL_BEGIN
+@protocol FPLoadReusableViewBlockProtocal <NSObject>
+@optional
+@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
+@end
+NS_ASSUME_NONNULL_END
+
+
+
 //FPLoadReusableViewProtocal + FPWidthHeightProtocal
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPConfigureReusableViewProtocal <FPLoadReusableViewProtocal,FPWidthHeightProtocal>
+@protocol FPConfigureReusableViewProtocal <FPLoadReusableViewProtocal,FPWidthHeightProtocal,FPLoadReusableViewBlockProtocal>
 @end
 NS_ASSUME_NONNULL_END
 
@@ -80,13 +80,15 @@ NS_ASSUME_NONNULL_END
 
 //配置SectionController宽高 SectionInset
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPSectionModelProtocal <IGListDiffable,FPWidthHeightProtocal,FPCreateSectionControllerProtocal>
+@protocol FPSectionModelProtocal <IGListDiffable,FPWidthHeightProtocal,FPCreateSectionControllerProtocal,FPLoadReusableViewBlockProtocal>
 @required
 @property(nonatomic,copy)NSString *diffId;
 @optional
 @property (nonatomic,strong)id<FPConfigureReusableViewProtocal> header;
 @property (nonatomic,strong)id<FPConfigureReusableViewProtocal> footer;
 @property (nonatomic,assign)UIEdgeInsets sectionInset;
+
+@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 @end
 NS_ASSUME_NONNULL_END
 // 一个section一个cellItem
@@ -99,7 +101,7 @@ NS_ASSUME_NONNULL_END
 
 //一个section嵌套多个section  场景cell上面放一个UICollectionView
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNestedSectionModelProtocal <FPSectionModelProtocal>
+@protocol FPNestedSectionModelProtocal <FPSectionModelProtocal,FPLoadReusableViewBlockProtocal>
 @optional
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
@@ -110,7 +112,7 @@ NS_ASSUME_NONNULL_END
 
 //一个section多个cellItem基类
 NS_ASSUME_NONNULL_BEGIN
-@protocol FPNumberOfItemSectionModelProtocal <FPSectionModelProtocal,FPWidthHeightProtocal>
+@protocol FPNumberOfItemSectionModelProtocal <FPSectionModelProtocal,FPWidthHeightProtocal,FPLoadReusableViewBlockProtocal>
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
 @property (nonatomic,strong)NSMutableArray <id<FPConfigureReusableViewProtocal>> *cellItems;

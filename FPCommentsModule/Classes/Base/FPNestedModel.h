@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)IGListSectionController *sectionController;
 @property (nonatomic,copy)IGListSectionController* (^sectionControllerBlock)(id<FPSectionModelProtocal> model);
 
+@property (nonatomic,copy)UICollectionViewCell  *(^dequeueReusableCellBlock)(id model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
 
 @property (nonatomic,strong)id strongObject;//备用
 @property (nonatomic,weak)id weakObject;//备用

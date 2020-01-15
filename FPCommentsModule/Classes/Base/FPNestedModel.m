@@ -35,6 +35,7 @@
 
 
 @implementation FPNestedModel
+@dynamic dequeueReusableCellBlock;
 @synthesize height = _height;
 - (CGFloat)height{
     if (_height == 0) {
