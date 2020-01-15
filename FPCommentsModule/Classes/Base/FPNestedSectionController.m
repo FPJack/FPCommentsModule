@@ -102,7 +102,11 @@
 @dynamic model;
 - (IGListAdapter *)adapter{
     if (!_adapter) {
-        _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:0];
+        NSInteger workingRangeSize = 0;
+        if ([self.model respondsToSelector:@selector(workingRangeSize)] && self.model.workingRangeSize) {
+            workingRangeSize = self.model.workingRangeSize;
+        }
+        _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self.viewController workingRangeSize:workingRangeSize];
         _adapter.dataSource = self;
     }
     return _adapter;

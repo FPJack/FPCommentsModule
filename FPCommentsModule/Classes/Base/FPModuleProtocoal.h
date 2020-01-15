@@ -103,6 +103,7 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPNestedSectionModelProtocal <FPSectionModelProtocal,FPLoadReusableViewBlockProtocal>
 @optional
+@property (nonatomic,assign)NSInteger workingRangeSize;
 @property (nonatomic,assign)UIEdgeInsets collectionViewContentInset;
 @property (nonatomic,strong)NSMutableArray <id<FPSectionModelProtocal>> *nestedCellItems;
 @property (nonatomic,copy)UICollectionViewCell<FPCollectionViewProtocal>  *(^dequeueReusableCellBlock)(id<FPSectionModelProtocal> model,IGListSectionController *sectionController,id<IGListCollectionContext> collectionContext,NSInteger index);
@@ -113,6 +114,7 @@ NS_ASSUME_NONNULL_END
 //一个section多个cellItem基类
 NS_ASSUME_NONNULL_BEGIN
 @protocol FPNumberOfItemSectionModelProtocal <FPSectionModelProtocal,FPWidthHeightProtocal,FPLoadReusableViewBlockProtocal>
+@optional
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
 @property (nonatomic,strong)NSMutableArray <id<FPConfigureReusableViewProtocal>> *cellItems;
